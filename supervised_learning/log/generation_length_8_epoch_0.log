@@ -1,0 +1,1634 @@
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i prefer a venue in centre .
+what kind of food would you like ?
+i need a european venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the moderate price range .
+galleria is a nice place , it is in the moderate price range , it serves european food and it is in the centre of town .
+wait , i need a venue on the expensive price range .
+michaelhouse cafe is a nice place , it serves european food , it is in the centre of town and it is in the expensive price range .
+what ' s the address ?
+can i help you with anything else ?
+no , i want a venue and it is a venue in south .
+i am sorry but there is no place , in the expensive price range , serving european food and in the area of south .
+wait , i want something else . i want a venue in any part of town .
+michaelhouse cafe is a nice place , it is in the expensive price range , it serves european food and it is in the centre of town .
+Reward: 0.7696163058280945
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i want a venue in the expensive price range and in the centre of town .
+what kind of food would you like ?
+i need a indian venue .
+curry garden is a nice place , it is in the expensive price range , it serves indian food and it is in the centre of town .
+what is the phone number of the restaurant ?
+can i help you with anything else ?
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.8471829891204834
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+it doesn ' t matter .
+what part of town do you have in mind ?
+i prefer a venue in centre .
+what kind of food would you like ?
+i need a international venue .
+bloomsbury restaurant is a nice place , it is in the centre of town and it serves international food .
+what is the phone number of the restaurant ?
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the moderate price range .
+bloomsbury restaurant is a nice place , it serves international food , it is in the moderate price range and it is in the centre of town .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.6459402441978455
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i prefer a venue in centre .
+what kind of food would you like ?
+i want a restaurant in the moderate price range serving chinese food .
+shanghai family restaurant is a nice place , it is in the centre of town , it serves chinese food and it is in the moderate price range .
+wait , i want something else .
+lan hong house is a nice place , it serves chinese food , it is in the moderate price range and it is in the centre of town .
+wait , i want something else . i prefer a venue in south .
+i am sorry but there is no place , serving chinese food , in the moderate price range and in the area of south .
+wait , i want something else .
+i am sorry but there is no place , in the moderate price range , in the area of south and serving chinese food .
+wait , i want to book a table for two rd a few in the tabby .
+i am sorry but there is no place , serving chinese food , in the moderate price range and in the area of south .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.8003786206245422
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+hi , i want to book a table
+what part of town do you have in mind ?
+it doesn ' t matter .
+what part of town do you have in mind ?
+i want a venue in the portuguese part of town .
+what part of town do you have in mind ?
+i want a venue in any part of town .
+nandos city centre is a nice place , it serves portuguese food and it is in the centre of town .
+wait , i want an client of the client about my 45 am .
+nandos city centre is a nice place , it is in the centre of town and it serves portuguese food .
+what is the address ?
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the expensive price range .
+i am sorry but there is no place , in the expensive price range and serving portuguese food .
+Reward: 0.617803692817688
+
+hello , welcome to the restaurant finding system . how may i help you ?
+i need another restaurant .
+what part of town do you have in mind ?
+i prefer a venue in north .
+what kind of food would you like ?
+i need a chinese venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the expensive price range .
+hakka is a nice place , it serves chinese food , it is in the north part of town and it is in the expensive price range .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.9091892242431641
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i want a restaurant in the expensive price range and in the centre of town .
+what kind of food would you like ?
+i need a international venue .
+i am sorry but there is no place , in the area of centre , serving international food and in the expensive price range .
+i want a venue in the moderate price range .
+bloomsbury restaurant is a nice place , it is in the centre of town , it is in the moderate price range and it serves international food .
+what is the phone number of the restaurant ?
+can i help you with anything else ?
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.8170930743217468
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+it doesn ' t matter .
+what part of town do you have in mind ?
+i prefer a venue in centre .
+what kind of food would you like ?
+i need a international venue .
+bloomsbury restaurant is a nice place , it serves international food and it is in the centre of town .
+what is the phone number of the restaurant ?
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the moderate price range .
+bloomsbury restaurant is a nice place , it serves international food , it is in the centre of town and it is in the moderate price range .
+please tell me another one .
+the varsity restaurant is a nice place , it serves international food , it is in the centre of town and it is in the moderate price range .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.5730481743812561
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i prefer a venue in north .
+what kind of food would you like ?
+i need a chinese venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the expensive price range .
+hakka is a nice place , it is in the expensive price range , it serves chinese food and it is in the north part of town .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.9080697298049927
+
+hello , welcome to the restaurant finding system . how may i help you ?
+i need another restaurant .
+what part of town do you have in mind ?
+i prefer a venue in north .
+what kind of food would you like ?
+i need a chinese venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the expensive price range .
+hakka is a nice place , it serves chinese food , it is in the expensive price range and it is in the north part of town .
+what is the address ?
+can i help you with anything else ?
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.8082043528556824
+
+hello , welcome to the restaurant finding system . how may i help you ?
+i need another restaurant .
+what part of town do you have in mind ?
+all part of town .
+what part of town do you have in mind ?
+i prefer a venue in north .
+what kind of food would you like ?
+i want a venue in the moderate price range serving turkish food .
+i am sorry but there is no place , in the moderate price range , serving turkish food and in the area of north .
+wait , i want something else . any single restaurant in the same part of town .
+i am sorry but there is no place , in the area of north , serving turkish food and in the moderate price range .
+wait , i want something else . i want a venue in the expensive price range .
+i am sorry but there is no place , in the area of north , in the expensive price range and serving turkish food .
+wait , i want to book a table
+i am sorry but there is no place , serving turkish food , in the area of north and in the expensive price range .
+okay , i want a venue in the expensive price range .
+i am sorry but there is no place , serving turkish food , in the area of north and in the expensive price range .
+Reward: 0.6342979073524475
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i want a venue in any part of town .
+what kind of food would you like ?
+i need a chinese venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the moderate price range .
+golden wok is a nice place , it is in the north part of town , it serves chinese food and it is in the moderate price range .
+wait , i want something else . i am not looking for this . please show me another one .
+shanghai family restaurant is a nice place , it serves chinese food , it is in the moderate price range and it is in the centre of town .
+wait , i want something else .
+lan hong house is a nice place , it is in the moderate price range , it serves chinese food and it is in the centre of town .
+wait , i want something else .
+jinling noodle bar is a nice place , it is in the centre of town , it is in the moderate price range and it serves chinese food .
+please show me the phone number of the restaurant .
+can i help you with anything else ?
+Reward: 0.7106395363807678
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i need a restaurant in centre .
+what kind of food would you like ?
+i need a european venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the moderate price range .
+galleria is a nice place , it is in the moderate price range , it is in the centre of town and it serves european food .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.9075232744216919
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i prefer a venue in north .
+what kind of food would you like ?
+i need a british restaurant .
+city stop restaurant is a nice place , it serves british food and it is in the north part of town .
+what is the phone number of the restaurant ?
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the expensive price range .
+city stop restaurant is a nice place , it is in the north part of town , it is in the expensive price range and it serves british food .
+wait , i show for a few , i want to book a table
+can i help you with anything else ?
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.6990035772323608
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i prefer a venue in west .
+i ' m having trouble understanding what you want . could you please rephrase it ?
+i need a restaurant in the moderate price range serving modern european food .
+galleria is a nice place , it serves european food and it is in the moderate price range .
+wait , i want something else . i want a venue in any part of town .
+hotel du vin and bistro is a nice place , it is in the moderate price range , it is in the centre of town and it serves european food .
+i want a venue in the moderate price range serving modern indian food .
+the nirala is a nice place , it is in the north part of town , it serves indian food and it is in the moderate price range .
+wait , i want something else . i want something else . it doesn ' t matter .
+meghna is a nice place , it serves indian food , it is in the north part of town and it is in the moderate price range .
+what is the phone number of the restaurant ?
+can i help you with anything else ?
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.3660416305065155
+
+hello , welcome to the restaurant finding system . how may i help you ?
+i need another restaurant .
+what part of town do you have in mind ?
+i want a venue in the moderate price range and in the centre of town .
+what kind of food would you like ?
+i want a venue in the indian price range serving moderate price range .
+i am sorry but there is no place , in the moderate price range , serving indian food and in the area of centre .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.8925345540046692
+
+hello , welcome to the restaurant finding system . how may i help you ?
+i want a restaurant in any price range and in any part of town .
+what kind of food would you like ?
+i want a venue in the moderate price range serving moderate price range .
+what kind of food would you like ?
+i need another restaurant .
+what kind of food would you like ?
+wait i want a venue in the expensive price range serving moderate price range .
+what kind of food would you like ?
+i need a restaurant in east .
+what kind of food would you like ?
+i need another restaurant .
+what kind of food would you like ?
+i prefer a venue in centre .
+what kind of food would you like ?
+i need a international venue .
+bloomsbury restaurant is a nice place , it is in the centre of town , it is in the moderate price range and it serves international food .
+Reward: 0.46562516689300537
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i prefer a venue in centre .
+what kind of food would you like ?
+i want a venue in the expensive price range serving british food .
+midsummer house restaurant is a nice place , it serves british food , it is in the centre of town and it is in the expensive price range .
+what is the phone number of the restaurant ?
+can i help you with anything else ?
+wait , i want a venue in the expensive price range serving asian oriental food .
+kymmoy is a nice place , it serves asian oriental food , it is in the expensive price range and it is in the centre of town .
+wait , i want something else . , i want a venue in the expensive price range .
+i am sorry but there is no place other than kymmoy in the expensive price range , serving asian oriental food and in the area of centre .
+wait , i want something else . i want a venue in any part of town .
+saigon city is a nice place , it is in the expensive price range , it is in the north part of town and it serves asian oriental food .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.5908191800117493
+
+hello , welcome to the restaurant finding system . how may i help you ?
+i need another restaurant .
+what part of town do you have in mind ?
+i prefer a venue in south .
+what kind of food would you like ?
+i need a chinese venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the expensive price range .
+the good luck chinese food takeaway is a nice place , it is in the expensive price range , it is in the south part of town and it serves chinese food .
+wait , it doesn ' t matter .
+the good luck chinese food takeaway is a nice place , it serves chinese food , it is in the south part of town and it is in the expensive price range .
+wait , i want to book a spot .
+the good luck chinese food takeaway is a nice place , it serves chinese food , it is in the expensive price range and it is in the south part of town .
+wait , i want something else . i want a venue in the expensive price range .
+peking restaurant is a nice place , it serves chinese food , it is in the south part of town and it is in the expensive price range .
+wait , i want something else . i want a venue in the expensive price range .
+i am sorry but there is no place other than the good luck chinese food takeaway and peking restaurant serving chinese food , in the expensive price range and in the area of south .
+Reward: 0.7180219888687134
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i want a venue in the moderate price range and in the centre of town .
+what kind of food would you like ?
+i need a international venue .
+bloomsbury restaurant is a nice place , it serves international food , it is in the moderate price range and it is in the centre of town .
+what is the phone number of the restaurant ?
+can i help you with anything else ?
+no , i want a few in the moderate price range .
+bloomsbury restaurant is a nice place , it is in the centre of town , it serves international food and it is in the moderate price range .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.8594926595687866
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i want a restaurant in any part of town .
+what kind of food would you like ?
+i need a turkish venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the moderate price range .
+efes restaurant is a nice place , it is in the centre of town , it is in the moderate price range and it serves turkish food .
+wait , i want another restaurant .
+efes restaurant is a nice place , it is in the moderate price range , it serves turkish food and it is in the centre of town .
+wait , i want something else . i want a venue in the expensive price range .
+meze bar restaurant is a nice place , it is in the expensive price range , it is in the centre of town and it serves turkish food .
+thank you , goodbye .
+thank you , goodbye .
+Reward: 0.7933651208877563
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i prefer a venue in south .
+what kind of food would you like ?
+i need a chinese venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the moderate price range .
+i am sorry but there is no place , in the moderate price range , in the area of south and serving chinese food .
+wait , i want to book a table
+i am sorry but there is no place , in the area of south , serving chinese food and in the moderate price range .
+wait , i want a venue in the moderate price range .
+i am sorry but there is no place , serving chinese food , in the moderate price range and in the area of south .
+wait , i want to book a table
+i am sorry but there is no place , in the area of south , serving chinese food and in the moderate price range .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.830737292766571
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want a venue serving mediterranean food and any price range is okay .
+la mimosa is a nice place , it is in the expensive price range and it serves mediterranean food .
+wait , i want something else . i want a venue in the moderate price range .
+i am sorry but there is no place , in the moderate price range and serving mediterranean food .
+wait , i want something else . i want a venue in any part of town .
+i am sorry but there is no place , in the moderate price range and serving mediterranean food .
+wait , i want something else . i want a venue in any part of town .
+i am sorry but there is no place , serving mediterranean food and in the moderate price range .
+wait , i want something else . i want a venue in the expensive price range .
+la mimosa is a nice place , it is in the centre of town , it serves mediterranean food and it is in the expensive price range .
+wait , i want something else . i want a venue in any part of town .
+shiraz restaurant is a nice place , it is in the expensive price range , it is in the centre of town and it serves mediterranean food .
+what is the address ?
+can i help you with anything else ?
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.7963653206825256
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i prefer a venue in south .
+what kind of food would you like ?
+it doesn ' t matter .
+what kind of food would you like ?
+i want a venue in it and the expensive price range serving chinese food .
+the good luck chinese food takeaway is a nice place , it serves chinese food , it is in the expensive price range and it is in the south part of town .
+wait , i want something else . i want a venue in the expensive price range .
+peking restaurant is a nice place , it serves chinese food , it is in the south part of town and it is in the expensive price range .
+wait , i want something else . i want a venue in any part of town .
+hakka is a nice place , it serves chinese food , it is in the north part of town and it is in the expensive price range .
+what is the address ?
+can i help you with anything else ?
+wait , i want to book a table
+hakka is a nice place , it is in the expensive price range , it is in the north part of town and it serves chinese food .
+Reward: 0.5984679460525513
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i prefer a venue in centre .
+what kind of food would you like ?
+i want a venue in the tabby .
+what kind of food would you like ?
+i need a international venue .
+bloomsbury restaurant is a nice place , it is in the centre of town and it serves international food .
+i want a european venue .
+would you like something in the cheap , moderate , or expensive price range ?
+it doesn ' t matter .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the moderate price range .
+galleria is a nice place , it is in the moderate price range , it serves european food and it is in the centre of town .
+wait , i want a venue in the expensive price range .
+michaelhouse cafe is a nice place , it is in the expensive price range , it serves european food and it is in the centre of town .
+Reward: 0.5295317769050598
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i prefer a venue in south .
+what kind of food would you like ?
+i want a venue in the moderate price range serving chinese food .
+i am sorry but there is no place , in the area of south , in the moderate price range and serving chinese food .
+wait , i want something else . i want a venue in any part of town .
+golden wok is a nice place , it is in the north part of town , it serves chinese food and it is in the moderate price range .
+wait , i prefer another venue .
+golden wok is a nice place , it serves chinese food , it is in the moderate price range and it is in the north part of town .
+no , i am not looking for this . please show me another one .
+shanghai family restaurant is a nice place , it is in the moderate price range , it is in the centre of town and it serves chinese food .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.7920976877212524
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i prefer a venue in east .
+what kind of food would you like ?
+i need a chinese venue .
+yu garden is a nice place , it is in the east part of town and it serves chinese food .
+what is the phone number of the restaurant ?
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the expensive price range .
+yu garden is a nice place , it is in the expensive price range , it is in the east part of town and it serves chinese food .
+what is the address ?
+can i help you with anything else ?
+wait , i want to book a table
+yu garden is a nice place , it is in the east part of town , it serves chinese food and it is in the expensive price range .
+what is the address ?
+can i help you with anything else ?
+Reward: 0.7540403604507446
+
+hello , welcome to the restaurant finding system . how may i help you ?
+i need another restaurant .
+what part of town do you have in mind ?
+it doesn ' t matter .
+what part of town do you have in mind ?
+i prefer a venue in south .
+what kind of food would you like ?
+i need a chinese venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the moderate price range .
+i am sorry but there is no place , in the moderate price range , in the area of south and serving chinese food .
+wait , i want to book a table
+i am sorry but there is no place , in the area of south , in the moderate price range and serving chinese food .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.6305776834487915
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i want a venue in any part of town .
+what kind of food would you like ?
+i need a turkish venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the moderate price range .
+efes restaurant is a nice place , it is in the centre of town , it is in the moderate price range and it serves turkish food .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.9083248972892761
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i need a restaurant in centre .
+what kind of food would you like ?
+i need a european venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the moderate price range .
+galleria is a nice place , it is in the moderate price range , it is in the centre of town and it serves european food .
+what is the phone number of the restaurant ?
+can i help you with anything else ?
+wait , i want to book a table
+galleria is a nice place , it is in the centre of town , it serves european food and it is in the moderate price range .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.7046769261360168
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i prefer a venue in south .
+what kind of food would you like ?
+i need a chinese venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the moderate price range .
+i am sorry but there is no place , in the area of south , serving chinese food and in the moderate price range .
+wait , i want to book a table
+i am sorry but there is no place , in the area of south , in the moderate price range and serving chinese food .
+wait , i want to book a table
+i am sorry but there is no place , in the area of south , in the moderate price range and serving chinese food .
+okay , i want to book a table
+thank you , goodbye .
+Reward: 0.8066869378089905
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i prefer a venue in north .
+what kind of food would you like ?
+i need a chinese venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the moderate price price range .
+golden wok is a nice place , it is in the moderate price range , it serves chinese food and it is in the north part of town .
+wait , i want something else . i want a venue in any part of town .
+shanghai family restaurant is a nice place , it is in the moderate price range , it is in the centre of town and it serves chinese food .
+wait , i want a venue in the expensive price range and is it okay .
+hakka is a nice place , it serves chinese food , it is in the expensive price range and it is in the north part of town .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.781806468963623
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i prefer a venue in north .
+what kind of food would you like ?
+i need a mediterranean venue .
+i am sorry but there is no place , serving mediterranean food and in the area of north .
+what is the best selling single restaurant in the same part of town ?
+i am sorry but there is no place , in the area of north and serving mediterranean food .
+what is the best selling single restaurant in the same restaurant ?
+i am sorry but there is no place , in the area of north and serving mediterranean food .
+what is the address ?
+i am sorry but there is no place , serving mediterranean food and in the area of north .
+what is the best selling single restaurant in russia ?
+i am sorry but there is no place , serving mediterranean food and in the area of north .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.8022633194923401
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i prefer a venue in south .
+what kind of food would you like ?
+it doesn ' t matter .
+what kind of food would you like ?
+i want a venue in the expensive price range serving turkish food .
+i am sorry but there is no place , in the expensive price range , in the area of south and serving turkish food .
+wait , i want something else . i want something else . i want a venue in south .
+i am sorry but there is no place , in the area of south , serving turkish food and in the expensive price range .
+wow , i want a venue in the moderate price range .
+i am sorry but there is no place , in the area of south , serving turkish food and in the moderate price range .
+wait , i want to book a table
+i am sorry but there is no place , serving turkish food , in the area of south and in the moderate price range .
+wait , i want to book a table
+i am sorry but there is no place , serving turkish food , in the moderate price range and in the area of south .
+Reward: 0.5759251117706299
+
+hello , welcome to the restaurant finding system . how may i help you ?
+i need another restaurant .
+what part of town do you have in mind ?
+i prefer a venue in north .
+what kind of food would you like ?
+i need a chinese venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the moderate price range .
+golden wok is a nice place , it is in the north part of town , it is in the moderate price range and it serves chinese food .
+wait , i want to book a table
+golden wok is a nice place , it is in the moderate price range , it serves chinese food and it is in the north part of town .
+wait , i want something else . i need a venue in south .
+i am sorry but there is no place , serving chinese food , in the moderate price range and in the area of south .
+wait , i want something else . i want a venue in deep . i want a venue in any part of town .
+golden wok is a nice place , it is in the north part of town , it is in the moderate price range and it serves chinese food .
+wait , i want to book a table
+shanghai family restaurant is a nice place , it is in the moderate price range , it is in the centre of town and it serves chinese food .
+Reward: 0.6714505553245544
+
+hello , welcome to the restaurant finding system . how may i help you ?
+i need another restaurant .
+what part of town do you have in mind ?
+i prefer a venue in north .
+what kind of food would you like ?
+i need a indian venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the expensive price range .
+tandoori palace is a nice place , it is in the expensive price range , it serves indian food and it is in the north part of town .
+wait , i want something else . i want a venue in the expensive price range .
+i am sorry but there is no place other than tandoori palace in the expensive price range , serving indian food and in the area of north .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.9132088422775269
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+it doesn ' t matter .
+what part of town do you have in mind ?
+i prefer a venue in north .
+what kind of food would you like ?
+i want a venue in the expensive price range serving chinese food .
+hakka is a nice place , it serves chinese food , it is in the north part of town and it is in the expensive price range .
+wait , i decide to the expensive price range and in what is the address ?
+can i help you with anything else ?
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.6194895505905151
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i prefer a venue in south .
+what kind of food would you like ?
+i need a chinese venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the moderate price range .
+i am sorry but there is no place , in the moderate price range , serving chinese food and in the area of south .
+wait , i want something else . the best . please show me another one .
+i am sorry but there is no place , in the area of south , serving chinese food and in the moderate price range .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.9131001830101013
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i prefer a venue in centre .
+what kind of food would you like ?
+i want a restaurant in the expensive price range serving british food .
+midsummer house restaurant is a nice place , it serves british food , it is in the expensive price range and it is in the centre of town .
+what is the phone number of the restaurant ?
+can i help you with anything else ?
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.842976987361908
+
+hello , welcome to the restaurant finding system . how may i help you ?
+i need another restaurant .
+what part of town do you have in mind ?
+i prefer a venue in north .
+what kind of food would you like ?
+i need a chinese venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the expensive price range .
+hakka is a nice place , it serves chinese food , it is in the north part of town and it is in the expensive price range .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.9091892242431641
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+it doesn ' t matter .
+what part of town do you have in mind ?
+i prefer a venue in north .
+what kind of food would you like ?
+i need a chinese venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the moderate price range .
+golden wok is a nice place , it is in the north part of town , it serves chinese food and it is in the moderate price range .
+wait , i want something else . i want a venue in the expensive price range .
+hakka is a nice place , it is in the expensive price range , it is in the north part of town and it serves chinese food .
+okay , i want a venue in the expensive price range serving moderate price range .
+golden wok is a nice place , it is in the north part of town , it serves chinese food and it is in the moderate price range .
+no , i am not looking for this . please show me another one .
+i am sorry but there is no place other than golden wok serving chinese food , in the area of north and in the moderate price range .
+Reward: 0.6000062227249146
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i prefer a venue in south .
+what kind of food would you like ?
+i need a chinese venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the moderate price range .
+i am sorry but there is no place , in the area of south , serving chinese food and in the moderate price range .
+wait , i want to book a table
+i am sorry but there is no place , in the area of south , serving chinese food and in the moderate price range .
+wait , i want to book a table
+i am sorry but there is no place , in the moderate price range , in the area of south and serving chinese food .
+wait , i want to book a table
+i am sorry but there is no place , serving chinese food , in the area of south and in the moderate price range .
+wait , i want a venue in the moderate price range serving indian food .
+i am sorry but there is no place , serving indian food , in the area of south and in the moderate price range .
+Reward: 0.7794298529624939
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i want a venue in the moderate price range and in the centre of town .
+what kind of food would you like ?
+i need a international venue .
+bloomsbury restaurant is a nice place , it is in the moderate price range , it serves international food and it is in the centre of town .
+is it in the moderate price range .
+bloomsbury restaurant is a nice place , it is in the centre of town , it serves international food and it is in the moderate price range .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.9080092906951904
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i want a venue in the moderate price range and in the centre of town .
+what kind of food would you like ?
+i need a european venue .
+galleria is a nice place , it is in the moderate price range , it is in the centre of town and it serves european food .
+what is the address of the restaurant ?
+can i help you with anything else ?
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.8336735367774963
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i prefer a venue in centre .
+what kind of food would you like ?
+i need a european venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the expensive price range .
+michaelhouse cafe is a nice place , it serves european food , it is in the expensive price range and it is in the centre of town .
+wait , i prefer a venue in south .
+i am sorry but there is no place , in the area of south , serving european food and in the expensive price range .
+wait , i want something else . i want a venue in the expensive price range .
+i am sorry but there is no place , in the area of south , in the expensive price range and serving european food .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.7926117777824402
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i prefer a venue in centre .
+what kind of food would you like ?
+i need a european venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the moderate price range .
+galleria is a nice place , it is in the centre of town , it is in the moderate price range and it serves european food .
+what is the address of the restaurant ?
+can i help you with anything else ?
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.8114102482795715
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i am i prefer a venue in centre .
+what kind of food would you like ?
+i need a european venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the moderate price range .
+galleria is a nice place , it is in the centre of town , it is in the moderate price range and it serves european food .
+what is the phone number of the restaurant ?
+can i help you with anything else ?
+wait , i want to book a table
+galleria is a nice place , it serves european food , it is in the centre of town and it is in the moderate price range .
+wait , i want something else . i want a venue in any part of town .
+hotel du vin and bistro is a nice place , it is in the moderate price range , it serves european food and it is in the centre of town .
+what is the phone number of the restaurant ?
+can i help you with anything else ?
+Reward: 0.44714340567588806
+
+hello , welcome to the restaurant finding system . how may i help you ?
+i need a restaurant in centre .
+what kind of food would you like ?
+i need a european venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a restaurant in the expensive price range .
+michaelhouse cafe is a nice place , it serves european food , it is in the centre of town and it is in the expensive price range .
+what is the address ?
+can i help you with anything else ?
+wait , i want to book a table
+michaelhouse cafe is a nice place , it is in the centre of town , it serves european food and it is in the expensive price range .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.7944047451019287
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i prefer a venue in north .
+what kind of food would you like ?
+i want a venue in the expensive price range serving british food .
+city stop restaurant is a nice place , it serves british food , it is in the north part of town and it is in the expensive price range .
+what is the address ?
+can i help you with anything else ?
+wait , i want something else . i want a venue in the expensive price range .
+i am sorry but there is no place other than city stop restaurant serving british food , in the area of north and in the expensive price range .
+what is the address ?
+city stop restaurant is a nice place , it serves british food , it is in the expensive price range and it is in the north part of town .
+what is the address ?
+can i help you with anything else ?
+no , i am not looking for this restaurant .
+city stop restaurant is a nice place , it is in the north part of town , it is in the expensive price range and it serves british food .
+Reward: 0.8585711121559143
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i prefer a venue in south .
+what kind of food would you like ?
+i want a venue in the moderate price range serving chinese food .
+i am sorry but there is no place , in the area of south , in the moderate price range and serving chinese food .
+wait , i want a venue in the expensive price range serving moderate name
+i am sorry but there is no place , serving chinese food , in the moderate price range and in the area of south .
+wait , i want something else . i want a venue in any part of town .
+golden wok is a nice place , it serves chinese food , it is in the moderate price range and it is in the north part of town .
+no , i am not looking for this . please show me another one .
+shanghai family restaurant is a nice place , it is in the centre of town , it serves chinese food and it is in the moderate price range .
+wait , i want something else . yes . please show me another one .
+lan hong house is a nice place , it is in the moderate price range , it is in the centre of town and it serves chinese food .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.7536957263946533
+
+hello , welcome to the restaurant finding system . how may i help you ?
+i need another restaurant .
+what part of town do you have in mind ?
+it doesn ' t matter .
+what part of town do you have in mind ?
+i prefer a venue in east .
+what kind of food would you like ?
+i need a turkish venue .
+i am sorry but there is no place , serving turkish food and in the area of east .
+what is the restaurant ?
+i am sorry but there is no place , in the area of east and serving turkish food .
+i prefer a venue in north .
+i am sorry but there is no place , serving turkish food and in the area of north .
+what part of the restaurant is okay ?
+thank you , goodbye .
+Reward: 0.6371000409126282
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i need a restaurant in centre .
+what kind of food would you like ?
+i need a european venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the moderate price range .
+galleria is a nice place , it serves european food , it is in the moderate price range and it is in the centre of town .
+wait , i want something else . i want a venue in the expensive price range .
+michaelhouse cafe is a nice place , it serves european food , it is in the centre of town and it is in the expensive price range .
+what is the address ?
+can i help you with anything else ?
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.7780776619911194
+
+hello , welcome to the restaurant finding system . how may i help you ?
+i need another restaurant .
+what part of town do you have in mind ?
+i prefer a venue in south .
+what kind of food would you like ?
+it doesn ' t matter .
+what kind of food would you like ?
+i want a venue in the expensive price range serving turkish food .
+i am sorry but there is no place , serving turkish food , in the area of south and in the expensive price range .
+wait , i want something else . i want a venue in the expensive price range .
+i am sorry but there is no place , serving turkish food , in the area of south and in the expensive price range .
+wait , i want something else . i want a venue in the expensive price range .
+i am sorry but there is no place , in the area of south , serving turkish food and in the expensive price range .
+what is the address ?
+i am sorry but there is no place , in the expensive price range , in the area of south and serving turkish food .
+i prefer a venue in the expensive price range .
+i am sorry but there is no place , in the expensive price range , in the area of south and serving turkish food .
+Reward: 0.5539674758911133
+
+hello , welcome to the restaurant finding system . how may i help you ?
+i need another restaurant .
+what part of town do you have in mind ?
+it doesn ' t matter .
+what part of town do you have in mind ?
+i prefer a venue in north .
+what kind of food would you like ?
+i need a british venue .
+city stop restaurant is a nice place , it is in the north part of town and it serves british food .
+what is the address ?
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the expensive price range .
+city stop restaurant is a nice place , it serves british food , it is in the north part of town and it is in the expensive price range .
+what is the address ?
+can i help you with anything else ?
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.7259504199028015
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i prefer a venue in south .
+what kind of food would you like ?
+i need a chinese venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the moderate price range .
+i am sorry but there is no place , in the moderate price range , in the area of south and serving chinese food .
+wait , i want to book a table
+i am sorry but there is no place , in the moderate price range , in the area of south and serving chinese food .
+wait , i want to book a table
+i am sorry but there is no place , serving chinese food , in the moderate price range and in the area of south .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.7644557952880859
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i need a restaurant in east .
+what kind of food would you like ?
+i want a venue in any price range and in my washington .
+what kind of food would you like ?
+i need a indian venue .
+rajmahal is a nice place , it is in the moderate price range , it serves indian food and it is in the east part of town .
+what is the phone number of the restaurant ?
+can i help you with anything else ?
+wait , i want to book a table
+rajmahal is a nice place , it is in the east part of town , it is in the moderate price range and it serves indian food .
+no , i am not looking for this . please show me another one .
+curry prince is a nice place , it is in the east part of town , it is in the moderate price range and it serves indian food .
+wait , i want to book a table
+pipasha restaurant is a nice place , it is in the expensive price range , it serves indian food and it is in the east part of town .
+wait , i prefer a venue in centre .
+can i help you with anything else ?
+Reward: 0.5630547404289246
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+it doesn ' t matter .
+what part of town do you have in mind ?
+i prefer a venue in north .
+what kind of food would you like ?
+i need a indian venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the expensive price range .
+tandoori palace is a nice place , it serves indian food , it is in the expensive price range and it is in the north part of town .
+wait , i want a venue in south .
+taj tandoori is a nice place , it is in the expensive price range , it is in the south part of town and it serves indian food .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.6447474360466003
+
+hello , welcome to the restaurant finding system . how may i help you ?
+i need another restaurant .
+what part of town do you have in mind ?
+i prefer a venue in north .
+what kind of food would you like ?
+i need a chinese venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the expensive price range .
+hakka is a nice place , it is in the north part of town , it is in the expensive price range and it serves chinese food .
+please tell me the address and phone number of the restaurant .
+can i help you with anything else ?
+wait , i want to book a table
+hakka is a nice place , it is in the expensive price range , it serves chinese food and it is in the north part of town .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.6996281147003174
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i prefer a venue in centre .
+what kind of food would you like ?
+i need a international venue .
+bloomsbury restaurant is a nice place , it is in the centre of town and it serves international food .
+i want a restaurant in any price range and in the expensive of town .
+i am sorry but there is no place , in the area of centre , serving international food and in the expensive price range .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.907659649848938
+
+hello , welcome to the restaurant finding system . how may i help you ?
+i need another restaurant .
+what part of town do you have in mind ?
+i want a venue in any part of town .
+what kind of food would you like ?
+i need a chinese venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the moderate price range .
+golden wok is a nice place , it is in the moderate price range , it serves chinese food and it is in the north part of town .
+wait , i want something else . i want a venue in south .
+i am sorry but there is no place , in the area of south , in the moderate price range and serving chinese food .
+wait , i want to book a table
+i am sorry but there is no place , serving chinese food , in the area of south and in the moderate price range .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.751821756362915
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i prefer a venue in centre .
+what kind of food would you like ?
+i need a italian venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a restaurant in any price range .
+pizza express fen ditton is a nice place , it is in the centre of town , it serves italian food and it is in the moderate price range .
+please tell me the address and client about the expensive price .
+can i help you with anything else ?
+wait , i want to book a table
+clowns cafe is a nice place , it is in the expensive price range , it serves italian food and it is in the centre of town .
+no , i am not looking for this . please show me another one .
+stazione restaurant and coffee bar is a nice place , it is in the expensive price range , it is in the centre of town and it serves italian food .
+wait , i want a venue in the expensive price range .
+can i help you with anything else ?
+Reward: 0.4820396900177002
+
+hello , welcome to the restaurant finding system . how may i help you ?
+i need another restaurant .
+what part of town do you have in mind ?
+i prefer a venue in north .
+what kind of food would you like ?
+i want a venue in the expensive price range serving chinese food .
+hakka is a nice place , it is in the north part of town , it serves chinese food and it is in the expensive price range .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.8928123712539673
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i want a restaurant in the moderate price range and in the west of town .
+what kind of food would you like ?
+i need a indian venue .
+i am sorry but there is no place , in the moderate price range , in the area of west and serving indian food .
+wait , i want to book a table
+i am sorry but there is no place , in the area of west , serving indian food and in the moderate price range .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.9074646830558777
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+it doesn ' t matter .
+what part of town do you have in mind ?
+i prefer a venue in south .
+what kind of food would you like ?
+i need a chinese venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the moderate price range .
+i am sorry but there is no place , serving chinese food , in the moderate price range and in the area of south .
+wait , i want something else . any price range is in any outside ?
+the good luck chinese food takeaway is a nice place , it is in the expensive price range , it is in the south part of town and it serves chinese food .
+wait , i want to book a table
+the lucky star is a nice place , it is in the south part of town , it is in the cheap price range and it serves chinese food .
+wait , i want to book a table
+peking restaurant is a nice place , it serves chinese food , it is in the south part of town and it is in the expensive price range .
+Reward: 0.553185760974884
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i want a venue in any part of town .
+what kind of food would you like ?
+i need a european venue .
+would you like something in the cheap , moderate , or expensive price range ?
+it doesn ' t matter .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the expensive price range .
+michaelhouse cafe is a nice place , it serves european food , it is in the expensive price range and it is in the centre of town .
+wait , i want something else . i want a venue in any part of town .
+eraina is a nice place , it is in the centre of town , it is in the expensive price range and it serves european food .
+what is the address of the restaurant ?
+can i help you with anything else ?
+no , i am not looking for this one in the cheap price range .
+i am sorry but there is no place , serving european food and in the cheap price range .
+Reward: 0.8688325881958008
+
+hello , welcome to the restaurant finding system . how may i help you ?
+i need another restaurant .
+what part of town do you have in mind ?
+i want a venue in the moderate price range and in the centre of town .
+what kind of food would you like ?
+i need a indian venue .
+i am sorry but there is no place , in the area of centre , in the moderate price range and serving indian food .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.8931063413619995
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i prefer a venue in south .
+what kind of food would you like ?
+i need a chinese venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the moderate price range .
+i am sorry but there is no place , serving chinese food , in the moderate price range and in the area of south .
+wait , i want something else . any part of the restaurant ?
+i am sorry but there is no place , serving chinese food , in the area of south and in the moderate price range .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.9121931195259094
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i prefer a venue in centre .
+what kind of food would you like ?
+i need a european venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the moderate price range .
+galleria is a nice place , it serves european food , it is in the moderate price range and it is in the centre of town .
+wait , i want something else . i do not . i want a venue in any part of town .
+hotel du vin and bistro is a nice place , it is in the centre of town , it serves european food and it is in the moderate price range .
+what is the address ?
+can i help you with anything else ?
+no , i want a venue in the moderate price range .
+galleria is a nice place , it is in the centre of town , it is in the moderate price range and it serves european food .
+what is the address of the restaurant ?
+can i help you with anything else ?
+Reward: 0.6622450351715088
+
+hello , welcome to the restaurant finding system . how may i help you ?
+i need a restaurant in centre .
+what kind of food would you like ?
+i need a european venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the expensive price range .
+michaelhouse cafe is a nice place , it serves european food , it is in the expensive price range and it is in the centre of town .
+wait , i want something else . i want a venue in the expensive price range .
+eraina is a nice place , it is in the expensive price range , it serves european food and it is in the centre of town .
+wait , i want something else . i want a venue in any part of town part of town .
+cambridge lodge restaurant is a nice place , it serves european food , it is in the expensive price range and it is in the west part of town .
+what is the address ?
+can i help you with anything else ?
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.7601224184036255
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+it doesn ' t matter .
+what part of town do you have in mind ?
+i prefer a venue in south .
+what kind of food would you like ?
+i need a chinese venue .
+would you like something in the cheap , moderate , or expensive price range ?
+it doesn ' t matter .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the expensive price range .
+the good luck chinese food takeaway is a nice place , it is in the south part of town , it serves chinese food and it is in the expensive price range .
+wait , i want a venue in the expensive price range .
+the good luck chinese food takeaway is a nice place , it is in the south part of town , it is in the expensive price range and it serves chinese food .
+wait , i want to book a table
+the good luck chinese food takeaway is a nice place , it is in the expensive price range , it is in the south part of town and it serves chinese food .
+Reward: 0.4351569414138794
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i prefer a venue in centre .
+what kind of food would you like ?
+i need a british venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the expensive price range .
+midsummer house restaurant is a nice place , it is in the expensive price range , it serves british food and it is in the centre of town .
+no , i am not looking for this . please show me the phone number .
+can i help you with anything else ?
+please tell me the address and phone number of the restaurant .
+midsummer house restaurant is a nice place , it serves british food , it is in the expensive price range and it is in the centre of town .
+no , i am not looking for this . please show me another one .
+fitzbillies restaurant is a nice place , it is in the centre of town , it is in the expensive price range and it serves british food .
+wait , i want something else . i want a venue in the expensive price range .
+the cambridge chop house is a nice place , it is in the expensive price range , it is in the centre of town and it serves british food .
+Reward: 0.6760513186454773
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i prefer a venue in west .
+what kind of food would you like ?
+i need a british venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the expensive price range .
+graffiti is a nice place , it is in the west part of town , it is in the expensive price range and it serves british food .
+what is the phone number of the restaurant ?
+can i help you with anything else ?
+wait , i want to book a table
+graffiti is a nice place , it is in the west part of town , it serves british food and it is in the expensive price range .
+what is the address ?
+can i help you with anything else ?
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.7980039715766907
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+it doesn ' t matter .
+what part of town do you have in mind ?
+i prefer a venue in north .
+what kind of food would you like ?
+i need a chinese venue .
+would you like something in the cheap , moderate , or expensive price range ?
+it doesn ' t matter .
+would you like something in the cheap , moderate , or expensive price range ?
+it doesn ' t matter .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in any price range and after this part of town .
+hakka is a nice place , it is in the north part of town , it is in the expensive price range and it serves chinese food .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.6786291003227234
+
+hello , welcome to the restaurant finding system . how may i help you ?
+i need another restaurant .
+what part of town do you have in mind ?
+i prefer a venue in east .
+what kind of food would you like ?
+i need a chinese venue .
+yu garden is a nice place , it is in the east part of town and it serves chinese food .
+what is the phone number of the restaurant ?
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the expensive price range .
+yu garden is a nice place , it is in the expensive price range , it is in the east part of town and it serves chinese food .
+wait , i want something else . i prefer a venue in south .
+the good luck chinese food takeaway is a nice place , it is in the expensive price range , it serves chinese food and it is in the south part of town .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.787676215171814
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i prefer a venue in north .
+what kind of food would you like ?
+i want a venue in the moderate price range serving turkish food .
+i am sorry but there is no place , serving turkish food , in the moderate price range and in the area of north .
+wait , not town . i want a venue in the expensive price range .
+i am sorry but there is no place , in the expensive price range , serving turkish food and in the area of north .
+wait , i want something else . any price range is okay .
+i am sorry but there is no place , serving turkish food and in the area of north .
+wait , i want something else . i want a venue in south .
+i am sorry but there is no place , in the area of south and serving turkish food .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.7928512096405029
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i prefer a venue in east .
+what kind of food would you like ?
+i need a chinese venue .
+yu garden is a nice place , it is in the east part of town and it serves chinese food .
+what is the phone number of the restaurant ?
+would you like something in the cheap , moderate , or expensive price range ?
+i need a indian venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the moderate price range .
+rajmahal is a nice place , it serves indian food , it is in the east part of town and it is in the moderate price range .
+wait , i want something else . i want a venue in the moderate price range .
+curry prince is a nice place , it serves indian food , it is in the moderate price range and it is in the east part of town .
+wow , i am not looking for this . please show me another one .
+i am sorry but there is no place other than curry prince and rajmahal in the moderate price range , serving indian food and in the area of east .
+Reward: 0.7503281831741333
+
+hello , welcome to the restaurant finding system . how may i help you ?
+i need another restaurant .
+what part of town do you have in mind ?
+i prefer a venue in south .
+what kind of food would you like ?
+i need another restaurant .
+what kind of food would you like ?
+i want a venue in the modern chinese venue .
+would you like something in the cheap , moderate , or expensive price range ?
+it doesn ' t matter .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the expensive price range .
+the good luck chinese food takeaway is a nice place , it serves chinese food , it is in the south part of town and it is in the expensive price range .
+wait , i want something else . i want a venue in any part of town .
+hakka is a nice place , it is in the north part of town , it is in the expensive price range and it serves chinese food .
+no , i am not looking for this . please show me another one .
+yu garden is a nice place , it serves chinese food , it is in the east part of town and it is in the expensive price range .
+Reward: 0.5967057347297668
+
+hello , welcome to the restaurant finding system . how may i help you ?
+i need another restaurant .
+what part of town do you have in mind ?
+i want a venue in the moderate price range and in the north of town .
+what kind of food would you like ?
+i need a indian venue .
+the nirala is a nice place , it serves indian food , it is in the north part of town and it is in the moderate price range .
+no , i am not looking for this .
+the nirala is a nice place , it serves indian food , it is in the north part of town and it is in the moderate price range .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.9129323363304138
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i prefer a venue in north .
+what kind of food would you like ?
+i need a chinese venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the expensive price range .
+hakka is a nice place , it serves chinese food , it is in the north part of town and it is in the expensive price range .
+what is the address ?
+can i help you with anything else ?
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.8089312314987183
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+it doesn ' t matter .
+what part of town do you have in mind ?
+i prefer a venue in south .
+what kind of food would you like ?
+i need a chinese venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the moderate price range .
+i am sorry but there is no place , serving chinese food , in the moderate price range and in the area of south .
+wait , i want something else . any price range is okay .
+the good luck chinese food takeaway is a nice place , it is in the south part of town , it is in the expensive price range and it serves chinese food .
+wait , i want to book a table
+the lucky star is a nice place , it is in the south part of town , it is in the cheap price range and it serves chinese food .
+wait , i want to book a table
+peking restaurant is a nice place , it is in the south part of town , it serves chinese food and it is in the expensive price range .
+Reward: 0.5682701468467712
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i want a venue in the moderate price range and in the centre of town .
+what kind of food would you like ?
+i need a international venue .
+bloomsbury restaurant is a nice place , it is in the moderate price range , it serves international food and it is in the centre of town .
+what is the phone number of the restaurant ?
+can i help you with anything else ?
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.8479517102241516
+
+hello , welcome to the restaurant finding system . how may i help you ?
+im looking for the restaurant in the cheap price range and in the centre of town .
+what kind of food would you like ?
+i need a indian venue .
+the gandhi is a nice place , it is in the cheap price range , it serves indian food and it is in the centre of town .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.27220016717910767
+
+hello , welcome to the restaurant finding system . how may i help you ?
+i need another restaurant .
+what part of town do you have in mind ?
+i want a venue in the moderate price range and in the north of town .
+what kind of food would you like ?
+i need a indian venue .
+the nirala is a nice place , it is in the moderate price range , it is in the north part of town and it serves indian food .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.8930642604827881
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i want a venue in any part of town .
+what kind of food would you like ?
+i need a turkish venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the expensive price range .
+meze bar restaurant is a nice place , it is in the centre of town , it serves turkish food and it is in the expensive price range .
+wait , i want something else . i need a venue in any part of town .
+i am sorry but there is no place other than meze bar restaurant in all parts of town , in the expensive price range and serving turkish food .
+wait , i want a venue in any part of town .
+meze bar restaurant is a nice place , it is in the centre of town , it is in the expensive price range and it serves turkish food .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.7973911762237549
+
+hello , welcome to the restaurant finding system . how may i help you ?
+i need another restaurant .
+what part of town do you have in mind ?
+i prefer a venue in north .
+what kind of food would you like ?
+i need a chinese venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the expensive price range .
+hakka is a nice place , it serves chinese food , it is in the expensive price range and it is in the north part of town .
+what is the address ?
+can i help you with anything else ?
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.8082043528556824
+
+hello , welcome to the restaurant finding system . how may i help you ?
+i need another restaurant .
+what part of town do you have in mind ?
+i prefer a venue in north .
+what kind of food would you like ?
+i need a chinese venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the expensive price range .
+hakka is a nice place , it is in the north part of town , it is in the expensive price range and it serves chinese food .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.909225344657898
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i prefer a venue in centre .
+what kind of food would you like ?
+i want a restaurant in the restaurant .
+what kind of food would you like ?
+i need a international venue .
+bloomsbury restaurant is a nice place , it serves international food and it is in the centre of town .
+is it in the expensive price range .
+i am sorry but there is no place , in the expensive price range , serving international food and in the area of centre .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.8120773434638977
+
+hello , welcome to the restaurant finding system . how may i help you ?
+i need another restaurant .
+what part of town do you have in mind ?
+i prefer a venue in north .
+what kind of food would you like ?
+i need a british venue .
+city stop restaurant is a nice place , it serves british food and it is in the north part of town .
+what is the phone number of the restaurant ?
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the expensive price range .
+city stop restaurant is a nice place , it serves british food , it is in the north part of town and it is in the expensive price range .
+no , i am not looking for this . then then show me daily one .
+can i help you with anything else ?
+great , i have a few , thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.834832489490509
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i want a venue in any part of town .
+what kind of food would you like ?
+i want a venue in the cheap price range and in the centre of town .
+what kind of food would you like ?
+i need a indian venue .
+the gandhi is a nice place , it is in the cheap price range , it serves indian food and it is in the centre of town .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.8116849064826965
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+it doesn ' t matter .
+what part of town do you have in mind ?
+i prefer a venue in north .
+what kind of food would you like ?
+i need a turkish venue .
+i am sorry but there is no place , serving turkish food and in the area of north .
+what is the best selling single restaurant in the same part of town ?
+i am sorry but there is no place , in the area of north and serving turkish food .
+wait , i want a venue in the moderate price range serving modern european food .
+i am sorry but there is no place , in the area of north , in the moderate price range and serving european food .
+wait , i want something else . i want a restaurant in the moderate price range .
+i am sorry but there is no place , serving european food , in the area of north and in the moderate price range .
+wait , i want something else . i want a venue in russia .
+i am sorry but there is no place , serving european food , in the area of north and in the moderate price range .
+Reward: 0.4440407454967499
+
+hello , welcome to the restaurant finding system . how may i help you ?
+i need another restaurant .
+what part of town do you have in mind ?
+i prefer a venue in north .
+what kind of food would you like ?
+i need a chinese venue .
+would you like something in the cheap , moderate , or expensive price range ?
+it doesn ' t matter .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the moderate price range .
+golden wok is a nice place , it is in the north part of town , it serves chinese food and it is in the moderate price range .
+what is the address ?
+can i help you with anything else ?
+wait , i want to book a table
+golden wok is a nice place , it serves chinese food , it is in the moderate price range and it is in the north part of town .
+wait , i want something else .
+i am sorry but there is no place other than golden wok serving chinese food , in the area of north and in the moderate price range .
+Reward: 0.8771848082542419
+
+hello , welcome to the restaurant finding system . how may i help you ?
+i need a mediterranean restaurant . for me if i want a restaurant in the moderate price range .
+i am sorry but there is no place , serving mediterranean food and in the moderate price range .
+i want a venue in the moderate price range .
+i am sorry but there is no place , serving mediterranean food and in the moderate price range .
+no looking for a restaurant in the expensive price range .
+la mimosa is a nice place , it serves mediterranean food and it is in the expensive price range .
+what is the address ?
+what part of town do you have in mind ?
+i prefer a venue in east .
+i am sorry but there is no place , serving mediterranean food , in the expensive price range and in the area of east .
+wait , i want something else . i want a venue in south .
+i am sorry but there is no place , in the expensive price range , in the area of south and serving mediterranean food .
+what is the address ?
+i am sorry but there is no place , in the area of south , in the expensive price range and serving mediterranean food .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.11974747478961945
+
+hello , welcome to the restaurant finding system . how may i help you ?
+i need another restaurant .
+what part of town do you have in mind ?
+i prefer a venue in north .
+what kind of food would you like ?
+i want a venue in the expensive price range serving chinese food .
+hakka is a nice place , it is in the expensive price range , it is in the north part of town and it serves chinese food .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.8927982449531555
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i want a venue in the moderate price range and in the south of town .
+what kind of food would you like ?
+i need a indian venue .
+i am sorry but there is no place , serving indian food , in the moderate price range and in the area of south .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.8940042853355408
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+everything is fine . i need a indian restaurant .
+what part of town do you have in mind ?
+i want a venue in the moderate price range and in the centre of town .
+i am sorry but there is no place , in the moderate price range , serving indian food and in the area of centre .
+what is the phone number of the restaurant ?
+i am sorry but there is no place , serving indian food , in the area of centre and in the moderate price range .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.8366952538490295
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i want a venue in the cheap price range and in the west of town .
+what kind of food would you like ?
+i need a indian venue .
+i am sorry but there is no place , serving indian food , in the cheap price range and in the area of west .
+what is the phone number of the restaurant ?
+i am sorry but there is no place , serving indian food , in the area of west and in the cheap price range .
+what is the address of nicole kidman ?
+i am sorry but there is no place , in the area of west , serving indian food and in the cheap price range .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.9111789464950562
+
+hello , welcome to the restaurant finding system . how may i help you ?
+i need a restaurant in centre .
+what kind of food would you like ?
+i need a european venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the moderate price range .
+galleria is a nice place , it is in the moderate price range , it is in the centre of town and it serves european food .
+what is the address of michaelhouse cafe ?
+michaelhouse cafe is a nice place their address is st . michael ' s church trinity street city centre .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.8903405666351318
+
+hello , welcome to the restaurant finding system . how may i help you ?
+i need another restaurant .
+what part of town do you have in mind ?
+i prefer a venue in north .
+what kind of food would you like ?
+i need a chinese venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the expensive price range .
+hakka is a nice place , it serves chinese food , it is in the expensive price range and it is in the north part of town .
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.9091983437538147
+
+hello , welcome to the restaurant finding system . how may i help you ?
+i need another restaurant .
+what part of town do you have in mind ?
+i prefer a venue in north .
+what kind of food would you like ?
+i need a chinese venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in any part of town .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a venue in the moderate price range .
+golden wok is a nice place , it is in the north part of town , it serves chinese food and it is in the moderate price range .
+what is the address ?
+can i help you with anything else ?
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.7974421381950378
+
+hello , welcome to the restaurant finding system . how may i help you ?
+hi , i want to book a table
+what part of town do you have in mind ?
+i prefer a venue in centre .
+what kind of food would you like ?
+i need a british venue .
+would you like something in the cheap , moderate , or expensive price range ?
+i want a restaurant in the expensive price range .
+midsummer house restaurant is a nice place , it is in the expensive price range , it is in the centre of town and it serves british food .
+what is the address ?
+can i help you with anything else ?
+thanks for your help , goodbye .
+thank you , goodbye .
+Reward: 0.8073039650917053
+

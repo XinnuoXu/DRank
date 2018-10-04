@@ -1,0 +1,1374 @@
+#NLG message generation rules
+# Last modified by JS on June 06, 2006
+
+# This file consists of two parts:
+
+# The first section is a list of rules defining system prompts for dialogue acts.
+# You can use $A, $B, $C as variables for slot names and $U, $V, $W, $X, $Y, $Z as variables for value names.
+# You can use vertical bars "|" to define several messages for the same dialogue act.
+
+# The second section contains a list of venues and locations. You can copy and paste this part from JVrules.txt.
+# Just add an asterisk "*" to all venue and location names that require the article "the" in sentences
+# like "I can recommend X"
+
+%count_rest($count) {
+  0 : "are no venues";
+  1 : "is one venue";
+  $count : "are $count venues";
+}
+
+%q($X){
+    food : "What food would you like";
+    area : "What area would you like";
+    near : "Where would you like it to be near to";
+    pricerange : "What price range would you like";
+    allowedforkids : "What is your preference as to whether it allows children";
+    goodformeal : "What meal would you like";
+    dogsallowed : "What is your preference as to whether it allows dogs";
+    hasinternet : "What is your preference as to whether it has internet";
+    acceptscreditcards : "What is your preference as to whether it accepts credit cards";
+}
+%description_inf($description) {
+  $description : "it is described as $description";
+}
+%signature_inf($signature) {
+  $signature : "the signature is $signature";
+}
+%food_inf($food) {
+  "sea food" : "it serves sea food";
+  "comfort food" : "it serves comfort food";
+  $food : "it serves $food food";
+}
+
+%area_inf($area) {
+  centre : "it is in the centre of town";
+  north : "it is in the north part of town";
+  south : "it is in the south part of town";
+  east : "it is in the east part of town";
+  west : "it is in the west part of town";
+  "<EMPH>centre</EMPH>" : "it is in the <EMPH>centre</EMPH> of town";
+  "<EMPH>north</EMPH>" : "it is in the <EMPH>north</EMPH> part of town";
+  "<EMPH>south</EMPH>" : "it is in the <EMPH>south</EMPH> part of town";
+  "<EMPH>east</EMPH>" : "it is in the <EMPH>east</EMPH> part of town";
+  "<EMPH>west</EMPH>" : "it is in the <EMPH>west</EMPH> part of town";
+  $area : "it is in the area of $area";
+}
+
+%near_inf($near) {
+    $near : "it is near $near";
+}
+
+%allowedforkids_inf($allowedforkids) {
+  1: "where children are allowed";
+  false: "where no children are allowed";
+  none : "I don't know if it allows children";
+}
+
+%dogsallowed_inf($dogsallowed) {
+  1: "where dogs are allowed";
+  false: "where no dogs are allowed";
+  none : "I don't know if it allows dogs";
+}
+
+%hasinternet_inf($hasinternet) {
+  1: "it has internet";
+  false: "it doesn't have internet";
+  none : "I don't know if it has interent";
+}
+
+%acceptscreditcards_inf($acceptscreditcards) {
+  1: "it accepts credit cards";
+  false: "it doesn't accept credit cards";
+  none : "I don't know if it accepts credit cards";
+}
+
+%goodformeal_inf($goodformeal) {
+  $goodformeal : "it is good for $goodformeal";
+}
+
+%goodforgroups_inf($goodforgroups){
+    1    : "it is good for groups";
+    false : "it is not good for groups";
+    none : "I don't know if it is good for groups";
+}
+
+%pricerange_inf($price) {
+  $price : "it is in the $price price range";
+}
+
+%food_str($food) {
+  dontcare : "if you don't care about the food";
+  "sea food" : "searving sea food";
+  "comfort food" : "serving comfort food";
+  $food : "serving $food food";
+}
+
+%name_str($name) {
+  $name : "other than $name";
+}
+%signature_str($signature) {
+  $signature : "its signature is $signature";
+}
+
+%area_str($area) {
+  dontcare : "in all parts of town";
+  $area : "in the area of $area";
+}
+
+%near_str($near) {
+    dontcare : "if you don't care where it is near to";
+    $near : "near $near";
+}
+
+%allowedforkids_str($allowedforkids) {
+  dontcare : "if you don't care whether children are allowed";
+  1: "where children are allowed";
+  false: "where no children are allowed";
+  none : "I don't know if it allows children";
+}
+
+%goodformeal_str($goodformeal) {
+  dontcare : "if you don't care which meal it is good for";
+  $goodformeal : "good for $goodformeal";
+}
+
+%goodforgroups_str($goodforgroups){
+    dontcare : "if you don't care if it's good for groups";
+    1    : "good for groups";
+    false : "not good for groups";
+    none : "I don't know if it is good for groups";
+}
+
+%hasinternet_str($hasinternet){
+    dontcare : "if you don't care if has internet";
+    1    : "has internet";
+    false : "doesn't have internet";
+    none : "I don't know if it is has internet";
+}
+
+%dogsallowed_str($dogsallowed) {
+  dontcare : "if you don't care whether dogs are allowed";
+  1: "where dogs are allowed";
+  false: "where no dogs are allowed";
+  none : "I don't know if it allows dogs";
+}
+
+%acceptscreditcards_str($acceptscreditcards) {
+  dontcare : "if you don't care whether it accepts credit cards";
+  1: "where credit cards are accepted";
+  false: "where no credit cards are accepted";
+  none : "I don't know if it accepts credit cards";
+}
+
+
+%pricerange_str($price) {
+  dontcare : "if you don't care about the price range";
+  $price : "in the $price price range";
+}
+
+%price_str($price) {
+    none :  "I don't know their prices";
+    $price : "the prices are $price";
+}
+
+
+
+
+%area_pricerange_str($area, $price) {
+  dontcare, dontcare : "if you don't care about the area or the price range";
+  dontcare, $price : "in the $price range and any part of town";
+  $area, dontcare : "in the area of $area if you don't care about the price range";
+  $area, $price : "in the $price price range and the area of $area";
+}
+%area_allowedforkids_str($area, $kids) {
+  dontcare, dontcare : "if you don't care about the area or whether it allows children";
+  dontcare, 1: "in any part of town where children are allowed";
+  dontcare, false: "in any part of town where no children are allowed";
+  $area, dontcare : "in the area of $area if you don't care whether it allows children";
+  $area, 1 : "where children are allowed and in the area of $area";
+  $area, false : "where no children are allowed and in the area of $area";
+}
+%area_goodformeal_str($area, $meal) {
+  dontcare, dontcare : "if you don't care about the area or the meal";
+  dontcare, $meal : "good for $meal and in any part of town";
+  $area, dontcare : "in the area of $area if you don't care about the meal";
+  $area, $meal : "good for $meal and in the area of $area";
+}
+
+%area_near_str($area, $near) {
+  dontcare, dontcare : "if you don't care about the area or where it is near to";
+  dontcare, $near : "near $near";
+  $area, dontcare : "in the area of $area if you don't care where it is near to";
+  $area, $near : "near $near and in the area of $area";
+}
+
+
+%area_food_str($area, $food) {
+  dontcare, dontcare : "if you don't care about the area or the type of food";
+  dontcare, $food : "serving $food food in any part of town";
+  $area, dontcare : "in the area of $area serving any kind of food";
+  $area, $food : "serving $food in the area of $area";
+}
+
+%food_pricerange_str($food, $price) {
+  dontcare, dontcare : "if you don't care about the price range or the type of food";
+  dontcare, $price : "serving any kind of food in the $price price range";
+  $food, dontcare : "serving $food in any price range";
+  $food, $price : "serving $food in the $price price range";
+}
+
+%food_allowedforkids_str($food, $kids) {
+  dontcare, dontcare : "if you don't care about the type of food or whether it allows children";
+  dontcare, false : "serving any kind of food and no children allowed";
+  dontcare, 1 : "serving any kind of food and children are allowed";
+  $food, dontcare : "serving $food if you don't care whether it allows children";
+  $food, false : "serving $food and where no children allowed";
+  $food, 1 : "serving $food and where children are allowed";
+}
+
+
+
+%area_food_pricerange_str($area, $food, $price) {
+  dontcare, dontcare, dontcare : "if you don't care about the price range or the type of food or the area";
+  dontcare, dontcare, $price : "in the $price price range serving any kind of food in any area";
+  dontcare, $food, dontcare : "serving $food in any area and price range";
+  $area, dontcare, dontcare : "in the area of $area serving any kind of food in any price range";
+  dontcare, $food, $price : "serving $price $food food in any area";
+  $area, $food, dontcare : "serving $food in the area of $area and in any price range";
+  $area, dontcare, $price : "in the area of $area and the $price price range serving any kind of food";
+  $area, $food, $price : "serving $price $food food in the area of $area";
+}
+
+%addr_str($addr) {
+  none : "I don't know their address";	
+  $addr : "Their address is $addr";
+}
+
+%phone_str($phone) {
+  none : "I don't know their phone number";	
+  $phone : "Their phone number is $phone";
+}
+
+%postcode_str($postcode) {
+  none : "I don't know their post code";	
+  $postcode : "Their postcode is $postcode";
+}
+
+%addr_inf($addr) {
+  none : "I don't know their address";	
+  $addr : "Their address is $addr";
+}
+
+%phone_inf($phone) {
+  none : "I don't know their phone number";	
+  $phone : "Their phone number is $phone";
+}
+
+%postcode_inf($postcode) {
+  none : "I don't know their post code";	
+  $postcode : "Their postcode is $postcode";
+}
+
+%price_inf($price) {
+  none : "I don't know their prices";	
+  $price : "Their prices are $price";
+}
+
+
+%addr_phone_str($addr, $phone) {
+  none, none : "I don't know their address or phone number";
+  none, $phone : "I don't know their address but their phone number is $phone";
+  $addr, none : "I don't know there phone number but their address is $addr";
+  $addr, $phone : "Their address is $addr and their phone number is $phone";
+}
+
+%phone_postcode_str($phone, $postcode) {
+  none, none : "I don't know the phone number or post code.";
+  none, $postcode : "I don't know their phone number but the post code is $postcode .";
+  $phone, none : "I don't know the post code but the phone number is $phone .";			   
+  $phone, $postcode : "Their phone number is $phone and their post code is $postcode .";
+}
+
+%addr_postcode_str($addr, $postcode) {
+  none, none : "I don't know the address or the post code";
+  none, $postcode : "I don't know the address but the post code is $postcode";
+  $addr, none : "I don't know their post code but the address is $addr";
+  $addr, $postcode : "Their address is $addr , $postcode";
+}
+
+%addr_phone_postcode_str($addr, $phone, $postcode) {
+  none, none, none : "I don't know the address, phone number or post code";
+  none, none, $postcode : "I don't know the address or phone number but the post code is $postcode";
+  none, $phone, none : "I don't know the address or post code but the phone number is $phone";
+  $addr, none, none : "I don't know the phone number or post code but the address is $addr";
+  none, $phone, $postcode : "I don't know the address but the post code is $postcode and the phone number is $phone";
+  $addr, $phone, none : "I don't know the post code but the phone number is $phone and the address is $addr";
+  $addr, none, $postcode : "I don't know the phone number but the address is $addr and the post code is $postcode";
+  $addr, $phone, $postcode : "Their address is $addr $postcode and their phone number is $phone";
+}
+
+%addr_phone_name_str($addr, $phrone, $name) {
+  none, none, $name : "I don't know the phone number or address of $name";
+  none, $phone, $name : "The phone number of $name is $phone but I don't know the address";
+  $addr, none, $name : "The address of $name is $addr but I don't know the phone number";
+  $addr, $phone, $name : "The phone number of $name is $phone and it is on $addr";
+}
+
+%addr_postcode_name_str($addr, $postcode, $name) {
+  none, none, $name : "I don't know the address or postcode of $name";
+  none, $postcode, $name : "The postcode of $name is $postcode but I don't know the address";
+  $addr, none, $name : "The address of $name is $addr but I don't know the postcode";
+  $addr, $postcode, $name : "$name is at $addr , $postcode";
+}
+
+
+# --------------- RULES --------------------------
+
+hello() : "Welcome to the Cambridge restaurant dialogue system. How may I help you?";
+u_hello() : "Hi, I want to book a table";
+
+# "Hello, and welcome to our dialogue system! Are you looking for a hotel, a venue, or a bar? ";
+
+hello(more) : "Can I help you with anything else?";
+# bad() : "Mumble";
+null() : "Sorry I am a bit confused; please tell me again what you are looking for.";
+
+repeat() : "Could you please repeat that?";
+u_repeat() : "Could you please repeat that?";
+
+bye() : "Thank you, goodbye.";
+u_bye() : "Thanks for your help, goodbye.";
+#u_thankyou() : "Thanks for your help.";
+
+u_ack() : "Ok";
+
+# Requests
+
+request(task) : "What are you looking for?";
+request(type) : "What are you looking for?";
+request(area) : "What part of town do you have in mind? ";
+request(name) : "What is the name of the place you are looking for?";
+request(pricerange) : "Would you like something in the cheap, moderate, or expensive price range?";
+request(food) : "What kind of food would you like? ";
+request(allowedforkids) : "What is your preference as to whether it allows children?";
+request(dogsallowed) : "What is your preference as to whether it allows dogs?";
+request(hasinternet) : "What is your preference as to whether it has internet?";
+request(acceptscreditcards) : "What is your preference as to whether it accepts credit cards?";
+request(goodforgroups)  : "What is your preference as to whether it is good for groups?";
+request(goodformeal)    : "What meal are you looking for?";
+request(near)   : "Where would you like it to be near to?";
+request(area, option=$X) : "What part of town do you have in mind? For example, something in the area of $X?";
+request(name, option=$X) : "What is the name of the place you are looking for? For example, $X";
+request(pricerange, option=$X) : "What pricerange would you like? For example, $X";
+request(food, option=$X) : "What kind of food would you like? For example, $X?";
+
+request(area, option=$X, option=$Y) : "What part of town do you have in mind? For example, something in the area of $X or the $Y.";
+request(name, option=$X, option=$Y) : "What is the name of the place you are looking for? For example, $X or $Y.";
+request(pricerange, option=$X, option=$Y) : "What pricerange would you like? For example, $X or $Y.";
+request(food, option=$X, option=$Y) : "What kind of food would you like? For example, $X or $Y?";
+
+reqmore() : "Can I help you with anything else?";
+reqmore(stars=dontcare) : "Would you like me to look for venues with any number of stars?";
+reqmore(pricerange=dontcare) : "Would you like me to look for venues in any price range?";
+reqmore(food=dontcare) : "Would you like me to look for venues serving any kind of food?";
+reqmore(drinks=dontcare) : "Would you like me to look for venues serving any kind of drinks?";
+reqmore(music=dontcare) : "Would you like me to look for venues playing any kind of music?";
+reqmore(near=dontcare) : "Would you like me to look for venues that are a bit further away?";
+reqmore(area=dontcare) : "Would you like me to look for venues in other parts of town?";
+reqmore(addr=dontcare) : "Would you like me to look for venues in other parts of town?";
+reqmore(phone=dontcare) : "Would you like me to look for venues with another phone number?";
+
+
+# Explicit Confirmations
+
+confirm() : "Please tell me more about the place you are looking for!";
+confirm(addr=$U) : "A venue on $U is that right?";
+confirm(type=$U) : "You are looking for a $U is that right?";
+confirm(type=$U,addr=dontcare) : "Ok, a $U and you dont care about the address is that right?";
+confirm(type=$U,addr=$V) : "Did you say you are looking for a $U on $V?";
+confirm(type=$U,area=dontcare) : "Ok, a $U in any part of town is that right?";
+confirm(type=$U,area=$V) : "Did you say you are looking for a $U in the area of $V?";
+confirm(type=$U,drinks=dontcare) : "You are looking for a $U serving any kind of drinks right?";
+confirm(type=$U,drinks=$V) : "You are looking for a $U that serves $V right?";
+confirm(type=$U,food=dontcare) : "You are looking for a $U serving any kind of food right?";
+confirm(type=$U,food=$V) : "You are looking for a $V $U right?";
+confirm(type=$U,near=dontcare) : "Let me confirm, you are looking for a $U and it does not need to be near a specific location?";
+confirm(type=$U,near=$V) : "Did you say you are looking for a $U near $V?";
+confirm(type=$U,music=dontcare) : "You are looking for a $U playing any kind of music right?";
+confirm(type=$U,music=$V) : "You are looking for a $U that plays $V music right?";
+confirm(type=$U,pricerange=dontcare) : "Let me confirm, You are looking for a $U and you dont care about the price range right?";
+confirm(type=$U,pricerange=$V) : "Let me confirm, You are looking for a $U in the $V price range right?";
+confirm(type=$U,stars=dontcare) : "Let me confirm, a $U with any number of stars right?";
+confirm(type=$U,stars=$W) : "Let me confirm, a $W star $U right?";
+confirm(type=$U,goodformeal=dontcare) : "Let me confirm, you are looking for a $U good for any meal?";
+confirm(type=$U,goodformeal=$V) : "Did you say you are looking for a $U good for $V?";
+confirm(type=$U,allowedforkids=dontcare) : "Let me confirm, you are looking for a $U and you don't care if it allows children?";
+confirm(type=$U,allowedforkids=false) : "Did you say you are looking for a $U that doesn't allow children?";
+confirm(type=$U,allowedforkids=1) : "Did you say you are looking for a $U that allowes children?";
+confirm(type=$U,dogsallowed=dontcare) : "Let me confirm, you are looking for a $U and you don't care if it allows dogs?";
+confirm(type=$U,dogsallowed=false) : "Did you say you are looking for a $U that doesn't allow dogs?";
+confirm(type=$U,dogsallowed=1) : "Did you say you are looking for a $U that allowes dogs?";
+confirm(type=$U,hasinternet=dontcare) : "Let me confirm, you are looking for a $U and you don't care if it has internet?";
+confirm(type=$U,hasinternet=false) : "Did you say you are looking for a $U that doesn't have internet?";
+confirm(type=$U,hasinternet=1) : "Did you say you are looking for a $U that has internet?";
+confirm(type=$U,acceptscreditcards=dontcare) : "Let me confirm, you are looking for a $U and you don't care if it accepts credit cards?";
+confirm(type=$U,acceptscreditcards=false) : "Did you say you are looking for a $U that doesn't accepts credit cards?";
+confirm(type=$U,acceptscreditcards=1) : "Did you say you are looking for a $U that accepts credit cards?";
+
+confirm(type=$U,area=$V,addr=$W) : "Let me confirm, A $U on $W in the area of $V right?";
+
+confirm(type=$U,area=dontcare,stars=dontcare) : "Let me confirm, a $U with any number of stars anywhere in town right?";
+confirm(type=$U,area=dontcare,stars=$W) : "Let me confirm, A $W star $U anywhere in town right?";
+confirm(type=$U,area=$V,stars=dontcare) : "Let me confirm, A $U with any number of stars in the area of $V right?";
+confirm(type=$U,area=$V,stars=$W) : "Let me confirm, A $W star $U in the area of $V right?";
+
+confirm(type=$U,area=dontcare,near=dontcare) : "Let me confirm, you are looking for a $U anywhere in town right?";
+confirm(type=$U,area=dontcare,near=$W) : "Let me confirm, a $U anywhere in town as long as it is near $W right?";
+confirm(type=$U,area=$V,near=dontcare) : "Let me confirm, a $U in the area of $V, near anything, right?";
+confirm(type=$U,area=$V,near=$W) : "Let me confirm, a $U in the area of $V near $W right?";
+
+confirm(type=$U,food=dontcare,drinks=dontcare) : "Let me confirm, you are looking for a $U serving any kind of food and drinks right?";
+confirm(type=$U,food=dontcare,drinks=$W) : "Let me confirm, you are looking for a $U serving $W and any kind of food right?";
+confirm(type=$U,food=$W,drinks=dontcare) : "Let me confirm, you are looking for a $U serving $W food and any kind of drinks right?";
+confirm(type=$U,food=$V,drinks=$W) : "Let me confirm, you are looking for a $U serving $V food and $W right?";
+
+confirm(type=$U,near=dontcare,drinks=dontcare) : "Let me confirm, you are looking for a $U serving any kind of drinks right?";
+confirm(type=$U,near=dontcare,drinks=$W) : "Let me confirm, you are looking for a $U serving $W right?";
+confirm(type=$U,near=$W,drinks=dontcare) : "Let me confirm, you are looking for a $U near $W serving any kind of drinks right?";
+confirm(type=$U,near=$V,drinks=$W) : "Let me confirm, you are looking for a $U near $V serving $W right?";
+
+confirm(type=$U,near=dontcare,stars=dontcare) : "Let me confirm, You are looking for a $U with any number of stars right?";
+confirm(type=$U,near=dontcare,stars=$W) : "Let me confirm, You are looking for a $U with $W stars right?";
+confirm(type=$U,near=$W,stars=dontcare) : "Let me confirm, You are looking for a $U near $W with any number of stars right?";
+confirm(type=$U,near=$V,stars=$W) : "Let me confirm, You are looking for a $U near $V with $W stars right?";
+
+confirm(type=$U,pricerange=dontcare,area=dontcare) : "Let me confirm, You are looking for a $U in any price range and in any part of town right?";
+confirm(type=$U,pricerange=dontcare,area=$W) : "Let me confirm, You are looking for a $U in any price range in the $W of town right?";
+confirm(type=$U,pricerange=$W,area=dontcare) : "Let me confirm, You are looking for a $U in the $W price range and you dont care about the part of town right?";
+confirm(type=$U,pricerange=$V,area=$W) : "Let me confirm, You are looking for a $U in the $V price range and in the $W of town right?";
+
+confirm(type=$U,pricerange=dontcare,drinks=dontcare) : "Let me confirm, You are looking for a $U in any price range and you dont care about the type of drinks right?";
+confirm(type=$U,pricerange=dontcare,drinks=$W) : "Let me confirm, You are looking for a $U serving $W and you dont care about the price range right?";
+confirm(type=$U,pricerange=$W,drinks=dontcare) : "Let me confirm, You are looking for a $U in the $W price range and you dont care about the type of drinks right?";
+confirm(type=$U,pricerange=$V,drinks=$W) : "Let me confirm, You are looking for a $U in the $V price range serving $W right?";
+
+confirm(type=$U,pricerange=dontcare,food=dontcare) : "Let me confirm, You are looking for a $U serving any kind of food and you dont care about the price range right?";
+confirm(type=$U,pricerange=dontcare,food=$W) : "Let me confirm, You are looking for a $U serving $W food and you dont care about the price range right?";
+confirm(type=$U,pricerange=$V,food=dontcare) : "Let me confirm, You are looking for a $U in the $V price range serving any kind of food right?";
+confirm(type=$U,pricerange=$V,food=$W) : "Let me confirm, You are looking for a $U in the $V price range serving $W food right?";
+
+confirm(type=$U,pricerange=$V,near=dontcare) : "Let me confirm, You are looking for a $U in any price range and it does not need to be near a specific venue right?";
+confirm(type=$U,pricerange=$V,near=dontcare) : "Let me confirm, You are looking for a $U in the $V price range and it does not need to be near a specific venue right?";
+confirm(type=$U,pricerange=dontcare,near=$W) : "Let me confirm, You are looking for a $U in any price range near $W right?";
+confirm(type=$U,pricerange=$V,near=$W) : "Let me confirm, You are looking for a $U in the $V price range near $W right?";
+
+confirm(type=$U,pricerange=dontcare,stars=dontcare) : "Let me confirm, You are looking for a $U in any price range and you dont care about the number of stars right?";
+confirm(type=$U,pricerange=dontcare,stars=$W) : "Let me confirm, You are looking for a $U with $W stars and you dont care about the price range right?";
+confirm(type=$U,pricerange=$W,stars=dontcare) : "Let me confirm, You are looking for a $U in the $W price range and you dont care about the number of stars right?";
+confirm(type=$U,pricerange=$V,stars=$W) : "Let me confirm, You are looking for a $U in the $V price range with $W stars right?";
+
+confirm(addr=dontcare) : "Ok, a venue and you dont care about the address is that right?";
+confirm(addr=$V) : "Did you say you are looking for a venue on $V?";
+confirm(area=dontcare) : "Ok, a venue in any part of town is that right?";
+confirm(area=$V) : "Did you say you are looking for a venue in the area of $V?";
+confirm(drinks=dontcare) : "You are looking for a venue serving any kind of drinks right?";
+confirm(drinks=$V) : "You are looking for a venue that serves $V right?";
+confirm(food=dontcare) : "You are looking for a venue serving any kind of food right?";
+confirm(food=$V) : "You are looking for a $V venue right?";
+confirm(near=dontcare) : "Let me confirm, you are looking for a venue and it does not need to be near a specific location?";
+confirm(near=$V) : "Did you say you are looking for a venue near $V?";
+confirm(music=dontcare) : "You are looking for a venue playing any kind of music right?";
+confirm(music=$V) : "You are looking for a venue that plays $V music right?";
+confirm(pricerange=dontcare) : "Let me confirm, You are looking for a venue and you dont care about the price range right?";
+confirm(pricerange=$V) : "Let me confirm, You are looking for a venue in the $V price range right?";
+confirm(stars=dontcare) : "Let me confirm, a venue with any number of stars right?";
+confirm(stars=$W) : "Let me confirm, a $W star venue right?";
+confirm(allowedforkids=dontcare) : "Let me confirm you don't care if it allows children";
+confirm(allowedforkids=1)  :   "Let me confirm you want a venue that allows children, right?";
+confirm(allowedforkids=false) : "Let me confirm you want a venue that doesn't allow children, right?";
+confirm(goodforgroups=dontcare) : "Let me confirm you don't care if it's good for groups";
+confirm(goodforgroups=1)  :   "Let me confirm you want a venue that's good for groups, right?";
+confirm(goodforgroups=false) : "Let me confirm you want a venue that isn't good for groups, right?";
+confirm(goodformeal=dontcare) : "Let me confirm you don't care about meal";
+confirm(goodformeal=$V) : "Let me confirm you are looking for a place good for $V";
+confirm(dogsallowed=dontcare) : "Let me confirm you don't care if it allows dogs";
+confirm(dogsallowed=1)  :   "Let me confirm you want a venue that allows dogs, right?";
+confirm(dogsallowed=false) : "Let me confirm you want a venue that doesn't allow dogs, right?";
+confirm(hasinternet=dontcare) : "Let me confirm you don't care if it has internet";
+confirm(hasinternet=1)  :   "Let me confirm you want a venue that has internet, right?";
+confirm(hasinternet=false) : "Let me confirm you want a venue that doesn't have internet, right?";
+confirm(acceptscreditcards=dontcare) : "Let me confirm you don't care if it accepts credit cards";
+confirm(acceptscreditcards=1)  :   "Let me confirm you want a venue that accepts credit cards, right?";
+confirm(acceptscreditcards=false) : "Let me confirm you want a venue that doesn't accept credit cards, right?";
+
+confirm(area=$V,addr=$W) : "Let me confirm, A venue on $W in the area of $V right?";
+
+confirm(area=dontcare,stars=dontcare) : "Let me confirm, a venue with any number of stars anywhere in town right?";
+confirm(area=dontcare,stars=$W) : "Let me confirm, A $W star venue anywhere in town right?";
+confirm(area=$V,stars=dontcare) : "Let me confirm, A place with any number of stars in the area of $V right?";
+confirm(area=$V,stars=$W) : "Let me confirm, A $W star venue in the area of $V right?";
+
+confirm(area=dontcare,near=dontcare) : "Let me confirm, you are looking for a venue anywhere in town right?";
+confirm(area=dontcare,near=$W) : "Let me confirm, a venue anywhere in town as long as it is near $W right?";
+confirm(area=$V,near=dontcare) : "Let me confirm, a place in the area of $V near anywhere right?";
+confirm(area=$V,near=$W) : "Let me confirm, a venue in the area of $V near $W right?";
+
+confirm(food=dontcare,drinks=dontcare) : "Let me confirm, you are looking for a venue serving any kind of food and drinks right?";
+confirm(food=dontcare,drinks=$W) : "Let me confirm, you are looking for a venue serving $W and any kind of food right?";
+confirm(food=$W,drinks=dontcare) : "Let me confirm, you are looking for a venue serving $W food and any kind of drinks right?";
+confirm(food=$V,drinks=$W) : "Let me confirm, you are looking for a venue serving $V food and $W right?";
+
+confirm(near=dontcare,drinks=dontcare) : "Let me confirm, you are looking for a venue serving any kind of drinks right?";
+confirm(near=dontcare,drinks=$W) : "Let me confirm, you are looking for a venue serving $W right?";
+confirm(near=$W,drinks=dontcare) : "Let me confirm, you are looking for a venue near $W serving any kind of drinks right?";
+confirm(near=$V,drinks=$W) : "Let me confirm, you are looking for a venue near $V serving $W right?";
+
+confirm(near=dontcare,stars=dontcare) : "Let me confirm, You are looking for a venue with any number of stars right?";
+confirm(near=dontcare,stars=$W) : "Let me confirm, You are looking for a venue with $W stars right?";
+confirm(near=$W,stars=dontcare) : "Let me confirm, You are looking for a venue near $W with any number of stars right?";
+confirm(near=$V,stars=$W) : "Let me confirm, You are looking for a venue near $V with $W stars right?";
+
+confirm(pricerange=dontcare,area=dontcare) : "Let me confirm, You are looking for a venue in any price range and in any part of town right?";
+confirm(pricerange=dontcare,area=$W) : "Let me confirm, You are looking for a venue in any price range in the $W of town right?";
+confirm(pricerange=$W,area=dontcare) : "Let me confirm, You are looking for a venue in the $W price range and you dont care about the part of town right?";
+confirm(pricerange=$V,area=$W) : "Let me confirm, You are looking for a venue in the $V price range and in the $W of town right?";
+
+confirm(pricerange=dontcare,drinks=dontcare) : "Let me confirm, You are looking for a venue in any price range and you dont care about the type of drinks right?";
+confirm(pricerange=dontcare,drinks=$W) : "Let me confirm, You are looking for a venue serving $W and you dont care about the price range right?";
+confirm(pricerange=$W,drinks=dontcare) : "Let me confirm, You are looking for a venue in the $W price range and you dont care about the type of drinks right?";
+confirm(pricerange=$V,drinks=$W) : "Let me confirm, You are looking for a venue in the $V price range serving $W right?";
+
+confirm(pricerange=dontcare,food=dontcare) : "Let me confirm, You are looking for a venue serving any kind of food and you dont care about the price range right?";
+confirm(pricerange=dontcare,food=$W) : "Let me confirm, You are looking for a venue serving $W food and you dont care about the price range right?";
+confirm(pricerange=$V,food=dontcare) : "Let me confirm, You are looking for a venue in the $V price range serving any kind of food right?";
+confirm(pricerange=$V,food=$W) : "Let me confirm, You are looking for a venue in the $V price range serving $W food right?";
+
+confirm(pricerange=$V,near=dontcare) : "Let me confirm, You are looking for a venue in any price range and it does not need to be near a specific venue right?";
+confirm(pricerange=$V,near=dontcare) : "Let me confirm, You are looking for a venue in the $V price range and it does not need to be near a specific venue right?";
+confirm(pricerange=dontcare,near=$W) : "Let me confirm, You are looking for a venue in any price range near $W right?";
+confirm(pricerange=$V,near=$W) : "Let me confirm, You are looking for a venue in the $V price range near $W right?";
+
+confirm(pricerange=dontcare,stars=dontcare) : "Let me confirm, You are looking for a venue in any price range and you dont care about the number of stars right?";
+confirm(pricerange=dontcare,stars=$W) : "Let me confirm, You are looking for a venue with $W stars and you dont care about the price range right?";
+confirm(pricerange=$W,stars=dontcare) : "Let me confirm, You are looking for a venue in the $W price range and you dont care about the number of stars right?";
+confirm(pricerange=$V,stars=$W) : "Let me confirm, You are looking for a venue in the $V price range with $W stars right?";
+
+confirm($A=$X) : "Let me confirm, you are looking for $X $A";
+
+
+#Recomendation
+
+inform(name=none,other=true,name=$X,type=$U,$Y=$O) : "I am sorry but there is no $U other than $X %$Y_str($O).";
+inform(name=none,other=true,name=$X,type=$U,$Y=$O,$Z=$P) : "I am sorry but there is no $U other than $X %$Y_str($O) and %$Z_str($P).";
+inform(name=none,other=true,name=$X,type=$U,$Y=$O,$Z=$P,$W=$R) : "I am sorry but there is no $U other than $X %$Y_str($O), %$Z_str($P) and %$W_str($R).";
+inform(name=none,other=true,name=$X,type=$U,$Y=$O,$Z=$P,$W=$R,$Q=$T) : "I am sorry but there is no $U other than $X %$Y_str($O), %$Z_str($P), %$W_str($R) and %$Q_str($T).";
+inform(name=none,other=true,name=$X,type=$U,$Y=$O,$Z=$P,$W=$R,$Q=$T,$G=$H) : "I am sorry but there is no $U other than $X %$Y_str($O), %$Z_str($P), %$W_str($R), %$Q_str($T) and %$G_str($H).";
+inform(name=none,other=true,name=$X,type=$U,$Y=$O,$Z=$P,$W=$R,$Q=$T,$G=$H,$B=$D) : "I am sorry but there is no $U other than $X %$Y_str($O), %$Z_str($P), %$W_str($R), %$Q_str($T), %$G_str($H) and %$B_str($D).";
+
+
+inform(name=none,other=true,name=$X,name=$E,$Y=$O) : "I am sorry but there is no place other than $X and $E %$Y_str($O).";
+inform(name=none,other=true,name=$X,name=$E,$Y=$O,$Z=$P) : "I am sorry but there is no place other than $X and $E %$Y_str($O) and %$Z_str($P).";
+inform(name=none,other=true,name=$X,name=$E,$Y=$O,$Z=$P,$W=$R) : "I am sorry but there is no place other than $X and $E %$Y_str($O), %$Z_str($P) and %$W_str($R).";
+inform(name=none,other=true,name=$X,name=$E,$Y=$O,$Z=$P,$W=$R,$Q=$T) : "I am sorry but there is no place other than $X and $E %$Y_str($O), %$Z_str($P), %$W_str($R) and %$Q_str($T).";
+inform(name=none,other=true,name=$X,name=$E,$Y=$O,$Z=$P,$W=$R,$Q=$T,$G=$H) : "I am sorry but there is no place other than $X and $E %$Y_str($O), %$Z_str($P), %$W_str($R), %$Q_str($T) and %$G_str($H).";
+inform(name=none,other=true,name=$X,name=$E,$Y=$O,$Z=$P,$W=$R,$Q=$T,$G=$H,$B=$D) : "I am sorry but there is no place other than $X and $E %$Y_str($O), %$Z_str($P), %$W_str($R), %$Q_str($T), %$G_str($H) and %$B_str($D).";
+
+inform(name=none,other=true,name=$X,name=$E,type=$U,$Y=$O) : "I am sorry but there is no $U other than $X and $E %$Y_str($O).";
+inform(name=none,other=true,name=$X,name=$E,type=$U,$Y=$O,$Z=$P) : "I am sorry but there is no $U other than $X and $E  %$Y_str($O) and %$Z_str($P).";
+inform(name=none,other=true,name=$X,name=$E,type=$U,$Y=$O,$Z=$P,$W=$R) : "I am sorry but there is no $U other than $X and $E %$Y_str($O), %$Z_str($P) and %$W_str($R).";
+inform(name=none,other=true,name=$X,name=$E,type=$U,$Y=$O,$Z=$P,$W=$R,$Q=$T) : "I am sorry but there is no $U other than $X and $E %$Y_str($O), %$Z_str($P), %$W_str($R) and %$Q_str($T).";
+inform(name=none,other=true,name=$X,name=$E,type=$U,$Y=$O,$Z=$P,$W=$R,$Q=$T,$G=$H) : "I am sorry but there is no $U other than $X and $E  %$Y_str($O), %$Z_str($P), %$W_str($R), %$Q_str($T) and %$G_str($H).";
+inform(name=none,other=true,name=$X,name=$E,type=$U,$Y=$O,$Z=$P,$W=$R,$Q=$T,$G=$H,$B=$D) : "I am sorry but there is no $U other than $X and $E %$Y_str($O), %$Z_str($P), %$W_str($R), %$Q_str($T), %$G_str($H) and %$B_str($D).";
+
+
+inform(name=none,other=true,name=$X,$Y=$O) : "I am sorry but there is no place other than $X %$Y_str($O).";
+inform(name=none,other=true,name=$X,$Y=$O,$Z=$P) : "I am sorry but there is no place other than $X %$Y_str($O) and %$Z_str($P).";
+inform(name=none,other=true,name=$X,$Y=$O,$Z=$P,$W=$R) : "I am sorry but there is no place other than $X %$Y_str($O), %$Z_str($P) and %$W_str($R).";
+inform(name=none,other=true,name=$X,$Y=$O,$Z=$P,$W=$R,$Q=$T) : "I am sorry but there is no place other than $X %$Y_str($O), %$Z_str($P), %$W_str($R) and %$Q_str($T).";
+inform(name=none,other=true,name=$X,$Y=$O,$Z=$P,$W=$R,$Q=$T,$G=$H) : "I am sorry but there is no place other than $X %$Y_str($O), %$Z_str($P), %$W_str($R), %$Q_str($T) and %$G_str($H).";
+inform(name=none,other=true,name=$X,$Y=$O,$Z=$P,$W=$R,$Q=$T,$G=$H,$B=$D) : "I am sorry but there is no place other than $X %$Y_str($O), %$Z_str($P), %$W_str($R), %$Q_str($T), %$G_str($H) and %$B_str($D).";
+
+
+inform(name=none,type=$U) : "I am sorry but there is no $U.";
+inform(name=none,type=$U,$Y=$O) : "I am sorry but there is no $U %$Y_str($O).";
+inform(name=none,type=$U,$Y=$O,$Z=$P) : "I am sorry but there is no $U %$Y_str($O) and %$Z_str($P).";
+inform(name=none,type=$U,$Y=$O,$Z=$P,$W=$R) : "I am sorry but there is no $U %$Y_str($O), %$Z_str($P) and %$W_str($R).";
+inform(name=none,type=$U,$Y=$O,$Z=$P,$W=$R,$Q=$T) : "I am sorry but there is no $U %$Y_str($O), %$Z_str($P), %$W_str($R) and %$Q_str($T).";
+inform(name=none,type=$U,$Y=$O,$Z=$P,$W=$R,$Q=$T,$G=$H) : "I am sorry but there is no $U %$Y_str($O), %$Z_str($P), %$W_str($R), %$Q_str($T) and %$G_str($H).";
+inform(name=none,type=$U,$Y=$O,$Z=$P,$W=$R,$Q=$T,$G=$H,$B=$D) : "I am sorry but there is no $U %$Y_str($O), %$Z_str($P), %$W_str($R), %$Q_str($T), %$G_str($H) and %$B_str($D).";
+
+
+inform(name=none,$Y=$O) : "I am sorry but there is no place %$Y_str($O).";
+inform(name=none,$Y=$O,$Z=$P) : "I am sorry but there is no place, %$Y_str($O) and %$Z_str($P).";
+inform(name=none,$Y=$O,$Z=$P,$W=$R) : "I am sorry but there is no place, %$Y_str($O), %$Z_str($P) and %$W_str($R).";
+inform(name=none,$Y=$O,$Z=$P,$W=$R,$Q=$T) : "I am sorry but there is no place, %$Y_str($O), %$Z_str($P), %$W_str($R) and %$Q_str($T).";
+inform(name=none,$Y=$O,$Z=$P,$W=$R,$Q=$T,$G=$H) : "I am sorry but there is no place, %$Y_str($O), %$Z_str($P), %$W_str($R), %$Q_str($T) and %$G_str($H).";
+inform(name=none,$Y=$O,$Z=$P,$W=$R,$Q=$T,$G=$H,$B=$D) : "I am sorry but there is no place, %$Y_str($O), %$Z_str($P), %$W_str($R), %$Q_str($T), %$G_str($H) and %$B_str($D).";
+
+
+inform(name=$X) : "$X is nice";
+inform(name=$X,type=$U) : "$X is a nice $U.";
+inform(name=$X,type=$U,$Y=$O) : "$X is a nice $U %$Y_inf($O).";
+inform(name=$X,type=$U,$Y=$O,$Z=$P) : "$X is a nice $U, %$Y_inf($O) and %$Z_inf($P).";
+inform(name=$X,type=$U,$Y=$O,$Z=$P,$W=$R) : "$X is a nice $U, %$Y_inf($O), %$Z_inf($P) and %$W_inf($R).";
+inform(name=$X,type=$U,$Y=$O,$Z=$P,$W=$R,$Q=$T) : "$X is a nice $U, %$Y_inf($O), %$Z_inf($P), %$W_inf($R) and %$Q_inf($T).";
+inform(name=$X,type=$U,$Y=$O,$Z=$P,$W=$R,$Q=$T,$G=$H) : "$X is a nice $U, %$Y_inf($O), %$Z_inf($P), %$W_inf($R), %$Q_inf($T) and %$G_inf($H).";
+inform(name=$X,type=$U,$Y=$O,$Z=$P,$W=$R,$Q=$T,$G=$H,$B=$D) : "$X is a nice $U, %$Y_inf($O), %$Z_inf($P), %$W_inf($R), %$Q_inf($T), %$G_inf($H) and %$B_inf($D).";
+inform(name=$X,type=$U,$Y=$O,$Z=$P,$W=$R,$Q=$T,$G=$H,$B=$D,$F=$C) : "$X is a nice $U, %$Y_inf($O), %$Z_inf($P), %$W_inf($R), %$Q_inf($T), %$G_inf($H) %$B_inf($D) and %$C_inf($F).";
+inform(name=$X,type=$U,$Y=$O,$Z=$P,$W=$R,$Q=$T,$G=$H,$B=$D,$F=$C,$I=$J) : "$X is a nice $U, %$Y_inf($O), %$Z_inf($P), %$W_inf($R), %$Q_inf($T), %$G_inf($H) %$B_inf($D) %$C_inf($F) and %$I_inf($J).";
+
+inform(name=$X,$Y=$O) : "$X is a nice place %$Y_inf($O).";
+inform(name=$X,$Y=$O,$Z=$P) : "$X is a nice place, %$Y_inf($O) and %$Z_inf($P).";
+inform(name=$X,$Y=$O,$Z=$P,$W=$R) : "$X is a nice place, %$Y_inf($O), %$Z_inf($P) and %$W_inf($R).";
+inform(name=$X,$Y=$O,$Z=$P,$W=$R,$Q=$T) : "$X is a nice place, %$Y_inf($O), %$Z_inf($P), %$W_inf($R) and %$Q_inf($T).";
+inform(name=$X,$Y=$O,$Z=$P,$W=$R,$Q=$T,$G=$H) : "$X is a nice place, %$Y_inf($O), %$Z_inf($P), %$W_inf($R), %$Q_inf($T) and %$G_inf($H).";
+inform(name=$X,$Y=$O,$Z=$P,$W=$R,$Q=$T,$G=$H,$B=$D) : "$X is a nice place, %$Y_inf($O), %$Z_inf($P), %$W_inf($R), %$Q_inf($T), %$G_inf($H) and %$B_inf($D).";
+inform(name=$X,$Y=$O,$Z=$P,$W=$R,$Q=$T,$G=$H,$B=$D,$F=$C) : "$X is a nice place, %$Y_inf($O), %$Z_inf($P), %$W_inf($R), %$Q_inf($T), %$G_inf($H) %$B_inf($D) and %$C_inf($F).";
+inform(name=$X,$Y=$O,$Z=$P,$W=$R,$Q=$T,$G=$H,$B=$D,$F=$C,$I=$J) : "$X is a nice place, %$Y_inf($O), %$Z_inf($P), %$W_inf($R), %$Q_inf($T), %$G_inf($H) %$B_inf($D) %$C_inf($F) and %$I_inf($J).";
+
+#Implicit confirmations
+
+confreq(count=$X,$Y=$P,$Q) : "There %count_rest($X) %$Y_str($P). %q($Q) ?";
+
+confreq(count=$X,$Y=$P, $Z=$R,$Q) : "There %count_rest($X) %$Y_str($P) and %$Z_str($R). %q($Q)";
+confreq(count=$X,$Y=$P, $Z=$R, $M=$T,$Q) : "There %count_rest($X) %$Y_str($P) %$Z_str($R) and %$M_str($T). %q($Q)";
+confreq(count=$X,$Y=$P, $Z=$R, $M=$T, $L=$S, $Q) : "There %count_rest($X) %$Y_str($P) %$Z_str($R) %$M_str($T) and %$L_str($S). %q($Q)";
+confreq(count=$X,$Y=$P, $Z=$R, $M=$T, $L=$S, $O=$V, $Q) : "There %count_rest($X) %$Y_str($P) %$Z_str($R) %$M_str($T) %$L_str($S) and %$O_str($V). %q($Q)";
+
+# Selections
+select(food=$X, food=dontcare) : "Sorry would you like $X food or you dont care";
+select(area=$X, area=dontcare) : "Sorry would you like the area of $X or you dont care";
+select(pricerange=$X, pricerange=dontcare) : "Sorry would you like something in the  $X price range or you dont care";
+select(goodformeal=$X,goodformeal=dontcare) : "Sorry would you like it to be good for $X or you don't care";
+select(near=$X,near=dontcare) : "Sorry would you like it to be near $X or you don't care";
+select(allowedforkids=true, allowedforkids=dontcare) : "Sorry would you like it to allow children or you don't care";
+select(allowedforkids=false, allowedforkids=dontcare) : "Sorry would you like it not to allow children or you don't care";
+select(allowedforkids=true,allowedforkids=false) : "Sorry would you like a place where children are allowed or where children are not allowed";
+select(dogsallowed=true, dogsallowed=dontcare) : "Sorry would you like it to allow dogs or you don't care";
+select(dogsallowed=false, dogsallowed=dontcare) : "Sorry would you like it not to allow dogs or you don't care";
+select(dogsallowed=true,dogsallowed=false) : "Sorry would you like a place where dogs are allowed or where dogs are not allowed";
+select(hasinternet=true, hasinternet=dontcare) : "Sorry would you like internet or you don't care";
+select(hasinternet=false, hasinternet=dontcare) : "Sorry would you like it not to have internet or you don't care";
+select(hasinternet=true,hasinternet=false) : "Sorry would you like a place which has internet or which doesn't have internet";
+select(acceptscreditcards=true, acceptscreditcards=dontcare) : "Sorry would you like it to accept credit cards or you don't care";
+select(acceptscreditcards=false, acceptscreditcards=dontcare) : "Sorry would you like it not to accept credit cards or you don't care";
+select(acceptscreditcards=true,acceptscreditcards=false) : "Sorry would you like a place which accepts credit cards or which doesn't accept credit cards";
+
+select(drinks=$X,drinks=$Y) : "Sorry would you like $X or $Y?";
+select(food=$X,food=$Y) : "Sorry would you like $X or $Y food?";
+select(name=$X,name=$Y) : "Sorry which of these two venues would you like $X or $Y?";
+select(type=$X,type=$Y) : "Sorry would you like a $X or a $Y?";
+select(area=$X,area=$Y) : "Sorry would you like something in the area of $X or $Y";
+select(pricerange=$X,pricerange=$Y) : "Sorry would you like something in the $X price range or in the $Y price range";
+select(near=$X,near=$Y) : "Sorry would you like it to be near $X or $Y";
+select(goodformeal=$X,goodformeal=$Y) : "Sorry would you like it to be good for $X or $Y";
+select($X=$Y,$X=dontcare) : "Sorry would you like $Y for $X or you dont care";
+select($X=$Y,$X=$Z) : "Sorry would you like $Y or $Z for $X";
+
+
+# Deny for User
+
+u_deny() : "No!";
+u_deny(addr=$U) : "not on $U.";
+u_deny(type=$U) : "I don't want a $U.";
+u_deny(type=$U,addr=$V) : "I don't want a $U on $V.";
+u_deny(type=$U,area=$V) : "I don't want for a $U in $V.";
+u_deny(type=$U,drinks=$V) : "I don't want a $U that serves $V.";
+u_deny(type=$U,food=$V) : "I don't want a $V $U.";
+u_deny(type=$U,near=$V) : "I don't want a $U close to $V.";
+u_deny(type=$U,music=$V) : "I don't want a $U that plays $V music.";
+u_deny(type=$U,pricerange=$V) : "No, I don't want a $U in the $V price range.";
+u_deny(type=$U,stars=$W) : "No, not a $W star $U.";
+u_deny(type=$U,goodformeal=$V) : "I don't want a $U nice for $V.";
+u_deny(type=$U,allowedforkids=false) : "I don't want a $U that doesn't allow children.";
+u_deny(type=$U,allowedforkids=1) : "I don't want a $U that allowes children.";
+u_deny(type=$U,dogsallowed=false) : "I don't want a $U that doesn't allow dogs.";
+u_deny(type=$U,dogsallowed=1) : "I don't want a $U that allowes dogs.";
+u_deny(type=$U,hasinternet=false) : "I don't want a $U that doesn't have internet.";
+u_deny(type=$U,hasinternet=1) : "I don't want a $U that has internet.";
+u_deny(type=$U,acceptscreditcards=false) : "I don't want a $U that doesn't accepts credit cards.";
+u_deny(type=$U,acceptscreditcards=1) : "I don't want a $U that accepts credit cards.";
+u_deny(type=$U,area=$V,addr=$W) : "No, not a $U on $W in $V.";
+u_deny(type=$U,area=$V,stars=$W) : "No, not a $W star $U in $V.";
+u_deny(type=$U,area=$V,near=$W) : "No, not a $U in $V close to $W.";
+u_deny(type=$U,food=$V,drinks=$W) : "No, I don't want a $U serving $V food and $W.";
+u_deny(type=$U,near=$V,drinks=$W) : "No, I don't want a $U close to $V serving $W.";
+u_deny(type=$U,near=$V,stars=$W) : "No, I don't want a $U close to $V with $W stars.";
+u_deny(type=$U,pricerange=$V,area=$W) : "No, I don't want a $U in the $V price range and in the $W of town.";
+u_deny(type=$U,pricerange=$V,drinks=$W) : "No, I don't want a $U in the $V price range serving $W.";
+u_deny(type=$U,pricerange=$V,food=$W) : "No, I don't want a $U in the $V price range serving $W food.";
+u_deny(type=$U,pricerange=$V,near=$W) : "No, I don't want a $U in the $V price range close to $W.";
+u_deny(type=$U,pricerange=$V,stars=$W) : "No, I don't want a $U in the $V price range with $W stars.";
+u_deny(addr=$V) : "I don't want a venue on $V.";
+u_deny(area=$V) : "I don't want a venue in $V.";
+u_deny(drinks=$V) : "I don't want a venue that serves $V.";
+u_deny(food=$V) : "I don't want a $V venue.";
+u_deny(near=$V) : "I don't want a venue close to $V.";
+u_deny(music=$V) : "I don't want a venue that plays $V music.";
+u_deny(pricerange=$V) : "No, I don't want a venue in the $V price range.";
+u_deny(stars=$W) : "No, not a $W star venue.";
+u_deny(allowedforkids=1)  :   "No, I am not looking for a venue that allows children.";
+u_deny(allowedforkids=false) : "No, I am not looking for a venue that doesn't allow children.";
+u_deny(goodforgroups=1)  :   "No, I am not looking for a venue that's nice for groups.";
+u_deny(goodforgroups=false) : "No, I am not looking for a venue that isn't nice for groups.";
+u_deny(goodformeal=$V) : "I don't want a place nice for $V";
+u_deny(dogsallowed=1)  :   "No, I am not looking for a venue that allows dogs.";
+u_deny(dogsallowed=false) : "No, I am not looking for a venue that doesn't allow dogs.";
+u_deny(hasinternet=1)  :   "No, I am not looking for a venue that has internet.";
+u_deny(hasinternet=false) : "No, I am not looking for a venue that doesn't have internet.";
+u_deny(acceptscreditcards=1)  :   "No, I am not looking for a venue that accepts credit cards.";
+u_deny(acceptscreditcards=false) : "No, I am not looking for a venue that doesn't accept credit cards.";
+u_deny(area=$V,addr=$W) : "No, not a venue on $W in $V.";
+u_deny(area=$V,stars=$W) : "No, not a $W star venue in $V.";
+u_deny(area=$V,near=$W) : "No, not a venue in $V close to $W.";
+u_deny(food=$V,drinks=$W) : "No, I don't want a venue serving $V food and $W.";
+u_deny(near=$V,drinks=$W) : "No, I don't want a venue close to $V serving $W.";
+u_deny(near=$V,stars=$W) : "No, I don't want a venue close to $V with $W stars.";
+u_deny(pricerange=$V,area=$W) : "No, I don't want a venue in the $V price range and in the $W of town.";
+u_deny(pricerange=$V,drinks=$W) : "No, I don't want a venue in the $V price range serving $W.";
+u_deny(pricerange=$V,food=$W) : "No, I don't want a venue in the $V price range serving $W food.";
+u_deny(pricerange=$V,near=$W) : "No, I don't want a venue in the $V price range close to $W.";
+u_deny(pricerange=$V,stars=$W) : "No, I don't want a venue in the $V price range with $W stars.";
+u_deny(addr=$V, addr=$W) : "I don't want a venue on $V and $W.";
+u_deny(area=$V, area=$W) : "I don't want a venue in $V and $W.";
+u_deny(drinks=$V, drinks=$W) : "I don't want a venue that serves $V and $W.";
+u_deny(food=$V, food=$W) : "I don't want a $V and $W venue.";
+u_deny(near=$V, near=$W) : "I don't want a venue close to $V and $W.";
+u_deny(music=$V, music=$W) : "I don't want a venue that plays $V and $W music.";
+u_deny(pricerange=$V, pricerange=$W) : "No, I don't want a venue in the $V and $W price range.";
+u_deny(stars=$V, stars=$W) : "No, not a $V with $W star venue.";
+u_deny(goodformeal=$V, goodformeal=$W) : "I don't want a place nice for $V and $W.";
+
+
+
+# Inform for User
+
+u_inform(dontcare=$K) : "It doesn't matter.";
+u_inform(addr=$U) : "I prefer a venue on $U.";
+u_inform(type=$U) : "I need another $U.";
+u_inform(type=$U,addr=dontcare) : "I want a $U and I dont care about the address.";
+u_inform(type=$U,addr=$V) : "I need a $U on $V.";
+u_inform(type=$U,area=dontcare) : "I want a $U in any part of town.";
+u_inform(type=$U,area=$V) : "I need a $U in $V.";
+u_inform(type=$U,drinks=dontcare) : "I need a $U serving any kind of drinks.";
+u_inform(type=$U,drinks=$V) : "I need a $U that serves $V.";
+u_inform(type=$U,food=dontcare) : "I need a $U serving any kind of food.";
+u_inform(type=$U,food=$V) : "I need a $V $U.";
+u_inform(type=$U,near=dontcare) : "I want a $U and it does not need to be close to a specific location.";
+u_inform(type=$U,near=$V) : "I need a $U close to $V.";
+u_inform(type=$U,music=dontcare) : "I need a $U playing any kind of music.";
+u_inform(type=$U,music=$V) : "I need a $U that plays $V music.";
+u_inform(type=$U,pricerange=dontcare) : "I want a $U and Any price range is okay.";
+u_inform(type=$U,pricerange=$V) : "I want a $U in the $V price range.";
+u_inform(type=$U,stars=dontcare) : "A $U with any number of stars.";
+u_inform(type=$U,stars=$W) : "A $W star $U.";
+u_inform(type=$U,goodformeal=dontcare) : "I want a $U nice for any meal.";
+u_inform(type=$U,goodformeal=$V) : "I need a $U nice for $V.";
+u_inform(type=$U,allowedforkids=dontcare) : "I want a $U and It doesn't matter if it allows children.";
+u_inform(type=$U,allowedforkids=false) : "I need a $U that doesn't allow children.";
+u_inform(type=$U,allowedforkids=1) : "I need a $U that allowes children.";
+u_inform(type=$U,dogsallowed=dontcare) : "I want a $U and It doesn't matter if it allows dogs.";
+u_inform(type=$U,dogsallowed=false) : "I need a $U that doesn't allow dogs.";
+u_inform(type=$U,dogsallowed=1) : "I need a $U that allowes dogs.";
+u_inform(type=$U,hasinternet=dontcare) : "I want a $U and It doesn't matter if it has internet.";
+u_inform(type=$U,hasinternet=false) : "I need a $U that doesn't have internet.";
+u_inform(type=$U,hasinternet=1) : "I need a $U that has internet.";
+u_inform(type=$U,acceptscreditcards=dontcare) : "I want a $U and It doesn't matter if it accepts credit cards.";
+u_inform(type=$U,acceptscreditcards=false) : "I need a $U that doesn't accepts credit cards.";
+u_inform(type=$U,acceptscreditcards=1) : "I need a $U that accepts credit cards.";
+u_inform(type=$U,area=$V,addr=$W) : "A $U on $W in $V.";
+u_inform(type=$U,area=dontcare,stars=dontcare) : "A $U with any number of stars anywhere in town.";
+u_inform(type=$U,area=dontcare,stars=$W) : "A $W star $U anywhere in town.";
+u_inform(type=$U,area=$V,stars=dontcare) : "A $U with any number of stars in $V.";
+u_inform(type=$U,area=$V,stars=$W) : "A $W star $U in $V.";
+u_inform(type=$U,area=dontcare,near=dontcare) : "I want a $U anywhere in town.";
+u_inform(type=$U,area=dontcare,near=$W) : "A $U anywhere in town as long as it is close to $W.";
+u_inform(type=$U,area=$V,near=dontcare) : "A $U in $V, close to anything.";
+u_inform(type=$U,area=$V,near=$W) : "A $U in $V close to $W.";
+u_inform(type=$U,food=dontcare,drinks=dontcare) : "I want a $U serving any kind of food and drinks.";
+u_inform(type=$U,food=dontcare,drinks=$W) : "I want a $U serving $W and any kind of food.";
+u_inform(type=$U,food=$W,drinks=dontcare) : "I want a $U serving $W food and any kind of drinks.";
+u_inform(type=$U,food=$V,drinks=$W) : "I want a $U serving $V food and $W.";
+u_inform(type=$U,near=dontcare,drinks=dontcare) : "I want a $U serving any kind of drinks.";
+u_inform(type=$U,near=dontcare,drinks=$W) : "I want a $U serving $W.";
+u_inform(type=$U,near=$W,drinks=dontcare) : "I want a $U close to $W serving any kind of drinks.";
+u_inform(type=$U,near=$V,drinks=$W) : "I want a $U close to $V serving $W.";
+u_inform(type=$U,near=dontcare,stars=dontcare) : "I want a $U with any number of stars.";
+u_inform(type=$U,near=dontcare,stars=$W) : "I want a $U with $W stars.";
+u_inform(type=$U,near=$W,stars=dontcare) : "I want a $U close to $W with any number of stars.";
+u_inform(type=$U,near=$V,stars=$W) : "I want a $U close to $V with $W stars.";
+u_inform(type=$U,pricerange=dontcare,area=dontcare) : "I want a $U in any price range and in any part of town.";
+u_inform(type=$U,pricerange=dontcare,area=$W) : "I want a $U in any price range in the $W of town.";
+u_inform(type=$U,pricerange=$W,area=dontcare) : "I want a $U in the $W price range and I dont care about the part of town.";
+u_inform(type=$U,pricerange=$V,area=$W) : "I want a $U in the $V price range and in the $W of town.";
+u_inform(type=$U,pricerange=dontcare,drinks=dontcare) : "I want a $U in any price range and I dont care about the type of drinks.";
+u_inform(type=$U,pricerange=dontcare,drinks=$W) : "I want a $U serving $W and Any price range is okay.";
+u_inform(type=$U,pricerange=$W,drinks=dontcare) : "I want a $U in the $W price range and I dont care about the type of drinks.";
+u_inform(type=$U,pricerange=$V,drinks=$W) : "I want a $U in the $V price range serving $W.";
+u_inform(type=$U,pricerange=dontcare,food=dontcare) : "I want a $U serving any kind of food and Any price range is okay.";
+u_inform(type=$U,pricerange=dontcare,food=$W) : "I want a $U serving $W food and Any price range is okay.";
+u_inform(type=$U,pricerange=$V,food=dontcare) : "I want a $U in the $V price range serving any kind of food.";
+u_inform(type=$U,pricerange=$V,food=$W) : "I want a $U in the $V price range serving $W food.";
+u_inform(type=$U,pricerange=dontcare,near=$W) : "I want a $U in any price range close to $W.";
+u_inform(type=$U,pricerange=$V,near=$W) : "I want a $U in the $V price range close to $W.";
+u_inform(type=$U,pricerange=dontcare,stars=dontcare) : "I want a $U in any price range and I dont care about the number of stars.";
+u_inform(type=$U,pricerange=dontcare,stars=$W) : "I want a $U with $W stars and Any price range is okay.";
+u_inform(type=$U,pricerange=$W,stars=dontcare) : "I want a $U in the $W price range and I dont care about the number of stars.";
+u_inform(type=$U,pricerange=$V,stars=$W) : "I want a $U in the $V price range with $W stars.";
+u_inform(addr=dontcare) : "I want a venue and I dont care about the address.";
+u_inform(addr=$V) : "I prefer a venue on $V.";
+u_inform(area=dontcare) : "I want a venue in any part of town.";
+u_inform(area=$V) : "I prefer a venue in $V.";
+u_inform(drinks=dontcare) : "I can go with any kind of drinks.";
+u_inform(drinks=$V) : "I prefer a venue that serves $V.";
+u_inform(food=dontcare) : "I can go with any kind of food.";
+u_inform(food=$V) : "I need a $V venue.";
+u_inform(near=dontcare) : "I want a venue and it does not need to be close to a specific location.";
+u_inform(near=$V) : "I prefer a venue close to $V.";
+u_inform(music=dontcare) : "I prefer a venue playing any kind of music.";
+u_inform(music=$V) : "I prefer a venue that plays $V music.";
+u_inform(pricerange=dontcare) : "Any price range is okay.";
+u_inform(pricerange=$V) : "I want a venue in the $V price range.";
+u_inform(stars=dontcare) : "A venue with any number of stars.";
+u_inform(stars=$W) : "A $W star venue.";
+u_inform(allowedforkids=dontcare) : "It doesn't matter if it allows children";
+u_inform(allowedforkids=1)  :   "I want a venue that allows children.";
+u_inform(allowedforkids=false) : "I want a venue that doesn't allow children.";
+u_inform(goodforgroups=dontcare) : "It doesn't matter if it's nice for groups";
+u_inform(goodforgroups=1)  :   "I want a venue that's nice for groups.";
+u_inform(goodforgroups=false) : "I want a venue that isn't nice for groups.";
+u_inform(goodformeal=dontcare) : "I don't care about meal";
+u_inform(goodformeal=$V) : "I are looking for a place nice for $V";
+u_inform(dogsallowed=dontcare) : "It doesn't matter if it allows dogs";
+u_inform(dogsallowed=1)  :   "I want a venue that allows dogs.";
+u_inform(dogsallowed=false) : "I want a venue that doesn't allow dogs.";
+u_inform(hasinternet=dontcare) : "It doesn't matter if it has internet";
+u_inform(hasinternet=1)  :   "I want a venue that has internet.";
+u_inform(hasinternet=false) : "I want a venue that doesn't have internet.";
+u_inform(acceptscreditcards=dontcare) : "It doesn't matter if it accepts credit cards";
+u_inform(acceptscreditcards=1)  :   "I want a venue that accepts credit cards.";
+u_inform(acceptscreditcards=false) : "I want a venue that doesn't accept credit cards.";
+u_inform(area=$V,addr=$W) : "A venue on $W in $V.";
+u_inform(area=dontcare,stars=dontcare) : "A venue with any number of stars anywhere in town.";
+u_inform(area=dontcare,stars=$W) : "A $W star venue anywhere in town.";
+u_inform(area=$V,stars=dontcare) : "A place with any number of stars in $V.";
+u_inform(area=$V,stars=$W) : "A $W star venue in $V.";
+u_inform(area=dontcare,near=dontcare) : "I want a venue anywhere in town.";
+u_inform(area=dontcare,near=$W) : "A venue anywhere in town as long as it is close to $W.";
+u_inform(area=$V,near=dontcare) : "A place in $V close to anywhere.";
+u_inform(area=$V,near=$W) : "A venue in $V close to $W.";
+u_inform(food=dontcare,drinks=dontcare) : "I want a venue serving any kind of food and drinks.";
+u_inform(food=dontcare,drinks=$W) : "I want a venue serving $W and any kind of food.";
+u_inform(food=$W,drinks=dontcare) : "I want a venue serving $W food and any kind of drinks.";
+u_inform(food=$V,drinks=$W) : "I want a venue serving $V food and $W.";
+u_inform(near=dontcare,drinks=dontcare) : "I want a venue serving any kind of drinks.";
+u_inform(near=dontcare,drinks=$W) : "I want a venue serving $W.";
+u_inform(near=$W,drinks=dontcare) : "I want a venue close to $W serving any kind of drinks.";
+u_inform(near=$V,drinks=$W) : "I want a venue close to $V serving $W.";
+u_inform(near=dontcare,stars=dontcare) : "I want a venue with any number of stars.";
+u_inform(near=dontcare,stars=$W) : "I want a venue with $W stars.";
+u_inform(near=$W,stars=dontcare) : "I want a venue close to $W with any number of stars.";
+u_inform(near=$V,stars=$W) : "I want a venue close to $V with $W stars.";
+u_inform(pricerange=dontcare,area=dontcare) : "I want a venue in any price range and in any part of town.";
+u_inform(pricerange=dontcare,area=$W) : "I want a venue in any price range in the $W of town.";
+u_inform(pricerange=$W,area=dontcare) : "I want a venue in the $W price range and I dont care about the part of town.";
+u_inform(pricerange=$V,area=$W) : "I want a venue in the $V price range and in the $W of town.";
+u_inform(pricerange=dontcare,drinks=dontcare) : "I want a venue in any price range and I dont care about the type of drinks.";
+u_inform(pricerange=dontcare,drinks=$W) : "I want a venue serving $W and Any price range is okay.";
+u_inform(pricerange=$W,drinks=dontcare) : "I want a venue in the $W price range and I dont care about the type of drinks.";
+u_inform(pricerange=$V,drinks=$W) : "I want a venue in the $V price range serving $W.";
+u_inform(pricerange=dontcare,food=dontcare) : "I want a venue serving any kind of food and Any price range is okay.";
+u_inform(pricerange=dontcare,food=$W) : "I want a venue serving $W food and Any price range is okay.";
+u_inform(pricerange=$V,food=dontcare) : "I want a venue in the $V price range serving any kind of food.";
+u_inform(pricerange=$V,food=$W) : "I want a venue in the $V price range serving $W food.";
+u_inform(pricerange=dontcare,near=$W) : "I want a venue in any price range close to $W.";
+u_inform(pricerange=$V,near=$W) : "I want a venue in the $V price range close to $W.";
+u_inform(pricerange=dontcare,stars=dontcare) : "I want a venue in any price range and I dont care about the number of stars.";
+u_inform(pricerange=dontcare,stars=$W) : "I want a venue with $W stars and Any price range is okay.";
+u_inform(pricerange=$W,stars=dontcare) : "I want a venue in the $W price range and I dont care about the number of stars.";
+u_inform(pricerange=$V,stars=$W) : "I want a venue in the $V price range with $W stars.";
+u_inform(dontcare=$K,addr=$U) : "It doesn't matter. I prefer a venue on $U.";
+u_inform(dontcare=$K,type=$U) : "It doesn't matter.";
+u_inform(dontcare=$K,type=$U,addr=dontcare) : "It doesn't matter. I want a $U and I dont care about the address.";
+u_inform(dontcare=$K,type=$U,addr=$V) : "It doesn't matter. I need a $U on $V.";
+u_inform(dontcare=$K,type=$U,area=dontcare) : "It doesn't matter. I want a $U in any part of town.";
+u_inform(dontcare=$K,type=$U,area=$V) : "It doesn't matter. I need a $U in $V.";
+u_inform(dontcare=$K,type=$U,drinks=dontcare) : "It doesn't matter. I need a $U serving any kind of drinks.";
+u_inform(dontcare=$K,type=$U,drinks=$V) : "It doesn't matter. I need a $U that serves $V.";
+u_inform(dontcare=$K,type=$U,food=dontcare) : "It doesn't matter. I need a $U serving any kind of food.";
+u_inform(dontcare=$K,type=$U,food=$V) : "It doesn't matter. I need a $V $U.";
+u_inform(dontcare=$K,type=$U,near=dontcare) : "It doesn't matter. I want a $U and it does not need to be close to a specific location.";
+u_inform(dontcare=$K,type=$U,near=$V) : "It doesn't matter. I need a $U close to $V.";
+u_inform(dontcare=$K,type=$U,music=dontcare) : "It doesn't matter. I need a $U playing any kind of music.";
+u_inform(dontcare=$K,type=$U,music=$V) : "It doesn't matter. I need a $U that plays $V music.";
+u_inform(dontcare=$K,type=$U,pricerange=dontcare) : "It doesn't matter. I want a $U and Any price range is okay.";
+u_inform(dontcare=$K,type=$U,pricerange=$V) : "It doesn't matter. I want a $U in the $V price range.";
+u_inform(dontcare=$K,type=$U,stars=dontcare) : "It doesn't matter. A $U with any number of stars.";
+u_inform(dontcare=$K,type=$U,stars=$W) : "It doesn't matter. A $W star $U.";
+u_inform(dontcare=$K,type=$U,goodformeal=dontcare) : "It doesn't matter. I want a $U nice for any meal.";
+u_inform(dontcare=$K,type=$U,goodformeal=$V) : "It doesn't matter. I need a $U nice for $V.";
+u_inform(dontcare=$K,type=$U,allowedforkids=dontcare) : "It doesn't matter. I want a $U and It doesn't matter if it allows children.";
+u_inform(dontcare=$K,type=$U,allowedforkids=false) : "It doesn't matter. I need a $U that doesn't allow children.";
+u_inform(dontcare=$K,type=$U,allowedforkids=1) : "It doesn't matter. I need a $U that allowes children.";
+u_inform(dontcare=$K,type=$U,dogsallowed=dontcare) : "It doesn't matter. I want a $U and It doesn't matter if it allows dogs.";
+u_inform(dontcare=$K,type=$U,dogsallowed=false) : "It doesn't matter. I need a $U that doesn't allow dogs.";
+u_inform(dontcare=$K,type=$U,dogsallowed=1) : "It doesn't matter. I need a $U that allowes dogs.";
+u_inform(dontcare=$K,type=$U,hasinternet=dontcare) : "It doesn't matter. I want a $U and It doesn't matter if it has internet.";
+u_inform(dontcare=$K,type=$U,hasinternet=false) : "It doesn't matter. I need a $U that doesn't have internet.";
+u_inform(dontcare=$K,type=$U,hasinternet=1) : "It doesn't matter. I need a $U that has internet.";
+u_inform(dontcare=$K,type=$U,acceptscreditcards=dontcare) : "It doesn't matter. I want a $U and It doesn't matter if it accepts credit cards.";
+u_inform(dontcare=$K,type=$U,acceptscreditcards=false) : "It doesn't matter. I need a $U that doesn't accepts credit cards.";
+u_inform(dontcare=$K,type=$U,acceptscreditcards=1) : "It doesn't matter. I need a $U that accepts credit cards.";
+u_inform(dontcare=$K,type=$U,area=$V,addr=$W) : "It doesn't matter. A $U on $W in $V.";
+u_inform(dontcare=$K,type=$U,area=dontcare,stars=dontcare) : "It doesn't matter. A $U with any number of stars anywhere in town.";
+u_inform(dontcare=$K,type=$U,area=dontcare,stars=$W) : "It doesn't matter. A $W star $U anywhere in town.";
+u_inform(dontcare=$K,type=$U,area=$V,stars=dontcare) : "It doesn't matter. A $U with any number of stars in $V.";
+u_inform(dontcare=$K,type=$U,area=$V,stars=$W) : "It doesn't matter. A $W star $U in $V.";
+u_inform(dontcare=$K,type=$U,area=dontcare,near=dontcare) : "It doesn't matter. I want a $U anywhere in town.";
+u_inform(dontcare=$K,type=$U,area=dontcare,near=$W) : "It doesn't matter. A $U anywhere in town as long as it is close to $W.";
+u_inform(dontcare=$K,type=$U,area=$V,near=dontcare) : "It doesn't matter. A $U in $V, close to anything.";
+u_inform(dontcare=$K,type=$U,area=$V,near=$W) : "It doesn't matter. A $U in $V close to $W.";
+u_inform(dontcare=$K,type=$U,food=dontcare,drinks=dontcare) : "It doesn't matter. I want a $U serving any kind of food and drinks.";
+u_inform(dontcare=$K,type=$U,food=dontcare,drinks=$W) : "It doesn't matter. I want a $U serving $W and any kind of food.";
+u_inform(dontcare=$K,type=$U,food=$W,drinks=dontcare) : "It doesn't matter. I want a $U serving $W food and any kind of drinks.";
+u_inform(dontcare=$K,type=$U,food=$V,drinks=$W) : "It doesn't matter. I want a $U serving $V food and $W.";
+u_inform(dontcare=$K,type=$U,near=dontcare,drinks=dontcare) : "Everything is fine. I want a $U serving any kind of drinks.";
+u_inform(dontcare=$K,type=$U,near=dontcare,drinks=$W) : "Everything is fine. I want a $U serving $W.";
+u_inform(dontcare=$K,type=$U,near=$W,drinks=dontcare) : "Everything is fine. I want a $U close to $W serving any kind of drinks.";
+u_inform(dontcare=$K,type=$U,near=$V,drinks=$W) : "Everything is fine. I want a $U close to $V serving $W.";
+u_inform(dontcare=$K,type=$U,near=dontcare,stars=dontcare) : "Everything is fine. I want a $U with any number of stars.";
+u_inform(dontcare=$K,type=$U,near=dontcare,stars=$W) : "Everything is fine. I want a $U with $W stars.";
+u_inform(dontcare=$K,type=$U,near=$W,stars=dontcare) : "Everything is fine. I want a $U close to $W with any number of stars.";
+u_inform(dontcare=$K,type=$U,near=$V,stars=$W) : "Everything is fine. I want a $U close to $V with $W stars.";
+u_inform(dontcare=$K,type=$U,pricerange=dontcare,area=dontcare) : "Everything is fine. I want a $U in any price range and in any part of town.";
+u_inform(dontcare=$K,type=$U,pricerange=dontcare,area=$W) : "Everything is fine. I want a $U in any price range in the $W of town.";
+u_inform(dontcare=$K,type=$U,pricerange=$W,area=dontcare) : "Everything is fine. I want a $U in the $W price range and I dont care about the part of town.";
+u_inform(dontcare=$K,type=$U,pricerange=$V,area=$W) : "Everything is fine. I want a $U in the $V price range and in the $W of town.";
+u_inform(dontcare=$K,type=$U,pricerange=dontcare,drinks=dontcare) : "Everything is fine. I want a $U in any price range and I dont care about the type of drinks.";
+u_inform(dontcare=$K,type=$U,pricerange=dontcare,drinks=$W) : "Everything is fine. I want a $U serving $W and Any price range is okay.";
+u_inform(dontcare=$K,type=$U,pricerange=$W,drinks=dontcare) : "Everything is fine. I want a $U in the $W price range and I dont care about the type of drinks.";
+u_inform(dontcare=$K,type=$U,pricerange=$V,drinks=$W) : "Everything is fine. I want a $U in the $V price range serving $W.";
+u_inform(dontcare=$K,type=$U,pricerange=dontcare,food=dontcare) : "Everything is fine. I want a $U serving any kind of food and Any price range is okay.";
+u_inform(dontcare=$K,type=$U,pricerange=dontcare,food=$W) : "Everything is fine. I want a $U serving $W food and Any price range is okay.";
+u_inform(dontcare=$K,type=$U,pricerange=$V,food=dontcare) : "Everything is fine. I want a $U in the $V price range serving any kind of food.";
+u_inform(dontcare=$K,type=$U,pricerange=$V,food=$W) : "Everything is fine. I want a $U in the $V price range serving $W food.";
+u_inform(dontcare=$K,type=$U,pricerange=dontcare,near=$W) : "Everything is fine. I want a $U in any price range close to $W.";
+u_inform(dontcare=$K,type=$U,pricerange=$V,near=$W) : "Everything is fine. I want a $U in the $V price range close to $W.";
+u_inform(dontcare=$K,type=$U,pricerange=dontcare,stars=dontcare) : "Everything is fine. I want a $U in any price range and I dont care about the number of stars.";
+u_inform(dontcare=$K,type=$U,pricerange=dontcare,stars=$W) : "Everything is fine. I want a $U with $W stars and Any price range is okay.";
+u_inform(dontcare=$K,type=$U,pricerange=$W,stars=dontcare) : "Everything is fine. I want a $U in the $W price range and I dont care about the number of stars.";
+u_inform(dontcare=$K,type=$U,pricerange=$V,stars=$W) : "Everything is fine. I want a $U in the $V price range with $W stars.";
+u_inform(dontcare=$K,addr=dontcare) : "Everything is fine. I want a venue and I dont care about the address.";
+u_inform(dontcare=$K,addr=$V) : "Everything is fine. I prefer a venue on $V.";
+u_inform(dontcare=$K,area=dontcare) : "Everything is fine. I want a venue in any part of town.";
+u_inform(dontcare=$K,area=$V) : "Everything is fine. I prefer a venue in $V.";
+u_inform(dontcare=$K,drinks=dontcare) : "Everything is fine. I can go with any kind of drinks.";
+u_inform(dontcare=$K,drinks=$V) : "Everything is fine. I prefer a venue that serves $V.";
+u_inform(dontcare=$K,food=dontcare) : "Everything is fine. I can go with any kind of food.";
+u_inform(dontcare=$K,food=$V) : "Everything is fine. I need a $V venue.";
+u_inform(dontcare=$K,near=dontcare) : "Everything is fine. I want a venue and it does not need to be close to a specific location.";
+u_inform(dontcare=$K,near=$V) : "Everything is fine. I prefer a venue close to $V.";
+u_inform(dontcare=$K,music=dontcare) : "Everything is fine. I prefer a venue playing any kind of music.";
+u_inform(dontcare=$K,music=$V) : "Everything is fine. I prefer a venue that plays $V music.";
+u_inform(dontcare=$K,pricerange=dontcare) : "Everything is fine. Any price range is okay.";
+u_inform(dontcare=$K,pricerange=$V) : "Everything is fine. I want a venue in the $V price range.";
+u_inform(dontcare=$K,stars=dontcare) : "Everything is fine. A venue with any number of stars.";
+u_inform(dontcare=$K,stars=$W) : "I am ok with everything. A $W star venue.";
+u_inform(dontcare=$K,allowedforkids=dontcare) : "I am ok with everything. It doesn't matter if it allows children";
+u_inform(dontcare=$K,allowedforkids=1)  :   "I want a venue that allows children.";
+u_inform(dontcare=$K,allowedforkids=false) : "I am ok with everything. I want a venue that doesn't allow children.";
+u_inform(dontcare=$K,goodforgroups=dontcare) : "I am ok with everything. It doesn't matter if it's nice for groups";
+u_inform(dontcare=$K,goodforgroups=1)  :   "I want a venue that's nice for groups.";
+u_inform(dontcare=$K,goodforgroups=false) : "I am ok with everything. I want a venue that isn't nice for groups.";
+u_inform(dontcare=$K,goodformeal=dontcare) : "I am ok with everything. I don't care about meal";
+u_inform(dontcare=$K,goodformeal=$V) : "I am ok with everything. I are looking for a place nice for $V";
+u_inform(dontcare=$K,dogsallowed=dontcare) : "I am ok with everything. It doesn't matter if it allows dogs";
+u_inform(dontcare=$K,dogsallowed=1)  :   "I want a venue that allows dogs.";
+u_inform(dontcare=$K,dogsallowed=false) : "I am ok with everything. I want a venue that doesn't allow dogs.";
+u_inform(dontcare=$K,hasinternet=dontcare) : "I am ok with everything. It doesn't matter if it has internet";
+u_inform(dontcare=$K,hasinternet=1)  :   "I want a venue that has internet.";
+u_inform(dontcare=$K,hasinternet=false) : "I am ok with everything. I want a venue that doesn't have internet.";
+u_inform(dontcare=$K,acceptscreditcards=dontcare) : "I am ok with everything. It doesn't matter if it accepts credit cards";
+u_inform(dontcare=$K,acceptscreditcards=1)  :   "I want a venue that accepts credit cards.";
+u_inform(dontcare=$K,acceptscreditcards=false) : "I am ok with everything. I want a venue that doesn't accept credit cards.";
+u_inform(dontcare=$K,area=$V,addr=$W) : "I am ok with everything. A venue on $W in $V.";
+u_inform(dontcare=$K,area=dontcare,stars=dontcare) : "I am ok with everything. A venue with any number of stars anywhere in town.";
+u_inform(dontcare=$K,area=dontcare,stars=$W) : "I am ok with everything. A $W star venue anywhere in town.";
+u_inform(dontcare=$K,area=$V,stars=dontcare) : "I am ok with everything. A place with any number of stars in $V.";
+u_inform(dontcare=$K,area=$V,stars=$W) : "I am ok with everything. A $W star venue in $V.";
+u_inform(dontcare=$K,area=dontcare,near=dontcare) : "I am ok with everything. I want a venue anywhere in town.";
+u_inform(dontcare=$K,area=dontcare,near=$W) : "I am ok with everything. A venue anywhere in town as long as it is close to $W.";
+u_inform(dontcare=$K,area=$V,near=dontcare) : "I am ok with everything. A place in $V close to anywhere.";
+u_inform(dontcare=$K,area=$V,near=$W) : "I am ok with everything. A venue in $V close to $W.";
+u_inform(dontcare=$K,food=dontcare,drinks=dontcare) : "I am ok with everything. I want a venue serving any kind of food and drinks.";
+u_inform(dontcare=$K,food=dontcare,drinks=$W) : "I am ok with everything. I want a venue serving $W and any kind of food.";
+u_inform(dontcare=$K,food=$W,drinks=dontcare) : "I am ok with everything. I want a venue serving $W food and any kind of drinks.";
+u_inform(dontcare=$K,food=$V,drinks=$W) : "I am ok with everything. I want a venue serving $V food and $W.";
+u_inform(dontcare=$K,near=dontcare,drinks=dontcare) : "I am ok with everything. I want a venue serving any kind of drinks.";
+u_inform(dontcare=$K,near=dontcare,drinks=$W) : "I am ok with everything. I want a venue serving $W.";
+u_inform(dontcare=$K,near=$W,drinks=dontcare) : "I am ok with everything. I want a venue close to $W serving any kind of drinks.";
+u_inform(dontcare=$K,near=$V,drinks=$W) : "I am ok with everything. I want a venue close to $V serving $W.";
+u_inform(dontcare=$K,near=dontcare,stars=dontcare) : "I am ok with everything. I want a venue with any number of stars.";
+u_inform(dontcare=$K,near=dontcare,stars=$W) : "I am ok with everything. I want a venue with $W stars.";
+u_inform(dontcare=$K,near=$W,stars=dontcare) : "I am ok with everything. I want a venue close to $W with any number of stars.";
+u_inform(dontcare=$K,near=$V,stars=$W) : "I am ok with everything. I want a venue close to $V with $W stars.";
+u_inform(dontcare=$K,pricerange=dontcare,area=dontcare) : "I am ok with everything. I want a venue in any price range and in any part of town.";
+u_inform(dontcare=$K,pricerange=dontcare,area=$W) : "I am ok with everything. I want a venue in any price range in the $W of town.";
+u_inform(dontcare=$K,pricerange=$W,area=dontcare) : "I am ok with everything. I want a venue in the $W price range and I dont care about the part of town.";
+u_inform(dontcare=$K,pricerange=$V,area=$W) : "I am ok with everything. I want a venue in the $V price range and in the $W of town.";
+u_inform(dontcare=$K,pricerange=dontcare,drinks=dontcare) : "I am ok with everything. I want a venue in any price range and I dont care about the type of drinks.";
+u_inform(dontcare=$K,pricerange=dontcare,drinks=$W) : "I am ok with everything. I want a venue serving $W and Any price range is okay.";
+u_inform(dontcare=$K,pricerange=$W,drinks=dontcare) : "I am ok with everything. I want a venue in the $W price range and I dont care about the type of drinks.";
+u_inform(dontcare=$K,pricerange=$V,drinks=$W) : "I am ok with everything. I want a venue in the $V price range serving $W.";
+u_inform(dontcare=$K,pricerange=dontcare,food=dontcare) : "I am ok with everything. I want a venue serving any kind of food and Any price range is okay.";
+u_inform(dontcare=$K,pricerange=dontcare,food=$W) : "I am ok with everything. I want a venue serving $W food and Any price range is okay.";
+u_inform(dontcare=$K,pricerange=$V,food=dontcare) : "I am ok with everything. I want a venue in the $V price range serving any kind of food.";
+u_inform(dontcare=$K,pricerange=$V,food=$W) : "I am ok with everything. I want a venue in the $V price range serving $W food.";
+u_inform(dontcare=$K,pricerange=dontcare,near=$W) : "I am ok with everything. I want a venue in any price range close to $W.";
+u_inform(dontcare=$K,pricerange=$V,near=$W) : "I am ok with everything. I want a venue in the $V price range close to $W.";
+u_inform(dontcare=$K,pricerange=dontcare,stars=dontcare) : "I am ok with everything. I want a venue in any price range and I dont care about the number of stars.";
+u_inform(dontcare=$K,pricerange=dontcare,stars=$W) : "I am ok with everything. I want a venue with $W stars and Any price range is okay.";
+u_inform(dontcare=$K,pricerange=$W,stars=dontcare) : "I am ok with everything. I want a venue in the $W price range and I dont care about the number of stars.";
+u_inform(dontcare=$K,pricerange=$V,stars=$W) : "I am ok with everything. I want a venue in the $V price range with $W stars.";
+
+
+
+# negate for User
+
+u_negate() : "No, that's all.";
+u_negate(addr=$U) : "not a venue on $U.";
+u_negate(type=$U) : "I don't want a $U.";
+u_negate(type=$U,addr=$V) : "I don't want a $U on $V.";
+u_negate(type=$U,area=$V) : "I don't want a $U in $V.";
+u_negate(type=$U,drinks=$V) : "I don't want a $U that serves $V.";
+u_negate(type=$U,food=$V) : "I don't want a $V $U.";
+u_negate(type=$U,near=$V) : "I don't want a $U close to $V.";
+u_negate(type=$U,music=$V) : "I don't want a $U that plays $V music.";
+u_negate(type=$U,pricerange=$V) : "No, I don't want a $U in the $V price range.";
+u_negate(type=$U,stars=$W) : "No, not a $W star $U.";
+u_negate(type=$U,goodformeal=$V) : "I don't want a $U nice for $V.";
+u_negate(type=$U,allowedforkids=false) : "I don't want a $U that doesn't allow children.";
+u_negate(type=$U,allowedforkids=1) : "I don't want a $U that allowes children.";
+u_negate(type=$U,dogsallowed=false) : "I don't want a $U that doesn't allow dogs.";
+u_negate(type=$U,dogsallowed=1) : "I don't want a $U that allowes dogs.";
+u_negate(type=$U,hasinternet=false) : "I don't want a $U that doesn't have internet.";
+u_negate(type=$U,hasinternet=1) : "I don't want a $U that has internet.";
+u_negate(type=$U,acceptscreditcards=false) : "I don't want a $U that doesn't accepts credit cards.";
+u_negate(type=$U,acceptscreditcards=1) : "I don't want a $U that accepts credit cards.";
+u_negate(type=$U,area=$V,addr=$W) : "No, not a $U on $W in $V.";
+u_negate(type=$U,area=$V,stars=$W) : "No, not a $W star $U in $V.";
+u_negate(type=$U,area=$V,near=$W) : "No, not a $U in $V close to $W.";
+u_negate(type=$U,food=$V,drinks=$W) : "No, I don't want a $U serving $V food and $W.";
+u_negate(type=$U,near=$V,drinks=$W) : "No, I don't want a $U close to $V serving $W.";
+u_negate(type=$U,near=$V,stars=$W) : "No, I don't want a $U close to $V with $W stars.";
+u_negate(type=$U,pricerange=$V,area=$W) : "No, I don't want a $U in the $V price range and in the $W of town.";
+u_negate(type=$U,pricerange=$V,drinks=$W) : "No, I don't want a $U in the $V price range serving $W.";
+u_negate(type=$U,pricerange=$V,food=$W) : "No, I don't want a $U in the $V price range serving $W food.";
+u_negate(type=$U,pricerange=$V,near=$W) : "No, I don't want a $U in the $V price range close to $W.";
+u_negate(type=$U,pricerange=$V,stars=$W) : "No, I don't want a $U in the $V price range with $W stars.";
+u_negate(addr=$V) : "I don't want a venue on $V.";
+u_negate(area=$V) : "I don't want a venue in $V.";
+u_negate(drinks=$V) : "I don't want a venue that serves $V.";
+u_negate(food=$V) : "I don't want a $V venue.";
+u_negate(near=$V) : "I don't want a venue close to $V.";
+u_negate(music=$V) : "I don't want a venue that plays $V music.";
+u_negate(pricerange=$V) : "No, I don't want a venue in the $V price range.";
+u_negate(stars=$W) : "No, not a $W star venue.";
+u_negate(allowedforkids=1)  :   "No, I am not looking for a venue that allows children.";
+u_negate(allowedforkids=false) : "No, I am not looking for a venue that doesn't allow children.";
+u_negate(goodforgroups=1)  :   "No, I am not looking for a venue that's nice for groups.";
+u_negate(goodforgroups=false) : "No, I am not looking for a venue that isn't nice for groups.";
+u_negate(goodformeal=$V) : "I don't want a place nice for $V";
+u_negate(dogsallowed=1)  :   "No, I am not looking for a venue that allows dogs.";
+u_negate(dogsallowed=false) : "No, I am not looking for a venue that doesn't allow dogs.";
+u_negate(hasinternet=1)  :   "No, I am not looking for a venue that has internet.";
+u_negate(hasinternet=false) : "No, I am not looking for a venue that doesn't have internet.";
+u_negate(acceptscreditcards=1)  :   "No, I am not looking for a venue that accepts credit cards.";
+u_negate(acceptscreditcards=false) : "No, I am not looking for a venue that doesn't accept credit cards.";
+u_negate(area=$V,addr=$W) : "No, not a venue on $W in $V.";
+u_negate(area=$V,stars=$W) : "No, not a $W star venue in $V.";
+u_negate(area=$V,near=$W) : "No, not a venue in $V close to $W.";
+u_negate(food=$V,drinks=$W) : "No, I don't want a venue serving $V food and $W.";
+u_negate(near=$V,drinks=$W) : "No, I don't want a venue close to $V serving $W.";
+u_negate(near=$V,stars=$W) : "No, I don't want a venue close to $V with $W stars.";
+u_negate(pricerange=$V,area=$W) : "No, I don't want a venue in the $V price range and in the $W of town.";
+u_negate(pricerange=$V,drinks=$W) : "No, I don't want a venue in the $V price range serving $W.";
+u_negate(pricerange=$V,food=$W) : "No, I don't want a venue in the $V price range serving $W food.";
+u_negate(pricerange=$V,near=$W) : "No, I don't want a venue in the $V price range close to $W.";
+u_negate(pricerange=$V,stars=$W) : "No, I don't want a venue in the $V price range with $W stars.";
+
+
+
+# request for User
+
+u_request(addr) : "What is the address?";
+u_request(addr,description) : "Can I have the address and description.";
+u_request(addr,postcode) : "I want the address and postcode.";
+u_request(addr,signature) : "I need the address and signature.";
+u_request(addr,phone) : "Please tell me the address and phone number of the restaurant.";
+u_request(description) : "What is the description of the restaurant?";
+u_request(description,phone) : "I want the description and phone number of the restaurant.";
+u_request(description,addr) : "Can I have the description and address.";
+u_request(description,postcode) : "I need the description and postcode.";
+u_request(description,signature) : "Please show me the description and signature.";
+u_request(phone) : "What is the phone number of the restaurant?";
+u_request(phone,addr) : "Please give me the phone number and address of this restaurant.";
+u_request(phone,description) : "I want the description and phone number of the restaurant.";
+u_request(phone,postcode) : "Please tell me the postcode and phone number of the restaurant.";
+u_request(phone,signature) : "I need the signature and phone number of the restaurant.";
+u_request(postcode) : "I want the postcode of the restaurant.";
+u_request(postcode,phone) : "Please give me the phone number and postcode of this restaurant.";
+u_request(postcode,addr) : "I need the postcode and address of this restaurant.";
+u_request(postcode,description) : "What is the description and postcode of the restaurant?";
+u_request(postcode,signature) : "What is the signature and postcode of the restaurant?";
+u_request(signature) : "What is the signature?";
+u_request(signature,phone) : "What is the signature and phone number?";
+u_request(signature,addr) : "I need the signature and address of the restaurant.";
+u_request(signature,description) : "Please show me the description and signature.";
+u_request(signature,postcode) : "What is the signature and postcode of the restaurant?";
+u_request(name=$V,addr) : "What is the address of $V?";
+u_request(name=$V,addr,description) : "Can I have the address and description of $V.";
+u_request(name=$V,addr,postcode) : "I want the address and postcode of $V.";
+u_request(name=$V,addr,signature) : "I need the address and signature of $V.";
+u_request(name=$V,addr,phone) : "Please tell me the address and phone number of $V.";
+u_request(name=$V,description) : "What is the description of $V?";
+u_request(name=$V,description,phone) : "I want the description and phone number of $V.";
+u_request(name=$V,description,addr) : "Can I have the description and address of $V.";
+u_request(name=$V,description,postcode) : "I need the description and postcode of $V.";
+u_request(name=$V,description,signature) : "Please show me the description and signature of $V.";
+u_request(name=$V,phone) : "What is the phone number of $V?";
+u_request(name=$V,phone,addr) : "Please give me the phone number and address of $V.";
+u_request(name=$V,phone,description) : "I want the description and phone number of $V.";
+u_request(name=$V,phone,postcode) : "Please tell me the postcode and phone number of $V.";
+u_request(name=$V,phone,signature) : "I need the signature and phone number of $V.";
+u_request(name=$V,postcode) : "I want the postcode of $V.";
+u_request(name=$V,postcode,phone) : "Please give me the phone number and postcode of $V.";
+u_request(name=$V,postcode,addr) : "I need the postcode and address of $V.";
+u_request(name=$V,postcode,description) : "What is the description and postcode of $V?";
+u_request(name=$V,postcode,signature) : "What is the signature and postcode of $V?";
+u_request(name=$V,signature) : "What is the signature of $V?";
+u_request(name=$V,signature,phone) : "What is the signature and phone number of $V?";
+u_request(name=$V,signature,addr) : "I need the signature and address of $V.";
+u_request(name=$V,signature,description) : "Please show me the description and signature of $V.";
+u_request(name=$V,signature,postcode) : "What is the signature and postcode of $V?";
+
+
+
+
+# Explicit Confirmations for User
+
+u_confirm(name=$U) : "Is this $U nice?";
+u_confirm(type=$U) : "Is it a $U?";
+u_confirm(type=$U,addr=$V) : "Is this $U on $V?";
+u_confirm(type=$U,area=$V) : "Is this $U in $V?";
+u_confirm(type=$U,drinks=$V) : "Does this $U serve $V?";
+u_confirm(type=$U,food=$V) : "Does this $U serve $V?";
+u_confirm(type=$U,near=$V) : "Is this $U close to $V?";
+u_confirm(type=$U,music=$V) : "This $U that plays $V music, right?";
+u_confirm(type=$U,pricerange=$V) : "Is this $U in the $V price range?";
+u_confirm(type=$U,stars=$W) : "Is this $W star $U?";
+u_confirm(type=$U,goodformeal=$V) : "Is this $U nice for $V?";
+u_confirm(type=$U,allowedforkids=false) : "This $U that doesn't allow children, right?";
+u_confirm(type=$U,allowedforkids=1) : "Does this $U allow children?";
+u_confirm(type=$U,dogsallowed=false) : "This $U doesn't allow dogs, right?";
+u_confirm(type=$U,dogsallowed=1) : "This $U allowes dogs, right?";
+u_confirm(type=$U,hasinternet=false) : "This $U doesn't have internet, right?";
+u_confirm(type=$U,hasinternet=1) : "This $U has internet, right?";
+u_confirm(type=$U,acceptscreditcards=false) : "This $U doesn't accepts credit cards, right?";
+u_confirm(type=$U,acceptscreditcards=1) : "This $U accepts credit cards, right?";
+u_confirm(type=$U,area=$V,addr=$W) : "Is it $U on $W in $V?";
+u_confirm(type=$U,area=$V,stars=$W) : "Is it $W star $U in $V?";
+u_confirm(type=$U,area=$V,near=$W) : "Is this $U in $V close to $W?";
+u_confirm(type=$U,food=$V,drinks=$W) : "Is this $U serving $V food and $W?";
+u_confirm(type=$U,near=$V,drinks=$W) : "Is this $U close to $V serving $W?";
+u_confirm(type=$U,near=$V,stars=$W) : "Is this $U close to $V with $W stars?";
+u_confirm(type=$U,pricerange=$V,area=$W) : "Is this $U in the $V price range and in the $W of town?";
+u_confirm(type=$U,pricerange=$V,drinks=$W) : "Is this $U in the $V price range serving $W?";
+u_confirm(type=$U,pricerange=$V,food=$W) : "Is this $U in the $V price range serving $W food?";
+u_confirm(type=$U,pricerange=$V,near=$W) : "Is this $U in the $V price range close to $W?";
+u_confirm(type=$U,pricerange=$V,stars=$W) : "Is this $U in the $V price range with $W stars?";
+u_confirm(addr=$V) : "Is it on $V?";
+u_confirm(area=$V) : "Is it in $V?";
+u_confirm(drinks=$V) : "Does it serve $V?";
+u_confirm(food=$V) : "Does it serve $V?";
+u_confirm(near=$V) : "Is it close to $V?";
+u_confirm(music=$V) : "This is a venue that plays $V music, right?";
+u_confirm(pricerange=$V) : "Is it in the $V price range?";
+u_confirm(stars=$W) : "Is this $W star venue?";
+u_confirm(allowedforkids=1)  :   "It allows children, right?";
+u_confirm(allowedforkids=false) : "It doesn't allow children, right?";
+u_confirm(goodforgroups=1)  :   "It's nice for groups, right??";
+u_confirm(goodforgroups=false) : "It isn't nice for groups, right?";
+u_confirm(goodformeal=$V) : "This is a place nice for $V, right?";
+u_confirm(dogsallowed=1)  :   "It allows dogs, right?";
+u_confirm(dogsallowed=false) : "It doesn't allow dogs, right?";
+u_confirm(hasinternet=1)  :   "It has internet, right?";
+u_confirm(hasinternet=false) : "It doesn't have internet, right?";
+u_confirm(acceptscreditcards=1)  :   "It accepts credit cards, right?";
+u_confirm(acceptscreditcards=false) : "It doesn't accept credit cards, right?";
+u_confirm(area=$V,addr=$W) : "Is it on $W in $V?";
+u_confirm(area=$V,stars=$W) : "Is it $W star venue in $V?";
+u_confirm(area=$V,near=$W) : "Is it in $V close to $W?";
+u_confirm(food=$V,drinks=$W) : "Is it serving $V food and $W?";
+u_confirm(near=$V,drinks=$W) : "Is it close to $V serving $W?";
+u_confirm(near=$V,stars=$W) : "Is it close to $V with $W stars?";
+u_confirm(pricerange=$V,area=$W) : "Is it in the $V price range and in the $W of town?";
+u_confirm(pricerange=$V,drinks=$W) : "Is it in the $V price range serving $W?";
+u_confirm(pricerange=$V,food=$W) : "Is it in the $V price range serving $W food?";
+u_confirm(pricerange=$V,near=$W) : "Is it in the $V price range close to $W?";
+u_confirm(pricerange=$V,stars=$W) : "Is it in the $V price range with $W stars?";
+
+
+
+
+# reqalts for User
+
+u_reqalts() : "No, I am not looking for this. Please show me another one.";
+u_reqalts(addr=$U) : "Wait, I want something else. I prefer a venue on $U.";
+u_reqalts(type=$U) : "Wait, I want something else. I want a $U.";
+u_reqalts(type=$U,addr=dontcare) : "Wait, I want something else. I dont care about the address of the $U.";
+u_reqalts(type=$U,addr=$V) : "Wait, I want something else. Please help me to find a $U on $V.";
+u_reqalts(type=$U,area=dontcare) : "Wait, I want something else. Any part of town is fine.";
+u_reqalts(type=$U,area=$V) : "Wait, I want something else. I want a $U in $V.";
+u_reqalts(type=$U,drinks=dontcare) : "I want something else. Any kind of drinks are fine.";
+u_reqalts(type=$U,drinks=$V) : "I want something else. I want a $U that serves $V.";
+u_reqalts(type=$U,food=dontcare) : "I want something else. Any kind of food are fine.";
+u_reqalts(type=$U,food=$V) : "Wait, I want something else. I want a $V $U.";
+u_reqalts(type=$U,near=dontcare) : "Wait, I want something else. I want a $U that does not need to be close to a specific location.";
+u_reqalts(type=$U,near=$V) : "I want something else. I want a $U close to $V.";
+u_reqalts(type=$U,music=dontcare) : "I want something else. I dont care the $U plays music or not.";
+u_reqalts(type=$U,music=$V) : "I want something else. I want a $U that plays $V music.";
+u_reqalts(type=$U,pricerange=dontcare) : "Wait, I want something else. Any price range is okay of the $U.";
+u_reqalts(type=$U,pricerange=$V) : "Wait, I want something else. I want a $U in the $V price range.";
+u_reqalts(type=$U,stars=dontcare) : "Wait, I want something else. I am ok with a $U with any number of stars.";
+u_reqalts(type=$U,stars=$W) : "Wait, I want something else. I want a $W star $U.";
+u_reqalts(type=$U,goodformeal=dontcare) : "Wait, I want something else. I dont care whether the $U serve good food or not.";
+u_reqalts(type=$U,goodformeal=$V) : "Wait, I want something else. I want a $U nice for $V.";
+u_reqalts(type=$U,allowedforkids=dontcare) : "Wait, I want something else. I dont care if the $U allows children.";
+u_reqalts(type=$U,allowedforkids=false) : "Wait, I want something else. I want a $U that doesn't allow children.";
+u_reqalts(type=$U,allowedforkids=1) : "Wait, I want something else. I want a $U that allowes children.";
+u_reqalts(type=$U,dogsallowed=dontcare) : "Wait, I want something else. I dont care if the $U allows dogs or not.";
+u_reqalts(type=$U,dogsallowed=false) : "Wait, I want something else. I need a $U that doesn't allow dogs.";
+u_reqalts(type=$U,dogsallowed=1) : "Wait, I want something else. I need a $U that allowes dogs.";
+u_reqalts(type=$U,hasinternet=dontcare) : "Wait, I want something else. I dont care if the $U has internet.";
+u_reqalts(type=$U,hasinternet=false) : "Wait, I want something else. I want a $U that doesn't have internet.";
+u_reqalts(type=$U,hasinternet=1) : "Wait, I want something else. I want a $U that has internet.";
+u_reqalts(type=$U,acceptscreditcards=dontcare) : "Wait, I want something else. I dont care if the $U accepts credit cards.";
+u_reqalts(type=$U,acceptscreditcards=false) : "Wait, I want something else. I want a $U that doesn't accepts credit cards.";
+u_reqalts(type=$U,acceptscreditcards=1) : "Wait, I want something else. I want a $U that accepts credit cards.";
+u_reqalts(type=$U,area=$V,addr=$W) : "Wait, I want something else. I want a $U on $W in $V.";
+u_reqalts(type=$U,area=dontcare,stars=dontcare) : "Wait, I want something else. I am ok with a $U with any number of stars anywhere in town.";
+u_reqalts(type=$U,area=dontcare,stars=$W) : "Wait, I want something else. I want a $W star $U anywhere in town.";
+u_reqalts(type=$U,area=$V,stars=dontcare) : "Wait, I want something else. I want a $U with any number of stars in $V.";
+u_reqalts(type=$U,area=$V,stars=$W) : "Wait, I want something else. I want a $W star $U in $V.";
+u_reqalts(type=$U,area=dontcare,near=dontcare) : "Wait, I want something else. I want a $U anywhere in town.";
+u_reqalts(type=$U,area=dontcare,near=$W) : "Wait, I want something else. I want a $U anywhere in town as long as it is close to $W.";
+u_reqalts(type=$U,area=$V,near=dontcare) : "Wait, I want something else. I want a $U in $V, close to anything.";
+u_reqalts(type=$U,area=$V,near=$W) : "Wait, I want something else. I want a $U in $V close to $W.";
+u_reqalts(type=$U,food=dontcare,drinks=dontcare) : "Wait, I want something else. I am ok with a $U serving any kind of food and drinks.";
+u_reqalts(type=$U,food=dontcare,drinks=$W) : "Wait, I want something else. I want a $U serving $W and any kind of food.";
+u_reqalts(type=$U,food=$W,drinks=dontcare) : "Wait, I want something else. I want a $U serving $W food and any kind of drinks.";
+u_reqalts(type=$U,food=$V,drinks=$W) : "Wait, I want something else. I want a $U serving $V food and $W.";
+u_reqalts(type=$U,near=dontcare,drinks=dontcare) : "Wait, I want something else. I want a $U serving any kind of drinks anywhere in town.";
+u_reqalts(type=$U,near=dontcare,drinks=$W) : "Wait, I want something else. I want a $U serving $W anywhere in town.";
+u_reqalts(type=$U,near=$W,drinks=dontcare) : "Wait, I want something else. I want a $U close to $W serving any kind of drinks.";
+u_reqalts(type=$U,near=$V,drinks=$W) : "Wait, I want something else. I want a $U close to $V serving $W.";
+u_reqalts(type=$U,near=dontcare,stars=dontcare) : "Wait, I want something else. I want a $U with any number of stars anywhere in town.";
+u_reqalts(type=$U,near=dontcare,stars=$W) : "Wait, I want something else. I want a $U with $W stars anywhere in town.";
+u_reqalts(type=$U,near=$W,stars=dontcare) : "Wait, I want something else. I want a $U close to $W with any number of stars.";
+u_reqalts(type=$U,near=$V,stars=$W) : "Wait, I want something else. I want a $U close to $V with $W stars.";
+u_reqalts(type=$U,pricerange=dontcare,area=dontcare) : "Wait, I want something else. I want a $U in any price range and in any part of town.";
+u_reqalts(type=$U,pricerange=dontcare,area=$W) : "Wait, I want something else. I want a $U in any price range in the $W of town.";
+u_reqalts(type=$U,pricerange=$W,area=dontcare) : "Wait, I want something else. I want a $U in the $W price range and I dont care about the part of town.";
+u_reqalts(type=$U,pricerange=$V,area=$W) : "Wait, I want something else. I want a $U in the $V price range and in the $W of town.";
+u_reqalts(type=$U,pricerange=dontcare,drinks=dontcare) : "Wait, I want something else. I want a $U in any price range and I dont care about the type of drinks.";
+u_reqalts(type=$U,pricerange=dontcare,drinks=$W) : "Wait, I want something else. I want a $U serving $W and Any price range is okay.";
+u_reqalts(type=$U,pricerange=$W,drinks=dontcare) : "Wait, I want something else. I want a $U in the $W price range and I dont care about the type of drinks.";
+u_reqalts(type=$U,pricerange=$V,drinks=$W) : "Wait, I want something else. I want a $U in the $V price range serving $W.";
+u_reqalts(type=$U,pricerange=dontcare,food=dontcare) : "Wait, I want something else. I want a $U serving any kind of food and Any price range is okay.";
+u_reqalts(type=$U,pricerange=dontcare,food=$W) : "Wait, I want something else. I want a $U serving $W food and Any price range is okay.";
+u_reqalts(type=$U,pricerange=$V,food=dontcare) : "Wait, I want something else. I want a $U in the $V price range serving any kind of food.";
+u_reqalts(type=$U,pricerange=$V,food=$W) : "Wait, I want something else. I want a $U in the $V price range serving $W food.";
+u_reqalts(type=$U,pricerange=$V,near=dontcare) : "Wait, I want something else. I want a $U in any price range and it does not need to be close to a specific venue.";
+u_reqalts(type=$U,pricerange=$V,near=dontcare) : "Wait, I want something else. I want a $U in the $V price range and it does not need to be close to a specific venue.";
+u_reqalts(type=$U,pricerange=dontcare,near=$W) : "Wait, I want something else. I want a $U in any price range close to $W.";
+u_reqalts(type=$U,pricerange=$V,near=$W) : "Wait, I want something else. I want a $U in the $V price range close to $W.";
+u_reqalts(type=$U,pricerange=dontcare,stars=dontcare) : "Wait, I want something else. I want a $U in any price range and I dont care about the number of stars.";
+u_reqalts(type=$U,pricerange=dontcare,stars=$W) : "Wait, I want something else. I want a $U with $W stars and Any price range is okay.";
+u_reqalts(type=$U,pricerange=$W,stars=dontcare) : "Wait, I want something else. I want a $U in the $W price range and I dont care about the number of stars.";
+u_reqalts(type=$U,pricerange=$V,stars=$W) : "Wait, I want something else. I want a $U in the $V price range with $W stars.";
+u_reqalts(addr=dontcare) : "Wait, I want something else. I dont care about the address.";
+u_reqalts(addr=$V) : "Wait, I want something else. I want a venue on $V.";
+u_reqalts(area=dontcare) : "Wait, I want something else. I want a venue in any part of town.";
+u_reqalts(area=$V) : "Wait, I want something else. I want a venue in $V.";
+u_reqalts(drinks=dontcare) : "Wait, I want something else. I want a venue serving any kind of drinks.";
+u_reqalts(drinks=$V) : "Wait, I want something else. I want a venue that serves $V.";
+u_reqalts(food=dontcare) : "Wait, I want something else. I want a venue serving any kind of food.";
+u_reqalts(food=$V) : "Wait, I want something else. I want a $V venue.";
+u_reqalts(near=dontcare) : "Wait, I want something else. I want a venue that does not need to be close to a specific location.";
+u_reqalts(near=$V) : "Wait, I want something else. I want a venue close to $V.";
+u_reqalts(music=dontcare) : "Wait, I want something else. I want a venue playing any kind of music.";
+u_reqalts(music=$V) : "Wait, I want something else. I want a venue that plays $V music.";
+u_reqalts(pricerange=dontcare) : "Wait, I want something else. Any price range is okay.";
+u_reqalts(pricerange=$V) : "Wait, I want something else. I want a venue in the $V price range.";
+u_reqalts(stars=dontcare) : "Wait, I want something else. I am ok with any number of stars.";
+u_reqalts(stars=$W) : "Wait, I want something else. I need a $W star venue.";
+u_reqalts(allowedforkids=dontcare) : "Wait, I want something else. I dont care if it allows children";
+u_reqalts(allowedforkids=1)  :   "Wait, I want something else. I want a venue that allows children.";
+u_reqalts(allowedforkids=false) : "Wait, I want something else. I want a venue that doesn't allow children.";
+u_reqalts(goodforgroups=dontcare) : "Wait, I want something else. I dont care if it's nice for groups";
+u_reqalts(goodforgroups=1)  :   "Wait, I want something else. I want a venue that's nice for groups.";
+u_reqalts(goodforgroups=false) : "Wait, I want something else. I want a venue that isn't nice for groups.";
+u_reqalts(goodformeal=dontcare) : "Wait, I want something else. I dont care about meal.";
+u_reqalts(goodformeal=$V) : "Wait, I want something else. I want a place nice for $V";
+u_reqalts(dogsallowed=dontcare) : "Wait, I want something else. I dont care if it allows dogs";
+u_reqalts(dogsallowed=1)  :   "Wait, I want something else. I want a venue that allows dogs.";
+u_reqalts(dogsallowed=false) : "Wait, I want something else. I want a venue that doesn't allow dogs.";
+u_reqalts(hasinternet=dontcare) : "Wait, I want something else. I dont care if it has internet";
+u_reqalts(hasinternet=1)  :   "Wait, I want something else. I want a venue that has internet.";
+u_reqalts(hasinternet=false) : "Wait, I want something else. I want a venue that doesn't have internet.";
+u_reqalts(acceptscreditcards=dontcare) : "Wait, I want something else. I dont care if it accepts credit cards";
+u_reqalts(acceptscreditcards=1)  :   "Wait, I want something else. I want a venue that accepts credit cards.";
+u_reqalts(acceptscreditcards=false) : "Wait, I want something else. I want a venue that doesn't accept credit cards.";
+u_reqalts(area=$V,addr=$W) : "Wait, I want something else. I prefer a venue on $W in $V.";
+u_reqalts(area=dontcare,stars=dontcare) : "Wait, I want something else. I prefer a venue with any number of stars anywhere in town.";
+u_reqalts(area=dontcare,stars=$W) : "Wait, I want something else. I need a $W star venue anywhere in town.";
+u_reqalts(area=$V,stars=dontcare) : "Wait, I want something else. I need a place with any number of stars in $V.";
+u_reqalts(area=$V,stars=$W) : "Wait, I want something else. I need a $W star venue in $V.";
+u_reqalts(area=dontcare,near=dontcare) : "Wait, I want something else. I want a venue anywhere in town.";
+u_reqalts(area=dontcare,near=$W) : "Wait, I want something else. I prefer a venue anywhere in town as long as it is close to $W.";
+u_reqalts(area=$V,near=dontcare) : "Wait, I want something else. I need a place in $V close to anywhere.";
+u_reqalts(area=$V,near=$W) : "Wait, I want something else. I prefer a venue in $V close to $W.";
+u_reqalts(food=dontcare,drinks=dontcare) : "Wait, I want something else. I want a venue serving any kind of food and drinks.";
+u_reqalts(food=dontcare,drinks=$W) : "Wait, I want something else. I want a venue serving $W and any kind of food.";
+u_reqalts(food=$W,drinks=dontcare) : "Wait, I want something else. I want a venue serving $W food and any kind of drinks.";
+u_reqalts(food=$V,drinks=$W) : "Wait, I want something else. I want a venue serving $V food and $W.";
+u_reqalts(near=dontcare,drinks=dontcare) : "Wait, I want something else. I want a venue serving any kind of drinks.";
+u_reqalts(near=dontcare,drinks=$W) : "Wait, I want something else. I want a venue serving $W.";
+u_reqalts(near=$W,drinks=dontcare) : "Wait, I want something else. I want a venue close to $W serving any kind of drinks.";
+u_reqalts(near=$V,drinks=$W) : "Wait, I want something else. I want a venue close to $V serving $W.";
+u_reqalts(near=dontcare,stars=dontcare) : "Wait, I want something else. I want a venue with any number of stars.";
+u_reqalts(near=dontcare,stars=$W) : "Wait, I want something else. I want a venue with $W stars.";
+u_reqalts(near=$W,stars=dontcare) : "Wait, I want something else. I want a venue close to $W with any number of stars.";
+u_reqalts(near=$V,stars=$W) : "Wait, I want something else. I want a venue close to $V with $W stars.";
+u_reqalts(pricerange=dontcare,area=dontcare) : "Wait, I want something else. I want a venue in any price range and in any part of town.";
+u_reqalts(pricerange=dontcare,area=$W) : "Wait, I want something else. I want a venue in any price range in the $W of town.";
+u_reqalts(pricerange=$W,area=dontcare) : "Wait, I want something else. I want a venue in the $W price range and I dont care about the part of town.";
+u_reqalts(pricerange=$V,area=$W) : "Wait, I want something else. I want a venue in the $V price range and in the $W of town.";
+u_reqalts(pricerange=dontcare,drinks=dontcare) : "Wait, I want something else. I want a venue in any price range and I dont care about the type of drinks.";
+u_reqalts(pricerange=dontcare,drinks=$W) : "Wait, I want something else. I want a venue serving $W and Any price range is okay.";
+u_reqalts(pricerange=$W,drinks=dontcare) : "Wait, I want something else. I want a venue in the $W price range and I dont care about the type of drinks.";
+u_reqalts(pricerange=$V,drinks=$W) : "Wait, I want something else. I want a venue in the $V price range serving $W.";
+u_reqalts(pricerange=dontcare,food=dontcare) : "Wait, I want something else. I want a venue serving any kind of food and Any price range is okay.";
+u_reqalts(pricerange=dontcare,food=$W) : "Wait, I want something else. I want a venue serving $W food and Any price range is okay.";
+u_reqalts(pricerange=$V,food=dontcare) : "Wait, I want something else. I want a venue in the $V price range serving any kind of food.";
+u_reqalts(pricerange=$V,food=$W) : "Wait, I want something else. I want a venue in the $V price range serving $W food.";
+u_reqalts(pricerange=$V,near=dontcare) : "Wait, I want something else. I want a venue in any price range and it does not need to be close to a specific venue.";
+u_reqalts(pricerange=$V,near=dontcare) : "Wait, I want something else. I want a venue in the $V price range and it does not need to be close to a specific venue.";
+u_reqalts(pricerange=dontcare,near=$W) : "Wait, I want something else. I want a venue in any price range close to $W.";
+u_reqalts(pricerange=$V,near=$W) : "Wait, I want something else. I want a venue in the $V price range close to $W.";
+u_reqalts(pricerange=dontcare,stars=dontcare) : "Wait, I want something else. I want a venue in any price range and I dont care about the number of stars.";
+u_reqalts(pricerange=dontcare,stars=$W) : "Wait, I want something else. I want a venue with $W stars and Any price range is okay.";
+u_reqalts(pricerange=$W,stars=dontcare) : "Wait, I want something else. I want a venue in the $W price range and I dont care about the number of stars.";
+u_reqalts(pricerange=$V,stars=$W) : "Wait, I want something else. I want a venue in the $V price range with $W stars.";
+u_reqalts($A=$X) : "Wait, I want something else. I want $X $A";

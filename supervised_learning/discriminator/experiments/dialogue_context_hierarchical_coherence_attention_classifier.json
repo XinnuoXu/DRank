@@ -1,0 +1,85 @@
+{
+  "dataset_reader": {
+    "type": "dialogue_context",
+    "shuffle_examples": true
+  },
+  "train_data_path": "./coherence/dataset_readers/generated_dial_examples_train",
+  "validation_data_path": "./coherence/dataset_readers/generated_dial_examples_dev",
+  "vocabulary": {
+    "max_vocab_size": 150
+  },
+  "model": {
+    "type": "dialogue_context_hierarchical_coherence_attention_classifier",
+    "text_field_embedder": {
+      "tokens": {
+        "type": "embedding",
+        "embedding_dim": 64,
+        "trainable": true
+      }
+    },
+     "utterance_encoder": {
+      "type": "lstm",
+      "bidirectional": true,
+      "input_size": 64,
+      "hidden_size": 32,
+      "num_layers": 1,
+      "dropout": 0.2
+    },
+    "attend_feedforward": {
+      "input_dim": 64,
+      "num_layers": 2,
+      "hidden_dims": 32,
+      "activations": "relu",
+      "dropout": 0.2
+    },
+    "similarity_function": {
+      "num_heads": 5,
+      "input_dim": 64,
+      "values_dim": 160,
+      "attention_dim": 160,
+      "attention_dropout_prob": 0.2
+    },
+    "compare_feedforward": {
+      "input_dim": 128,
+      "num_layers": 2,
+      "hidden_dims": 64,
+      "activations": "relu",
+      "dropout": 0.2
+    },
+    "classifier_feedforward": {
+      "input_dim": 128,
+      "num_layers": 2,
+      "hidden_dims": [64, 2],
+      "activations": ["relu", "linear"],
+      "dropout": [0.2, 0.0]
+    },
+    "final_classifier_feedforward": {
+      "input_dim": 63,
+      "num_layers": 2,
+      "hidden_dims": [32, 2],
+      "activations": ["relu", "linear"],
+      "dropout": [0.2, 0.0]
+    },
+    "initializer": [
+      [".*linear_layers.*weight", {"type": "xavier_normal"}],
+      [".*token_embedder_tokens_projection.*weight", {"type": "xavier_normal"}]
+    ]
+  },
+  "iterator": {
+    "type": "bucket",
+    "sorting_keys": [["context", "list_num_tokens"]],
+    "padding_noise": 0.0,
+    "batch_size": 100
+  },
+  "trainer": {
+    "num_epochs": 50,
+    "patience": 30,
+    "cuda_device": -1,
+    "grad_clipping": 5.0,
+    "validation_metric": "+accuracy",
+    "optimizer": {
+      "type": "adagrad",
+      "lr": 0.005
+    }
+  }
+}

@@ -1,0 +1,72 @@
+
+************ TRAINING FOR LENGTH-1 STARTS ************
+[GENERATOR][G_length 1]Average reward at epoch 0 is 0.206843
+[GENERATOR][G_length 1]Average reward at epoch 1 is 0.205298
+[DISCRIMINATOR][G_length 1]ACC at epoch 1 is 0.900000
+[GENERATOR][G_length 1]Average reward at epoch 2 is 0.369724
+[DISCRIMINATOR][G_length 1]ACC at epoch 2 is 0.625000
+[GENERATOR][G_length 1]Average reward at epoch 3 is 0.468261
+[DISCRIMINATOR][G_length 1]ACC at epoch 3 is 0.575000
+
+************ TRAINING FOR LENGTH-2 STARTS ************
+[GENERATOR][G_length 2]Average reward at epoch 0 is 0.629103
+[GENERATOR][G_length 2]Average reward at epoch 1 is 0.605045
+[DISCRIMINATOR][G_length 2]ACC at epoch 1 is 0.500000
+[GENERATOR][G_length 2]Average reward at epoch 2 is 0.700783
+[DISCRIMINATOR][G_length 2]ACC at epoch 2 is 0.525000
+
+************ TRAINING FOR LENGTH-3 STARTS ************
+[GENERATOR][G_length 3]Average reward at epoch 0 is 0.670635
+[GENERATOR][G_length 3]Average reward at epoch 1 is 0.701971
+[DISCRIMINATOR][G_length 3]ACC at epoch 1 is 0.500000
+[GENERATOR][G_length 3]Average reward at epoch 2 is 0.717901
+[DISCRIMINATOR][G_length 3]ACC at epoch 2 is 0.550000
+
+************ TRAINING FOR LENGTH-4 STARTS ************
+[GENERATOR][G_length 4]Average reward at epoch 0 is 0.733905
+[GENERATOR][G_length 4]Average reward at epoch 1 is 0.726786
+[DISCRIMINATOR][G_length 4]ACC at epoch 1 is 0.500000
+[GENERATOR][G_length 4]Average reward at epoch 2 is 0.778000
+[DISCRIMINATOR][G_length 4]ACC at epoch 2 is 0.525000
+
+************ TRAINING FOR LENGTH-5 STARTS ************
+[GENERATOR][G_length 5]Average reward at epoch 0 is 0.781526
+[GENERATOR][G_length 5]Average reward at epoch 1 is 0.797563
+[DISCRIMINATOR][G_length 5]ACC at epoch 1 is 0.500000
+[GENERATOR][G_length 5]Average reward at epoch 2 is 0.784447
+[DISCRIMINATOR][G_length 5]ACC at epoch 2 is 0.525000
+
+************ TRAINING FOR LENGTH-6 STARTS ************
+[GENERATOR][G_length 6]Average reward at epoch 0 is 0.801575
+[GENERATOR][G_length 6]Average reward at epoch 1 is 0.764533
+[DISCRIMINATOR][G_length 6]ACC at epoch 1 is 0.550000
+[GENERATOR][G_length 6]Average reward at epoch 2 is 0.746963
+[DISCRIMINATOR][G_length 6]ACC at epoch 2 is 0.625000
+
+************ TRAINING FOR LENGTH-7 STARTS ************
+[GENERATOR][G_length 7]Average reward at epoch 0 is 0.744668
+[GENERATOR][G_length 7]Average reward at epoch 1 is 0.734694
+[DISCRIMINATOR][G_length 7]ACC at epoch 1 is 0.575000
+[GENERATOR][G_length 7]Average reward at epoch 2 is 0.740135
+[DISCRIMINATOR][G_length 7]ACC at epoch 2 is 0.575000
+
+************ TRAINING FOR LENGTH-8 STARTS ************
+[GENERATOR][G_length 8]Average reward at epoch 0 is 0.744243
+[GENERATOR][G_length 8]Average reward at epoch 1 is 0.715599
+[DISCRIMINATOR][G_length 8]ACC at epoch 1 is 0.575000
+[GENERATOR][G_length 8]Average reward at epoch 2 is 0.702733
+[DISCRIMINATOR][G_length 8]ACC at epoch 2 is 0.525000
+
+************ TRAINING FOR LENGTH-9 STARTS ************
+[GENERATOR][G_length 9]Average reward at epoch 0 is 0.797383
+[GENERATOR][G_length 9]Average reward at epoch 1 is 0.786733
+[DISCRIMINATOR][G_length 9]ACC at epoch 1 is 0.550000
+[GENERATOR][G_length 9]Average reward at epoch 2 is 0.783575
+[DISCRIMINATOR][G_length 9]ACC at epoch 2 is 0.500000
+
+************ TRAINING FOR LENGTH-10 STARTS ************
+[GENERATOR][G_length 10]Average reward at epoch 0 is 0.804573
+[GENERATOR][G_length 10]Average reward at epoch 1 is 0.837312
+[DISCRIMINATOR][G_length 10]ACC at epoch 1 is 0.575000
+[GENERATOR][G_length 10]Average reward at epoch 2 is 0.748968
+[DISCRIMINATOR][G_length 10]ACC at epoch 2 is 0.525000
