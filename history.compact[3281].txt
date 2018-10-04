@@ -1,0 +1,285 @@
+82c21340-7558-4ef2-8301-9d801f4f71b6
++what's the rating of pizza hut in seattle?
+-It's 3.1
+============================================
+1ce33242-b9ff-44ef-82bb-cbc5bbec6cc7
++is there a western themed restaurant in wilmington, nc?
+-Sorry, could not find restaurants matching this criteria.
+-Please specify a restaurant or cuisine you have in mind..
++anything
+-Found the following options: Iron Hill Brewery & Restaurant, Mikimotos Japanese Restaurant and Mrs. Robino's Restaurant.
+============================================
+681be6d3-da02-43d8-983e-70665d6d1715
++table for 5 in Seattle for tomorrow 2pm
+-Please specify a restaurant or cuisine you have in mind..
++thai
+-Found the following options: Mae Phim, Thai Ginger-Pacific Place and Mae Phim.
+-Which restaurant would you like to book?
++Mae Phim sounds nice
+-Sure, What name would you want the booking under?
++Matt Mazz
+-//Confirming reservation..//
+-Sorry, Our service does not extend to the city you mentioned. Please try an alternate city.
++Sounds good
+-//Confirming reservation..//
+-Success! Your reservation has been confirmed. Please enjoy your meal! How would you rate your booking experience on a scale of 1-5?
++5
+============================================
+335ee393-c47d-4c73-919c-b4801043360b
++I would like to book a table at a 5 star Seafood restaurant in San Fransico
+-Found the following options: Golden Fortune, The Royale Sharksfin Seafood Restaurant and Emerald Garden.
+-Which restaurant would you like to book?
++Golden Fortune sounds nice
+-Sure! How many adults and how many kids are in your party?
++8
+-What date would you like me to book?
++tomorrow
+-What time would you prefer?
++8pm
+-Sure, What name would you want the booking under?
++Shahin
+-//Confirming reservation..//
+-Sorry, Our service does not extend to the city you mentioned. Please try an alternate city.
++Sure, sounds good
+-//No tables are available.//
+-Success! Your reservation has been confirmed. Please enjoy your meal! How would you rate your booking experience on a scale of 1-5?
++5
+-Thank you for your feedback!
+============================================
+fef8754b-d7f8-4cdd-8d72-635d86ded586
++hi
+-Hi! Welcome to the restaurant booking bot.
+-What city would you be dining in?
+============================================
+4ad1afd3-4b30-451a-ba6b-38108d455039
++for 2 people
+-Hi! Welcome to the restaurant booking bot.
+-What city would you be dining in?
++New Orleans
+-Please specify a restaurant or cuisine you have in mind..
++mexican
+-Found the following options: Felipe's Mexican Taqueria, Juan's Flying Burrito and Johnny Sanchez.
+-Which restaurant would you like to book?
++Juan's
+============================================
+124a4898-c462-4bc8-8210-7676256a5138
++Hello
+-Hi! Welcome to the restaurant booking bot.
+-What city would you be dining in?
++Pahrump Nevada
+-Please specify a restaurant or cuisine you have in mind..
++I'd like a nice steak please
+-Found the following options: Ohjah Japanese Steakhouse, Mountain Falls Grill Room and Sugar's Shack.
+-Which restaurant would you like to book?
++Ohjah
+-Sure! How many adults and how many kids are in your party?
++3 adults
+-What date would you like me to book?
++today 5pm
+-Sure, What name would you want the booking under?
++Bobby Brown
+-//Confirming reservation..//
+-Sorry, Our service does not extend to the city you mentioned. Please try an alternate city.
++Sure
+-//No tables are available.//
+-Sorry, Our service does not extend to the city you mentioned. Please try an alternate city.
++Works for me
+-//No tables are available.//
+-Success! Your reservation has been confirmed. Please enjoy your meal! How would you rate your booking experience on a scale of 1-5?
++4
+-Thank you for your feedback!
+============================================
+66523ad7-6ee5-415c-a9e8-4546620132f6
++Can you find me a vegan restaurant with wheelchair access in Berkeley, CA
+-Found the following options: Jupiter, Gather and Cinnaholic.
+-Which restaurant would you like to book?
++Cinnaholic
+-Sure! How many adults and how many kids are in your party?
++7 guys
+-What date would you like me to book?
++tomorrow 2pm in the name of Steven Spielberg
+-//Confirming reservation..//
+-Success! Your reservation has been confirmed. Please enjoy your meal! How would you rate your booking experience on a scale of 1-5?
++5
+-Thank you for your feedback!
+============================================
+aaebf63b-74f6-42b1-965c-1740c6092b30
++I need to make a large reservation for 10 guests at an American restaurant in Seattle for TONIGHT.
+-Found the following options: Metropolitan Grill, Purple Cafe and Wine Bar and Quinn's.
+-Which restaurant would you like to book?
++Purple Cafe
+-What time would you prefer?
++8pm
+-Sure, What name would you want the booking under?
++Lars Liden
+-//Confirming reservation..//
+-Success! Your reservation has been confirmed. Please enjoy your meal! How would you rate your booking experience on a scale of 1-5?
++5
+-Thank you for your feedback!
+============================================
+393b87ca-e0ab-4d6d-ae9f-ea680f5ded09
++Can you reserve a table for 5, I am looking for something in the New York City area that serves french or greek food but is not too expensive
+-Found the following options: French Roast, The Palm Too and French Roast Uptown.
+-Which restaurant would you like to book?
++French roast
+-What date would you like me to book?
++Monday the 11th at 6 pm
+-Sure, What name would you want the booking under?
++Megan Maddox
+-//Confirming reservation..//
+-Success! Your reservation has been confirmed. Please enjoy your meal! How would you rate your booking experience on a scale of 1-5?
++4
+-Thank you for your feedback!
+============================================
+5fbcc06e-8418-4ddf-b299-7d5b7072ae0d
++Seattle
+-Hi! Welcome to the restaurant booking bot.
+-Please specify a restaurant or cuisine you have in mind..
++bamboo
+-Found the following options: Bamboo Garden, Bamboo Restaurant and Bamboo Village.
+-Which restaurant would you like to book?
++bamboo village
+-Sure! How many adults and how many kids are in your party?
++9 gals
+============================================
+20cd1c65-6f22-4e2a-bf8e-e54c0c5e488a
++Hello, i was wondering if you can tell me where a good restaurant is to book
+-Hi! Welcome to the restaurant booking bot.
+-What city would you be dining in?
++New orleans
+-Please specify a restaurant or cuisine you have in mind..
++superb
+-Found the following options: Spudly's Super Spuds, Tony's Super Cajun Seafood and Super Spuds.
+-Which restaurant would you like to book?
+============================================
+f289283a-a806-4046-9d1c-b0566f00111d
++Please make a reservation at a pizza place in seattle for 2 people on friday night 8Pm
+-Hi! Welcome to the restaurant booking bot.
+-Found the following options: Serious Pie, Via Tribunali and Palomino.
+-Which restaurant would you like to book?
++via tribulani sounds nice
+-Sure, What name would you want the booking under?
++Sungjin bond
+-//No tables are available.//
+-Success! Your reservation has been confirmed. Please enjoy your meal! How would you rate your booking experience on a scale of 1-5?
++5
+-Thank you for your feedback!
+============================================
+fdf0c1a7-8fc7-401a-9257-03ff94431d64
++helos
+-Hi! Welcome to the restaurant booking bot.
+-What city would you be dining in?
++I live in Portland
+-Please specify a restaurant or cuisine you have in mind..
++Indian
+-Found the following options: Swagat Indian Cuisine, East India Co. Grill & Bar and India House.
+-Which restaurant would you like to book?
++none of the above
+-Sure! No problem!
+-Found the following options: Bollywood Theater, Bombay Chaat House and Gandhi's: An Indian Cafe.
+-Which restaurant would you like to book?
++Siri looks nice
+-Sure! How many adults and how many kids are in your party?
++3 adults 0 kids
+-What date would you like me to book?
++tomorrow 9pm
+-Sure, What name would you want the booking under?
++Need the booking under Poplar Good 
+-//Confirming reservation..//
+-Success! Your reservation has been confirmed. Please enjoy your meal! How would you rate your booking experience on a scale of 1-5?
++5
+-Thank you for your feedback!
+============================================
+8b19402b-f67b-43b0-a5d8-1632de37cf5c
++what's the rice range of el gaucho in seattle
+-Hi! Welcome to the restaurant booking bot.
+-Sorry, I don't know the answer to that one yet.
++ok, book it please
+-Sure! How many adults and how many kids are in your party?
+============================================
+7a4319bc-db01-41dd-91a1-88d0ab9d24e4
++bollocks
+-Hi! Welcome to the restaurant booking bot.
+-What city would you be dining in?
++Bollocks
+-Please specify a restaurant or cuisine you have in mind..
++Point
+-Sorry, Our service does not extend to the city you mentioned. Please try an alternate city.
+-What city would you be dining in?
++Brooklyn
+-Sorry, could not find restaurants matching this criteria.
+-Please specify a restaurant or cuisine you have in mind..
++Indian
+-Sorry, could not find restaurants matching this criteria.
+-Please specify a restaurant or cuisine you have in mind..
+============================================
+224a189c-1437-49f0-8880-50773b9ff312
++Hello!
+-Hi! Welcome to the restaurant booking bot.
+-What city would you be dining in?
++in vancouver
+-Please specify a restaurant or cuisine you have in mind..
++I love thai
+-Found the following options: SalaThai Restaurant, Urban Thai Bistro and Pink Elephant Thai.
+-Which restaurant would you like to book?
++Pink thai
+-Sure! How many adults and how many kids are in your party?
++5 adults and no kids
+-What date would you like me to book?
++thursday night 9pm
+-Sure, What name would you want the booking under?
++Xinnu
+-//Confirming reservation..//
+-Success! Your reservation has been confirmed. Please enjoy your meal! How would you rate your booking experience on a scale of 1-5?
++2
+-Thank you for your feedback!
+============================================
+7c9920db-5852-4e1a-a0f4-58736a50651b
++what is the price range of el gaucho in seattle?
+-Hi! Welcome to the restaurant booking bot.
+-The average cost for two people is 150
+============================================
+8a176d64-b5b0-4a10-b437-3730509e03dd
++what's the rating of pizza hut in Las Vegas?
+-Hi! Welcome to the restaurant booking bot.
+-It's 3.2
+============================================
+9d535486-8cf4-4093-aa80-3a6327c8a3f8
++Hello there!
+-Hi! Welcome to the restaurant booking bot.
+-What city would you be dining in?
++We're travelling to Venice now.
+-Please specify a restaurant or cuisine you have in mind..
+============================================
+b4d828f4-1b76-4cd1-9d3f-eab12f7d5b30
++Where can I eat strange food like froglegs or chocolate covered grasshoppers?
+-Hi! Welcome to the restaurant booking bot.
+-What city would you be dining in?
++Swansboro, N.C.
+-Sorry, could not find restaurants matching this criteria.
+-Please specify a restaurant or cuisine you have in mind..
+============================================
+55d859ef-2cc0-4de4-974d-cdb1c9bef30f
++hello
+-Hi! Welcome to the restaurant booking bot.
+-What city would you be dining in?
++in New Orleans
+-Please specify a restaurant or cuisine you have in mind..
++i would like some indian please
+-Found the following options: Nirvana Indian Cuisine, Salt 'N' Pepper Restaurant and Taj Mahal Indian Cuisine.
+-Which restaurant would you like to book?
++What cuisines does Taj Mahal serve?
+-This restaurant serves: Indian, Vegetarian
++Great, Book this for me.
+-Sure! How many adults and how many kids are in your party?
++3 people for friday night 9'o clock
+-Sure, What name would you want the booking under?
++I want it booked in Swadheen's name.
+-//Confirming reservation..//
+-Success! Your reservation has been confirmed. Please enjoy your meal! How would you rate your booking experience on a scale of 1-5?
++5
+-Thank you for your feedback!
+============================================
+3d290df0-9bd5-4180-a1bf-d426f8538b0e
++please book in seattle
+============================================
