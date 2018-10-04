@@ -1,0 +1,48 @@
+INFO   :: 20:06:27: root                       FlatOntologyManager.py <_set_ontology>93 :  Loading ontology: /home/t-xinxu/pydial/ontology/ontologies/CamRestaurants-rules.json
+INFO   :: 20:06:27: root                            FlatOntologyManager.py <_set_db>109 :  Loading database: /home/t-xinxu/pydial/ontology/ontologies/CamRestaurants-dbase.db
+INFO   :: 20:06:27: root                       FlatOntologyManager.py <_set_ontology>93 :  Loading ontology: /home/t-xinxu/pydial/ontology/ontologies/CamHotels-rules.json
+INFO   :: 20:06:27: root                            FlatOntologyManager.py <_set_db>109 :  Loading database: /home/t-xinxu/pydial/ontology/ontologies/CamHotels-dbase.db
+INFO   :: 20:06:27: root                                         pydial <initialise>315 :  Seed = 870221979
+INFO   :: 20:06:27: root                                         pydial <initialise>316 :  Root = /home/t-xinxu/pydial
+DIAL   :: 20:06:27: root                                      pydial <chat_command>1066 :  *** Chatting with policies [u'CamRestaurants', u'CamHotels']: ***
+INFO   :: 20:06:27: root                                    Agent.py <_hand_control>461 :  Launching Dialogue Manager for domain: topicmanager
+WARNING:: 20:06:27: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 20:06:27: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 20:06:27: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 20:06:27: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 20:06:27: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 20:06:27: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 20:06:27: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 20:06:27: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 20:06:27: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 20:06:27: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 20:06:27: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 20:06:27: root                                      RegexSemI.py <__init__>80 :  No rTYPE regex has been set.
+WARNING:: 20:06:28: root                     PolicyManager.py <_load_domains_policy>229 :  No policy section specified for domain: topicmanager - defaulting to HDC
+WARNING:: 20:06:28: root                                             Texthub.py <run>88 :  NOTE: texthub is not using any error simulation at present.
+INFO   :: 20:06:28: root                                    Agent.py <_hand_control>478 :  Domain topicmanager is both already running and has control
+DIAL   :: 20:06:28: root                                      Agent.py <_print_turn>587 :  ** Turn 0 **
+DIAL   :: 20:06:28: root                                   Agent.py <_print_sys_act>602 :  | Sys > hello()
+DIAL   :: 20:06:28: root                                     Agent.py <_agents_semo>698 :  Domain with CONTROL: topicmanager
+DIAL   :: 20:06:29: root                                    Agent.py <continue_call>236 :  user input: [('hello', 1.0)]
+DIAL   :: 20:06:29: root                                     Agent.py <_agents_semo>698 :  Domain with CONTROL: topicmanager
+ERROR  :: 20:06:29: root                              ContextLogger.py <_exceptHook>263 :  Uncaught exception: <type 'exceptions.AttributeError'>( 'NoneType' object has no attribute 'to_string' )
+          Traceback (most recent call last):
+            File "/usr/local/bin/pydial", line 1108, in <module>
+              run()
+            File "/home/t-xinxu/miniconda3/envs/PYDIAL/lib/python2.7/site-packages/scriptine/command.py", line 196, in autocmds
+              add_verbosity_option=add_verbosity_option)
+            File "/home/t-xinxu/miniconda3/envs/PYDIAL/lib/python2.7/site-packages/scriptine/command.py", line 105, in parse_and_run_function
+              return function(*args[:len(required_args)], **kw)
+            File "/usr/local/bin/pydial", line 1070, in chat_command
+              hub.run()
+            File "/home/t-xinxu/pydial/Texthub.py", line 119, in run
+              sys_act = self.agent.continue_call(asr_info = [(obs,1.0)], domainString = domain)
+            File "/home/t-xinxu/pydial/Agent.py", line 239, in continue_call
+              self._agents_semo(uact, domainString)
+            File "/home/t-xinxu/pydial/Agent.py", line 699, in _agents_semo
+              prompt_str = self.semo_manager.generate(act, domainTag=self.topic_tracker.operatingDomain)
+            File "/home/t-xinxu/pydial/semo/SemOManager.py", line 144, in generate
+              act_s = act.to_string()
+          AttributeError: 'NoneType' object has no attribute 'to_string'
+          
