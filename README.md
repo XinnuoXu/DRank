@@ -24,7 +24,7 @@ source ~/.benv
 ```
 
 ### AMT data collection <br />
-AMT data collection is working in `AMT/`. We need to create a conda enviornment first by running
+AMT data collection is working in folder `AMT/`. We need to create a conda enviornment first by running
 
 ```
 conda create -n AMT python=3; conda activate AMT
@@ -73,3 +73,5 @@ After running this preprocessing, the following files are generated. `AMT_prepro
 * `generated_dial_examples_train.pos`
 
 
+### Supervised learning <br />
+Supervised learning is working in folder `supervised_learning`.
