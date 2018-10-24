@@ -76,7 +76,7 @@ After running this preprocessing, the following files are generated. `AMT_prepro
 * `generated_dial_examples_train.pos`
 
 
-### Supervised learning <br />
+### Supervised model <br />
 Based on the data collected from AMT, we train a supervised learning model to predict the quality of dialogues. The model is multi-heads self-attention with position embedding.
 
 ![image](https://github.com/XinnuoXu/msr_dialog_ranking/blob/master/supervised_learning.png)
@@ -111,3 +111,48 @@ discriminator_test.sh
 ```
 
 You can change the hyper-parameters in `experiments/dialogue_context_hierarchical_coherence_attention_classifier.json`
+
+### Unsupervised model <br />
+
+The goal of unsupervised model is that given only gold dialogues (references during the DS construction) and the DS and giving a ranker that can detect user-to-system dialogues with lower quality. Our approach is (1) train a user simulator to talk with Pydail restaurant finding bot and collect conversations as negative examples (2) take gold dialogues as positive examples (3) train a discriminator to detect dialogues with lower quality.
+
+#### Pre-training of seq2seq user simulator <br />
+
+We pre-train our model on multi-domain Maluuba data. You can find Maluuba data and the script for format transfering in folder `Maluuba_data`. To read the original Maluuba data and transfer it into data for seq2seq model, you can run
+
+```
+mkdir data; python readline.py
+```
+
+After running this script, the following files are generated in folder `data/`
+
+* `dev.en`
+* `dev.vi`
+* `test.en`
+* `test.vi`
+* `train.en`
+* `train.vi`
+
+#### Gold dialogue generation <br />
+
+We generate 100 Gold dialogues by rule-based user simulator and restaurant finding system offered in Pydail. Gold dialogue generation is working in folder `gold_dialogue_generator/` based on [Pydial](http://www.camdial.org/pydial/). You need to create a conda enviornment first by running
+
+```
+TODO
+```
+
+To generate gold dialogues, run
+
+```
+sh generate.sh
+```
+
+#### Model: Stepwised seq2seq user simulator (Stepwised-US) <br />
+
+Stepwised seq2seq user simulator is working in folder `stepwise_monster/` based on [OpenNMT-py](https://github.com/OpenNMT/OpenNMT-py). You need to create a conda enviornment first by running
+
+```
+TODO
+```
+
+
