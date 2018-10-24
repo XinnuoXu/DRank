@@ -6,8 +6,8 @@ After releasing their dialogue system (DS) to users, developers can improve the 
 
 This code is based on
 
-* `[OpenNMT-py]`(https://github.com/OpenNMT/OpenNMT-py)
-* `[ParlAI]`(https://github.com/facebookresearch/ParlAI/blob/master/README.md)
+* [OpenNMT-py](https://github.com/OpenNMT/OpenNMT-py)
+* [ParlAI](https://github.com/facebookresearch/ParlAI/blob/master/README.md)
 
 ## Quickstart <br />
 
