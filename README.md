@@ -77,7 +77,10 @@ After running this preprocessing, the following files are generated. `AMT_prepro
 
 
 ### Supervised learning <br />
+Based on the data collected from AMT, we train a supervised learning model to predict the quality of dialogues. The model is multi-heads self-attention with position embedding.
+
 ![image](https://github.com/XinnuoXu/msr_dialog_ranking/blob/master/supervised_learning.png)
+
 Supervised learning is working in folder `supervised_learning/discriminator` based on [AllenNLP](https://allennlp.org/tutorials). You need to create a conda enviornment first by running
 
 ```
