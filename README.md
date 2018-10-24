@@ -25,11 +25,25 @@ Run `conda --help` to test.
 ### Supervised learning <br />
 
 #### AMT data collection <br />
-AMT data collection is working in `AMT/`. 
+AMT data collection is working in `AMT/`. We need to create a conda enviornment first by running
 
 ```
-conda create -n AMT python=3
+conda create -n AMT python=3; conda activate AMT
 ```
+
+AMT data collection is based on [ParlAI](https://github.com/facebookresearch/ParlAI/blob/master/README.md). To install ParlAI, please run the following command in `AMT/`.
+
+```
+python setup.py develop
+```
+
+To start data collection, you need to run `sh run.sh` in `AMT/parlai/mturk/tasks/pydail_collection/`. If you run the script for the first time, it will ask for `Access Key ID` and `Secret Access Key`. They are
+
+```
+Access Key ID: AKIAIE57EGXOXHCR3TWA
+Secret Access Key: MNyMotQxjhALU+/UBWvGPzruGt7UhZuKn0ugfKqS
+```
+
 We will be working with some example data in `data/` folder. The data consists of parallel dialogue context (`.en`) and its response (`.vi`) data containing one sentence per line with tokens separated by a space:
 
 * `train.en`
