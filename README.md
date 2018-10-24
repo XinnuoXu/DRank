@@ -40,7 +40,7 @@ Access Key ID: AKIAIE57EGXOXHCR3TWA
 Secret Access Key: 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
 ```
 
-If you see the following information when you run `sh run.sh`, it means that you setup everything correctly. You can visit the `Link to HIT` to see your task. 
+If you see the following information when you run `sh run.sh`, it means that you setup everything correctly. You can visit the `Link to HIT` to view your task. 
 
 ```
 Creating HITs...
@@ -58,7 +58,8 @@ Run the following scripts to process the raw data collected from AMT.
 python log_reading.py > AMT_dials.txt
 python log_preprocess.py
 ```
-After running the preprocessing, the following files are generated. `AMT_preprocessed.txt` is a file with all dialogues and rated scores. `generated_dial_examples_*` are positive and negative examples for supervised learning that we will explain later.
+
+After running this preprocessing, the following files are generated. `AMT_preprocessed.txt` is a file with all dialogues and rated scores. `generated_dial_examples_*` are randomly sampled positive and negative examples for supervised learning that we will explain later.
 
 * `AMT_preprocessed.txt`
 * `generated_dial_examples_dev.neg`
@@ -68,80 +69,3 @@ After running the preprocessing, the following files are generated. `AMT_preproc
 * `generated_dial_examples_train.neg`
 * `generated_dial_examples_train.pos`
 
-
-### Step2: Train a language model <br />
-
-```
-cd lm/tool/
-```
-
-In this step, we will train a language model based on the responses for the MMI-anti model (example data `data/*.vi`). Since this language model will be used in the MMI-anti model, it will share the dictionary (`data/*.vocab.pt`) generated in `Step1`.
-
-#### Step2.1: Preprocess the data <br /> 
-
-```
-python preprocess.py
-```
-
-These preprocessing will turn all responses for the MMI-anti model (example data `data/*.vi`) into parallel data for the language model. 
-
-
-After running the preprocessing, the following files are generated in `lm/data/` folder:
-
-* `train.en`
-* `train.de`
-* `dev.en`
-* `dev.de`
-
-For example, the response `"they just want a story"` in file `data/train.vi` will be preprocessed in to `"<s> they just want a story"` in file `lm/data/train.en` and `"they just want a story </s>"` in file `lm/data/train.de`.
-
-#### Step2.2: Train a language model <br />
-
-```
-cd ../
-python lm.py
-```
-
-This train command will save the language model to `lm/model.pt`.
-
-To run this code on the CPU, you need to update your pytorch to any version after `24th Feb 2018` and make sure that this piece of code can be found in your `torchtext/data/iterator.py`:
-
-```
-if not torch.cuda.is_available() and self.device is None:
-  self.device = -1
-```
-
-#### Step2.3: Test your language model <br />
-
-```
-python generate.py
-```
-
-This tool will generate 1000 utterances randomly using the language model `lm/model.pt` and save them into file `lm/generated.txt`.
-
-
-#### Step2.4: Go back to our MMI-anti model <br />
-
-```
-cd ../
-```
-
-### Step3: Train a MMI-anti model <br />
-
-```
-python train.py
-```
-
-### Step4: Generate <br />
-
-```
-python translate.py -model model_name
-```
-
-The generation results will be saved in file `pred.txt`.
-
-### Step5: Evaluate the diversity? <br />
-
-```
-cat pred.txt | python diversity.py
-```
