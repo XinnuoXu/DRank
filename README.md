@@ -27,13 +27,13 @@ AMT data collection is working in `AMT/`. We need to create a conda enviornment 
 conda create -n AMT python=3; conda activate AMT
 ```
 
-AMT data collection is based on [ParlAI](https://github.com/facebookresearch/ParlAI/blob/master/README.md). To install ParlAI, please run the following command in `AMT/`.
+AMT data collection is based on [ParlAI](https://github.com/facebookresearch/ParlAI/blob/master/README.md). To install ParlAI, please run the following command in folder `AMT/`.
 
 ```
 python setup.py develop
 ```
 
-To start the data collection, you need to run `sh run.sh` in `AMT/parlai/mturk/tasks/pydail_collection/`. If you run the script for the first time, it will ask for `Access Key ID` and `Secret Access Key`. Then, register your email address at [Heroku](https://signup.heroku.com/) and run `/home/xxu/msr_dialog_ranking/AMT/parlai/mturk/core/heroku-cli-v6.99.0-ec9edad-linux-x64/bin/heroku login` at the terminal to login to Heroku. The `Access Key ID` and `Secret Access Key` we are using are
+To start the data collection, you need to run `sh run.sh` in folder `AMT/parlai/mturk/tasks/pydail_collection/`. If you run the script for the first time, it will ask for `Access Key ID` and `Secret Access Key`. Then, register your email address at [Heroku](https://signup.heroku.com/) and run `/home/xxu/msr_dialog_ranking/AMT/parlai/mturk/core/heroku-cli-v6.99.0-ec9edad-linux-x64/bin/heroku login` at the terminal to login to Heroku. The `Access Key ID` and `Secret Access Key` we are using are
 
 ```
 Access Key ID: AKIAIE57EGXOXHCR3TWA
@@ -52,18 +52,22 @@ Local: Setting up WebSocket...
 WebSocket set up!
 ```
 
-We will be working with some example data in `data/` folder. The data consists of parallel dialogue context (`.en`) and its response (`.vi`) data containing one sentence per line with tokens separated by a space:
+Run the following scripts to process the raw data collected from AMT.  
 
-* `train.en`
-* `train.vi`
-* `dev.en`
-* `dev.vi`
+```
+python log_reading.py > AMT_dials.txt
+python log_preprocess.py
+```
+After running the preprocessing, the following files are generated. `AMT_preprocessed.txt` is a file with all dialogues and rated scores. `generated_dial_examples_*` are positive and negative examples for supervised learning that we will explain later.
 
-After running the preprocessing, the following files are generated in `data/` folder:
+* `AMT_preprocessed.txt`
+* `generated_dial_examples_dev.neg`
+* `generated_dial_examples_dev.pos`
+* `generated_dial_examples_test.neg`
+* `generated_dial_examples_test.pos`
+* `generated_dial_examples_train.neg`
+* `generated_dial_examples_train.pos`
 
-* `dialogue.train.1.pt`: serialized PyTorch file containing training data
-* `dialogue.valid.1.pt`: serialized PyTorch file containing validation data
-* `dialogue.vocab.pt`: serialized PyTorch file containing vocabulary data, which will be used in the training process of language model.
 
 ### Step2: Train a language model <br />
 
