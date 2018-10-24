@@ -20,9 +20,7 @@ echo ". ~/miniconda2/etc/profile.d/conda.sh" >> ~/.benv
 source ~/.benv
 ```
 
-### Supervised learning <br />
-
-#### AMT data collection <br />
+### AMT data collection <br />
 AMT data collection is working in `AMT/`. We need to create a conda enviornment first by running
 
 ```
