@@ -147,7 +147,11 @@ To generate gold dialogues, run
 sh generate.sh
 ```
 
+you will find all generated dialogues in file `gold_dialogues.in`.
+
 #### Model: Stepwised seq2seq user simulator (Stepwised-US) <br />
+
+To generate negative examples for the training of discriminator, we use stepwised seq2seq as the user simulator and make it talk with the Pydail restaurant finding bot. During training process of user simulator, we save a model for each 6 epochs and collect 100 conversations between each model and Pydial restaurant finding bot. The positive examples for the training of discriminator is the duplication of gold dialogues.
 
 Stepwised seq2seq user simulator is working in folder `stepwise_monster/` based on [OpenNMT-py](https://github.com/OpenNMT/OpenNMT-py). You need to create a conda enviornment first by running
 
@@ -155,4 +159,10 @@ Stepwised seq2seq user simulator is working in folder `stepwise_monster/` based 
 TODO
 ```
 
+We pre-train the seq2seq model on the Maluuba data mentioned before and train the model on gold dialogues. To pre-train the model, you need to copy data generated in folder `Maluuba_data` to folder `generator/data/` and run
 
+```
+sh pre-train.sh
+```
+
+You will find the pre-trained model in folder `dialogue-model`
