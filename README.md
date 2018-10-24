@@ -9,7 +9,7 @@ This code is based on [OpenNMT-py](https://github.com/OpenNMT/OpenNMT-py) and [w
 ## Quickstart <br />
 
 ### Environment set up
-Since references are based on different environment, we use [Miniconda](https://conda.io/miniconda.html) to set up environment for each regerence. Please run the following codes to set up miniconda.
+Since references are based on different environment, we use [Miniconda](https://conda.io/miniconda.html) to set up environment for each regerence. Please run the following codes to set up miniconda. After the installation, you can run `conda --help` to test.
 
 ```
 wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh
@@ -19,8 +19,6 @@ echo ". ~/miniconda2/etc/profile.d/conda.sh" >> ~/.bashrc
 echo ". ~/miniconda2/etc/profile.d/conda.sh" >> ~/.benv
 source ~/.benv
 ```
-
-Run `conda --help` to test.
 
 ### Supervised learning <br />
 
@@ -37,11 +35,23 @@ AMT data collection is based on [ParlAI](https://github.com/facebookresearch/Par
 python setup.py develop
 ```
 
-To start data collection, you need to run `sh run.sh` in `AMT/parlai/mturk/tasks/pydail_collection/`. If you run the script for the first time, it will ask for `Access Key ID` and `Secret Access Key`. They are
+To start the data collection, you need to run `sh run.sh` in `AMT/parlai/mturk/tasks/pydail_collection/`. If you run the script for the first time, it will ask for `Access Key ID` and `Secret Access Key`. Then, register your email address at [Heroku](https://signup.heroku.com/) and run `/home/xxu/msr_dialog_ranking/AMT/parlai/mturk/core/heroku-cli-v6.99.0-ec9edad-linux-x64/bin/heroku login` at the terminal to login to Heroku. The `Access Key ID` and `Secret Access Key` we are using are
 
 ```
 Access Key ID: AKIAIE57EGXOXHCR3TWA
 Secret Access Key: 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
+```
+
+If you see the following information when you run `sh run.sh`, it means that you setup everything correctly. You can visit the `Link to HIT` to see your task. 
+
+```
+Creating HITs...
+Link to HIT: https://workersandbox.mturk.com/mturk/preview?groupId=36Y7KK4GODJC2A2MECPHDQWE7L9SUZ
+
+Waiting for Turkers to respond... (Please don't close your laptop or put your computer into sleep or standby mode.)
+
+Local: Setting up WebSocket...
+WebSocket set up!
 ```
 
 We will be working with some example data in `data/` folder. The data consists of parallel dialogue context (`.en`) and its response (`.vi`) data containing one sentence per line with tokens separated by a space:
