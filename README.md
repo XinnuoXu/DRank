@@ -4,7 +4,10 @@ After releasing their dialogue system (DS) to users, developers can improve the 
 
 ## References <br />
 
-This code is based on [OpenNMT-py](https://github.com/OpenNMT/OpenNMT-py) and [word_language_model](https://github.com/pytorch/examples/tree/master/word_language_model)
+This code is based on
+
+* `[OpenNMT-py](https://github.com/OpenNMT/OpenNMT-py)`
+* `[ParlAI](https://github.com/facebookresearch/ParlAI/blob/master/README.md)`
 
 ## Quickstart <br />
 
@@ -68,4 +71,5 @@ After running this preprocessing, the following files are generated. `AMT_prepro
 * `generated_dial_examples_test.pos`
 * `generated_dial_examples_train.neg`
 * `generated_dial_examples_train.pos`
+
 
