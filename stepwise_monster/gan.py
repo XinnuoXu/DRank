@@ -61,10 +61,8 @@ if __name__ == '__main__':
     gen = generator.Generator()
     disc = discriminator.Discriminator()
 
-    '''
     # Pre-train generator on Maluba
-    # gen.pre_train()
-    '''
+    gen.pre_train()
 
     # Pre-train generator on gold dials
     gen.pre_train(max_ctx=MAX_CONTEXT_LENGTH, maluba=False)

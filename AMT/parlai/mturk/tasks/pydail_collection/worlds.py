@@ -17,7 +17,8 @@ __author__ = "cued_dialogue_systems_group"
 __version__ = Settings.__version__
 
 global seed
-seed = Settings.init("/home/t-xinxu/ParlAI/parlai/mturk/tasks/pydail_collection/config/Tut-hdc-CamInfo.cfg", None)
+#seed = Settings.init("/home/t-xinxu/ParlAI/parlai/mturk/tasks/pydail_collection/config/Tut-hdc-CamInfo.cfg", None)
+seed = Settings.init("./config/Tut-hdc-CamInfo.cfg", None)
 global Ontology
 Ontology.init_global_ontology()
 

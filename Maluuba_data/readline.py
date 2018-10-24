@@ -33,8 +33,8 @@ if __name__ == '__main__':
 					pass
 	
 	random.shuffle(dials)
-	for item in dials:
-		print ("\n".join(item) + "\n\n")
+	#for item in dials:
+	#	print ("\n".join(item) + "\n\n")
 	dialouge_num = len(dials)
 	print (dialouge_num)
 	test_dials = dials[0:1000]
