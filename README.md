@@ -86,7 +86,7 @@ Supervised learning is working in folder `supervised_learning/discriminator` bas
 ```
 conda create -n ALLENNLP python=3.6
 conda activate ALLENNLP
-pip install allennlp
+pip install allennlp=0.5.0
 ```
 
 Training, validation, testing data are in folder `coherence/dataset_readers`. 
