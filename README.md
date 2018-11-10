@@ -156,7 +156,9 @@ To generate negative examples for the training of discriminator, we use stepwise
 Stepwised seq2seq user simulator is working in folder `stepwise_monster/` based on [OpenNMT-py](https://github.com/OpenNMT/OpenNMT-py). You need to create a conda enviornment first by running
 
 ```
-TODO
+conda create -n GAN python=3.6
+git clone https://github.com/OpenNMT/OpenNMT-py.git
+pip install -r requirements.txt --user
 ```
 
 We pre-train the seq2seq model on the Maluuba data mentioned before and train the model on gold dialogues. To pre-train the model, you need to copy data generated in folder `Maluuba_data` to folder `generator/data/` and run
