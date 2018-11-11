@@ -158,7 +158,10 @@ Stepwised seq2seq user simulator is working in folder `stepwise_monster/` based 
 ```
 conda create -n GAN python=3.6
 git clone https://github.com/OpenNMT/OpenNMT-py.git
-pip install -r requirements.txt --user
+pip install -r requirements.txt
+conda install pytorch=0.4.1 cuda80 -c pytorch
+pip install torchtext
+pip install six
 ```
 
 We pre-train the seq2seq model on the Maluuba data mentioned before and train the model on gold dialogues. To pre-train the model, you need to copy data generated in folder `Maluuba_data` to folder `generator/data/` and run
