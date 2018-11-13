@@ -162,6 +162,10 @@ pip install -r requirements.txt
 conda install pytorch=0.4.1 cuda80 -c pytorch
 pip install torchtext
 pip install six
+pip install allennlp=0.5.0
+cd pydial
+pip install -r requirements.txt
+pip install numpydoc
 ```
 
 We pre-train the seq2seq model on the Maluuba data mentioned before and train the model on gold dialogues. To pre-train the model, you need to copy data generated in folder `Maluuba_data` to folder `generator/data/` and run
