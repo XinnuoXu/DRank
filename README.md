@@ -79,6 +79,8 @@ Based on the data collected from AMT, we train a supervised learning model to pr
 
 ![image](https://github.com/XinnuoXu/msr_dialog_ranking/blob/master/supervised_learning.png){:height="24px" width="48px"}
 
+<img src="https://github.com/XinnuoXu/msr_dialog_ranking/blob/master/supervised_learning.png" height="24" width="48">
+
 Supervised learning is working in folder `supervised_learning/discriminator` based on [AllenNLP](https://allennlp.org/tutorials). You need to create a conda enviornment first by running
 
 ```
