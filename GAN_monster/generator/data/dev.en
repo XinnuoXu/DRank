@@ -1,13 +1,5 @@
 hello , welcome to the restaurant finding system . how may i help you ?
 hello , welcome to the restaurant finding system . how may i help you ? <s> i need another restaurant . <s> what part of town do you have in mind ?
-hello , welcome to the restaurant finding system . how may i help you ? <s> i need another restaurant . <s> what part of town do you have in mind ? <s> everything is fine . i need a european venue . <s> would you like something in the cheap , moderate , or expensive price range ?
-what part of town do you have in mind ? <s> everything is fine . i need a european venue . <s> would you like something in the cheap , moderate , or expensive price range ? <s> i want a venue in the moderate price range . <s> galleria is a nice place , it is in the centre of town , it serves european food and it is in the moderate price range .
-hello , welcome to the restaurant finding system . how may i help you ?
-hello , welcome to the restaurant finding system . how may i help you ? <s> i need another restaurant . <s> what part of town do you have in mind ?
-hello , welcome to the restaurant finding system . how may i help you ? <s> i need another restaurant . <s> what part of town do you have in mind ? <s> i want a venue in the expensive price range and in the centre of town . <s> backstreet bistro is a nice place , it serves gastropub food , it is in the expensive price range and it is in the centre of town .
-what part of town do you have in mind ? <s> i want a venue in the expensive price range and in the centre of town . <s> backstreet bistro is a nice place , it serves gastropub food , it is in the expensive price range and it is in the centre of town . <s> what is the address ? <s> backstreet bistro is a nice place their address is 2 sturton street city centre .
-hello , welcome to the restaurant finding system . how may i help you ?
-hello , welcome to the restaurant finding system . how may i help you ? <s> i need another restaurant . <s> what part of town do you have in mind ?
 hello , welcome to the restaurant finding system . how may i help you ? <s> i need another restaurant . <s> what part of town do you have in mind ? <s> i prefer a venue in west . <s> what kind of food would you like ?
 what part of town do you have in mind ? <s> i prefer a venue in west . <s> what kind of food would you like ? <s> it doesn ' t matter . <s> would you like something in the cheap , moderate , or expensive price range ?
 what kind of food would you like ? <s> it doesn ' t matter . <s> would you like something in the cheap , moderate , or expensive price range ? <s> i want a venue in the cheap price range . <s> la margherita is a nice place , it is in the west part of town , it is in the cheap price range and it serves italian food .

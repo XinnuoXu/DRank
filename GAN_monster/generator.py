@@ -12,7 +12,6 @@ import tokenize
 import io
 from pydial import DialogueManager, DialogueGenerator
 
-
 class Generator(nn.Module):
 
     def __init__(self):
@@ -56,7 +55,7 @@ class Generator(nn.Module):
             return sys_utt, 1
         return sys_utt, 0
 
-    def sample(self, gen_turns, max_ctx, tag, given_turns, pre_train, model_path = ""):
+    def sample(self, gen_turns, max_ctx, tag, given_turns, pre_train, model_path = "", gen_id = ""):
         if model_path == "":
             model_path = "dialogue-model.last"
 
@@ -74,14 +73,14 @@ class Generator(nn.Module):
             gen_turns -= 1
 
             # generate user_utt
-            fp_test_en = open(self.path_generator + self.path_test_en, "w")
-            fp_test_vi = open(self.path_generator + self.path_test_vi, "w")
+            fp_test_en = open(self.path_generator + self.path_test_en + model_path + "." + gen_id, "w")
+            fp_test_vi = open(self.path_generator + self.path_test_vi + model_path + "." + gen_id, "w")
             for context in contexts:
                 fp_test_en.write(" <s> ".join(context[max(0, len(context) - max_ctx):]) + "\n")
                 fp_test_vi.write(context[-1] + "\n")
             fp_test_en.close(); fp_test_vi.close()
-            os.system("cd " + self.path_generator + "; sh translate.sh " + model_path)
-            gen_uttrs = [line.strip() for line in open(self.path_generator + self.path_pred)]
+            os.system("cd " + self.path_generator + "; sh translate.sh " + model_path + " " + gen_id)
+            gen_uttrs = [line.strip() for line in open(self.path_generator + self.path_pred + model_path + "." + gen_id)]
 
             # get system responses from dail_systems
             for i in range(0, len(contexts)):
@@ -126,7 +125,6 @@ class Generator(nn.Module):
         train_pos = int(self.train_dev_rate * len(examples))
         fp_train_en = open(self.path_generator + self.path_train_en, "w")
         fp_train_vi = open(self.path_generator + self.path_train_vi, "w")
-        rewards = self.batch_norm(rewards)
 
         for i in range (0, train_pos):
             item = examples[i]
@@ -184,14 +182,15 @@ class Generator(nn.Module):
                     
 
 if __name__ == '__main__':
-    MAX_GEN_LENGTH = 15
+    MAX_GEN_LENGTH = 11
     MAX_CONTEXT_LENGTH = 5
     GIVEN_TURNS = 1
 
     gen = Generator()
-    contexts = gen.sample(MAX_GEN_LENGTH, MAX_CONTEXT_LENGTH, "neg", GIVEN_TURNS, False, model_path = sys.argv[1])
+    contexts = gen.sample(MAX_GEN_LENGTH, MAX_CONTEXT_LENGTH, "neg", \
+        GIVEN_TURNS, False, model_path = sys.argv[1], gen_id = sys.argv[2])
 
-    fpout = open(gen.path_generator + sys.argv[1] + ".ex", "w")
+    fpout = open(gen.path_generator + sys.argv[1] + "." + sys.argv[2] + ".ex", "w")
     for item in contexts:
         fpout.write(item + "\n")
     fpout.close()

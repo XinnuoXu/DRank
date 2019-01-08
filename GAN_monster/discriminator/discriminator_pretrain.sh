@@ -14,5 +14,5 @@ ${EXPERIMENT} \
 
 #--file-friendly-logging \
 
-rm -rf trained_models.pretrain
-cp -r trained_models trained_models.pretrain
+rm -rf trained_models.$1
+cp -r trained_models trained_models.$1

@@ -68,7 +68,8 @@ class DialogueContextHierarchicalCoherenceAttentionClassifier(Model):
                 repeat: torch.FloatTensor = None,
                 label: torch.LongTensor = None) -> Dict[str, torch.Tensor]:
 
-        expected_dim = (self.final_classifier_feedforward.get_input_dim() + 1) / 2
+        #expected_dim = (self.final_classifier_feedforward.get_input_dim() + 1) / 2
+        expected_dim = (self.final_classifier_feedforward.get_input_dim() + 2) / 2
         dia_len = context['tokens'].size()[1]
         if expected_dim - dia_len > 0:
             padding = torch.zeros([context['tokens'].size()[0], (expected_dim - dia_len), context['tokens'].size()[2]]).long()
@@ -120,7 +121,7 @@ class DialogueContextHierarchicalCoherenceAttentionClassifier(Model):
         length_tensor = torch.FloatTensor(length).reshape(-1, 1)
         repeat_tensor = torch.FloatTensor(repeat).reshape(-1, 1)
         #class_probs = torch.cat([class_probs, length_tensor, repeat_tensor], dim=1)
-        class_probs = torch.cat([class_probs, repeat_tensor], dim=1)
+        #class_probs = torch.cat([class_probs, repeat_tensor], dim=1)
 
         full_logits = self.final_classifier_feedforward(class_probs)
         full_probs = F.softmax(full_logits, dim=-1)

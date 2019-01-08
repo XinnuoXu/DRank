@@ -464,6 +464,7 @@ class BasicTemplateGenerator(object):
     def __init__(self, filename):
         from utils import Scanner
         fn = Settings.locate_file(filename)
+        print ("================= ", filename, "!!")
         if os.path.exists(fn):
             f = open(fn)
             string = f.read()

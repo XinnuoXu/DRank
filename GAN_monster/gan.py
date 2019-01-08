@@ -18,7 +18,7 @@ MAX_GEN_LENGTH = 10
 REPORT_EPOCH = 2
 #ADV_TRAIN_EPOCHS = MAX_GEN_LENGTH * EPOCH_FOR_EACH_GEN_LENGTH
 
-TRAIN_LOG = open("./log/train.log", "w")
+TRAIN_LOG = open("./log/train.log", "w", buffering=1)
 
 def train_generator_PG(gen, disc, gen_turns):
 
@@ -61,13 +61,9 @@ if __name__ == '__main__':
     gen = generator.Generator()
     disc = discriminator.Discriminator()
 
-    '''
     # Pre-train generator on Maluba
-    # gen.pre_train()
+    gen.pre_train()
 
-    # Pre-train generator on gold dials
-    #gen.pre_train(max_ctx=MAX_CONTEXT_LENGTH, maluba=False)
-    
     # Pre-train discriminator
     pos_examples = gen.sample(PRETRAIN_GEN_LENGTH, -1, "pos", GIVEN_TURNS, True)
     neg_examples = gen.sample(PRETRAIN_GEN_LENGTH, MAX_CONTEXT_LENGTH, "neg", GIVEN_TURNS, True)
@@ -75,9 +71,6 @@ if __name__ == '__main__':
 
     # Report ACC on AMT-dev
     TRAIN_LOG.write('ACC of pretrained discriminator %f\n' % disc.dev())
-
-    #ADV_TRAIN_EPOCHS = 3
-    '''
 
     gen_len = 1; converged_tag = 0; epoch = 0
 
@@ -112,4 +105,3 @@ if __name__ == '__main__':
         if converged_tag == 2:
             gen_len += 1; converged_tag = 0; epoch = 0
             disc.re_fresh()
-

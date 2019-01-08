@@ -23,8 +23,8 @@ class Discriminator():
 
         self.path_AMT_dev_pos = "testset/generated_dial_examples_dev.pos"
         self.path_AMT_dev_neg = "testset/generated_dial_examples_dev.neg"
-        self.path_AMT_test_pos = "/home/t-xinxu/GAN_testset/AMT_test.pos"
-        self.path_AMT_test_neg = "/home/t-xinxu/GAN_testset/AMT_test.neg"
+        self.path_AMT_test_pos = "../../ranking_testset/AMT_test.pos"
+        self.path_AMT_test_neg = "../../ranking_testset/AMT_test.neg"
 
         self.path_cls_res = self.path_discriminator + "/test.res"
         self.accumulate_neg_examples = self.path_discriminator + "/trained_models/neg.examples"
@@ -98,8 +98,8 @@ class Discriminator():
             all_num += 1
         return correct_num / all_num
 
-    def test(self):
-        os.system("cd " + self.path_discriminator + "; sh discriminator_test.sh " + self.path_AMT_test_pos + " " + self.path_AMT_test_neg)
+    def test(self, log_no):
+        os.system("cd " + self.path_discriminator + "; sh discriminator_test.sh " + self.path_AMT_test_pos + " " + self.path_AMT_test_neg + " " + str(log_no))
         correct_num = 0; all_num = 0.0
         for line in open(self.path_cls_res):
             flist = line.strip().split(" ")
@@ -107,7 +107,8 @@ class Discriminator():
                 correct_num += 1
             all_num += 1
         os.system("cd " + self.path_discriminator + "; sort -k5 -n test.res | awk \'{if($2==\"pos\")print 0; else print 1}\' > tmp")
-        os.system("python evaluation.py")
+        os.system("python evaluation_metrics.py > dis.res." + str(log_no))
+        os.system("echo ACC " + str(correct_num / all_num) +  " >> dis.res." + str(log_no))
         return correct_num / all_num
 
     def dev_epoch(self):
