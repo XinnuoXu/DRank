@@ -169,7 +169,7 @@ pip install numpydoc
 ```
 
 <p align="center">
-<img src="https://github.com/XinnuoXu/msr_dialog_ranking/blob/master/plot_gans.png" height="400" width="400">
+<img src="https://github.com/XinnuoXu/msr_dialog_ranking/blob/master/plot_gans.png" height="300" width="350">
 </p>
 
 We pre-train the seq2seq model on the Maluuba data mentioned before and train the model on gold dialogues. To pre-train the model, you need to copy data generated in folder `Maluuba_data` to folder `generator/data/` and run
