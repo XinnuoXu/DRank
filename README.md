@@ -107,7 +107,7 @@ sh discriminator_pretrain.sh
 The trained model will be saved as `trained_models/hierarchical_coherence_attention/model.tar.gz`. To test it, run
 
 ```
-discriminator_test.sh
+sh discriminator_test.sh
 ```
 
 You can change the hyper-parameters in `experiments/dialogue_context_hierarchical_coherence_attention_classifier.json`
@@ -154,7 +154,7 @@ you will find all generated dialogues in file `gold_dialogues.in`.
 Figure below shows the overall pipeline of the StepGAN approach. A dialogue generator consists of a user simulator and the bot, and have them talk with each other. We start off by pre-training a generative user simulator on a large corpus of dialogues collected from multiple domains which teaches the simulator basic language skills and helps learn diverse out-of-domain behavior. We use the pre-trained user simulator to produce problematic dialogues and pre-train a discriminator with seed dialogues used as normal dialogues. We then begin stepwise GAN training.
 
 <p align="center">
-<img src="https://github.com/XinnuoXu/msr_dialog_ranking/blob/master/plot_gans.png" height="300" width="380">
+<img src="https://github.com/XinnuoXu/msr_dialog_ranking/blob/master/plot_gans.png" height="300" width="400">
 </p>
 
 StepGAN is working in folder `GAN_monster/` based on [OpenNMT-py](https://github.com/OpenNMT/OpenNMT-py). You need to create a conda enviornment first by running
@@ -175,6 +175,34 @@ pip install numpydoc
 To train the StepGAN, you need to run
 
 ```
+python step_fine_tune.py
+```
+
+To prepare the training data for the dialouge ranker, please run
+
+```
+python discriminator_final.py data
+```
+
+To train the dialouge ranker, run
+
+```
+python discriminator_final.py train
+```
+
+To test the dialouge ranker, run
+
+```
+python discriminator_final.py test
+```
+
+### Model: StepFineTune <br />
+
+StepFineTune is working in folder `StepFineTune_monster/`. You can create a conda enviornment following the StepGAN's setup.
+
+To train the StepGAN, you need to run
+
+```
 python gan.py
 ```
 
@@ -184,8 +212,14 @@ To prepare the training data for the dialouge ranker, please run
 python discriminator_final.py data
 ```
 
-To traine the dialouge ranker, run
+To train the dialouge ranker, run
 
 ```
 python discriminator_final.py train
+```
+
+To test the dialouge ranker, run
+
+```
+python discriminator_final.py test
 ```
