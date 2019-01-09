@@ -151,9 +151,13 @@ you will find all generated dialogues in file `gold_dialogues.in`.
 
 ### Model: StepGAN <br />
 
-To generate negative examples for the training of discriminator, we use stepwised seq2seq as the user simulator and make it talk with the Pydail restaurant finding bot. During training process of user simulator, we save a model for each 6 epochs and collect 100 conversations between each model and Pydial restaurant finding bot. The positive examples for the training of discriminator is the duplication of gold dialogues.
+Figure below shows the overall pipeline of the StepGAN approach. A dialogue generator consists of a user simulator and the bot, and have them talk with each other. We start off by pre-training a generative user simulator on a large corpus of dialogues collected from multiple domains which teaches the simulator basic language skills and helps learn diverse out-of-domain behavior. We use the pre-trained user simulator to produce problematic dialogues and pre-train a discriminator with seed dialogues used as normal dialogues. We then begin stepwise GAN training.
 
-Stepwised seq2seq user simulator is working in folder `GAN_monster/` based on [OpenNMT-py](https://github.com/OpenNMT/OpenNMT-py). You need to create a conda enviornment first by running
+<p align="center">
+<img src="https://github.com/XinnuoXu/msr_dialog_ranking/blob/master/plot_gans.png" height="300" width="380">
+</p>
+
+StepGAN is working in folder `GAN_monster/` based on [OpenNMT-py](https://github.com/OpenNMT/OpenNMT-py). You need to create a conda enviornment first by running
 
 ```
 conda create -n GAN python=3.6
@@ -167,10 +171,6 @@ cd pydial
 pip install -r requirements.txt
 pip install numpydoc
 ```
-
-<p align="center">
-<img src="https://github.com/XinnuoXu/msr_dialog_ranking/blob/master/plot_gans.png" height="300" width="380">
-</p>
 
 We pre-train the seq2seq model on the Maluuba data mentioned before and train the model on gold dialogues. To pre-train the model, you need to copy data generated in folder `Maluuba_data` to folder `generator/data/` and run
 
