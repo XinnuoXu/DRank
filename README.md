@@ -135,13 +135,7 @@ After running this script, the following files are generated in folder `data/`
 
 ### Gold dialogue generation <br />
 
-We generate 100 Gold dialogues by rule-based user simulator and restaurant finding system offered in Pydail. Gold dialogue generation is working in folder `gold_dialogue_generator/` based on [Pydial](http://www.camdial.org/pydial/). You need to create a conda enviornment first by running
-
-```
-TODO
-```
-
-To generate gold dialogues, run
+We generate 100 Gold dialogues by rule-based user simulator and restaurant finding system offered in Pydail. Gold dialogue generation is working in folder `gold_dialogue_generator/` based on [Pydial](http://www.camdial.org/pydial/). To generate gold dialogues, run
 
 ```
 sh generate.sh
