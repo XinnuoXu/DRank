@@ -192,6 +192,8 @@ def dcg_at_k(r, k, method=0):
             raise ValueError('method must be 0 or 1.')
     return 0.
 
+def recall_at_k(r, k):
+    return sum(r[:k]) / float(sum(r))
 
 def ndcg_at_k(r, k, method=0):
     """Score is normalized discounted cumulative gain (ndcg)
@@ -230,22 +232,48 @@ def ndcg_at_k(r, k, method=0):
     return dcg_at_k(r, k, method) / dcg_max
 
 
-if __name__ == "__main__":
-    #import doctest
-    #doctest.testmod()
-    train_samples = sys.argv[1].split(".")[-1]
-    os.system("sort -k5 -n " + sys.argv[1] + " | awk \'{if($2==\"pos\")print 0; else print 1}\' > tmp")
+def one_file(filename):
+    os.system("sort -k5 -n " + filename + " | awk \'{if($2==\"pos\")print 0; else print 1}\' > tmp")
     r = [int(line.strip()) for line in open("tmp")]
-    print (train_samples, "NDCG@20", ndcg_at_k(r, 20))
-    print (train_samples, "NDCG@30", ndcg_at_k(r, 30))
-    print (train_samples, "NDCG@40", ndcg_at_k(r, 40))
-    print (train_samples, "NDCG@50", ndcg_at_k(r, 50))
-    print (train_samples, "NDCG@100", ndcg_at_k(r, 100))
-    print (train_samples, "NDCG@200", ndcg_at_k(r, 200))
-    print (train_samples, "average_precision", average_precision(r))
-    print (train_samples, "precision@20", precision_at_k(r, 20))
-    print (train_samples, "precision@30", precision_at_k(r, 30))
-    print (train_samples, "precision@40", precision_at_k(r, 40))
-    print (train_samples, "precision@50", precision_at_k(r, 50))
-    print (train_samples, "precision@100", precision_at_k(r, 100))
-    print (train_samples, "precision@200", precision_at_k(r, 200))
+    return [ndcg_at_k(r, 10), ndcg_at_k(r, 20), ndcg_at_k(r, 30), \
+                ndcg_at_k(r, 40), ndcg_at_k(r, 50), ndcg_at_k(r, 100), \
+                ndcg_at_k(r, 150), ndcg_at_k(r, 200), \
+                recall_at_k(r, 10), recall_at_k(r, 20), recall_at_k(r, 30), \
+                recall_at_k(r, 40), recall_at_k(r, 50), recall_at_k(r, 100), \
+                recall_at_k(r, 150), recall_at_k(r, 200), \
+                precision_at_k(r, 10), precision_at_k(r, 20), precision_at_k(r, 30), \
+                precision_at_k(r, 40), precision_at_k(r, 50), precision_at_k(r, 100), \
+                precision_at_k(r, 150), precision_at_k(r, 200)]
+
+if __name__ == "__main__":
+    res_list = {}
+    for filename in os.listdir("./"):
+        if filename.startswith("test.res"):
+            train_samples = filename.split(".")[-1]
+            epoch = int(filename.split(".")[-2])
+            #if epoch >= 5:
+            #    continue
+            res = one_file(filename)
+            if train_samples not in res_list:
+                res_list[train_samples] = []
+            res_list[train_samples].append(res)
+    evl_metrics = ["NDCG@10","NDCG@20", "NDCG@30", "NDCG@40", "NDCG@50", "NDCG@100", "NDCG@150", "NDCG@200",\
+                    "recall@10","recall@20", "recall@30", "recall@40", "recall@50", "recall@100", "recall@150", "recall@200",\
+                    "precision@10", "precision@20", "precision@30", "precision@40", \
+                    "precision@50", "precision@100", "precision@150", "precision@200"]
+    for sample_num in res_list:
+        '''
+        print ("\t".join(evl_metrics[:6]))
+        for item in res_list[sample_num]:
+            print ("\t".join([str(it) for it in item][:6]))
+        print ("\t".join(evl_metrics[6:-6]))
+        for item in res_list[sample_num]:
+            print ("\t".join([str(it) for it in item][6:-6]))
+        print ("\t".join(evl_metrics[-6:]))
+        for item in res_list[sample_num]:
+            print ("\t".join([str(it) for it in item][-6:]))
+        '''
+        avg = [sum(i)/len(res_list[sample_num]) for i in zip(*res_list[sample_num])]
+        for i in range(0, len(evl_metrics)):
+            print (sample_num, evl_metrics[i], avg[i])
+        print ("")

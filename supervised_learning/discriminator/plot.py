@@ -7,7 +7,7 @@ if __name__ == '__main__':
 
 	dial_lens = []
 	label_rate = 0.9
-	x_x = set()
+	x = []
 	y_dict = {}
 	for line in open("ndcg.txt"):
 		if line.strip() == "":
@@ -19,22 +19,20 @@ if __name__ == '__main__':
 		if label.find(sys.argv[1]) == -1:
 			continue
 		value = float(flist[2])
-		if label not in y_dict:
-			y_dict[label] = {}
-		y_dict[label][training_num] = value
-		x_x.add(training_num)
-	x = list(sorted(x_x))
+		if training_num not in y_dict:
+			y_dict[training_num] = []
+		y_dict[training_num].append(value)
+		label = label.replace(sys.argv[1], "")
+		if label not in x:
+			x.append(label)
 	y = []
 	label_list = []
-	for label in y_dict:
-		label_list.append(label)
-		y.append([item[1] for item in sorted(y_dict[label].items(), key=lambda d:d[0])])
+	for training_num in y_dict:
+		plt.plot(x, y_dict[training_num], linewidth=1, label="size = " + str(training_num))
 
-	for y_val, label in zip(y, label_list):
-		plt.plot(x, y_val, linewidth=1, label=label)
-	plt.xlabel('Number of training data')
+	plt.xlabel('Evaluation metrics')
 	plt.ylabel('Ranking performance (' + sys.argv[1] + '@k)')
-	plt.title(sys.argv[1] + '@k of Supervised Learning with Different Training Size')
+	plt.title(sys.argv[1] + '@k of Supervised Settings with Different Training Size')
 	#plt.text(label_x+1, 900, r'90% dials are less than ' + str(label_x) + r' turns')
 	plt.grid(True)
 	plt.legend()
