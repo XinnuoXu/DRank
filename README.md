@@ -172,10 +172,20 @@ pip install -r requirements.txt
 pip install numpydoc
 ```
 
-We pre-train the seq2seq model on the Maluuba data mentioned before and train the model on gold dialogues. To pre-train the model, you need to copy data generated in folder `Maluuba_data` to folder `generator/data/` and run
+To train the StepGAN, you need to run
 
 ```
-sh pre-train.sh
+python gan.py
 ```
 
-You will find the pre-trained model in folder `dialogue-model`
+To prepare the training data for the dialouge ranker, please run
+
+```
+python discriminator_final.py data
+```
+
+To traine the dialouge ranker, run
+
+```
+python discriminator_final.py train
+```
