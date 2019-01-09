@@ -175,7 +175,7 @@ pip install numpydoc
 To train the StepGAN, you need to run
 
 ```
-python step_fine_tune.py
+python gan.py
 ```
 
 To prepare the training data for the dialouge ranker, please run
@@ -200,10 +200,10 @@ python discriminator_final.py test
 
 StepFineTune is working in folder `StepFineTune_monster/`. You can create a conda enviornment following the StepGAN's setup.
 
-To train the StepGAN, you need to run
+To train the StepFineTune, you need to run
 
 ```
-python gan.py
+python step_fine_tune.py
 ```
 
 To prepare the training data for the dialouge ranker, please run
@@ -223,3 +223,60 @@ To test the dialouge ranker, run
 ```
 python discriminator_final.py test
 ```
+
+### Model: FineTune <br />
+
+FineTune is working in folder `FineTune_monster/`. You can create a conda enviornment following the StepGAN's setup.
+
+To train the FineTune, you need to run
+
+```
+python fine_tune.py
+```
+
+To prepare the training data for the dialouge ranker, please run
+
+```
+python discriminator_final.py data
+```
+
+To train the dialouge ranker, run
+
+```
+python discriminator_final.py train
+```
+
+To test the dialouge ranker, run
+
+```
+python discriminator_final.py test
+```
+
+### Model: MultiDomain <br />
+
+FineTune is working in folder `MultiDomain_monster/`. You can create a conda enviornment following the StepGAN's setup.
+
+To train the MultiDomain, you need to run
+
+```
+python multi_domain.py
+```
+
+To prepare the training data for the dialouge ranker, please run
+
+```
+python discriminator_final.py data
+```
+
+To train the dialouge ranker, run
+
+```
+python discriminator_final.py train
+```
+
+To test the dialouge ranker, run
+
+```
+python discriminator_final.py test
+```
+
