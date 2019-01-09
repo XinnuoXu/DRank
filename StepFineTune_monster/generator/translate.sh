@@ -1,0 +1,1 @@
+python translate.py -model $1/dialogue-model_best.pt -output pred.txt""$1"."$2 -src data/test.en""$1"."$2 -tgt data/test.vi""$1"."$2 -report_bleu -verbose -gpu 0 -batch_size 128 -beam_size 1 -min_length 2 -max_length 25 -replace_unk -n_best 1 -beam_sample
