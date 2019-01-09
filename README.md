@@ -75,7 +75,7 @@ After running this preprocessing, the following files are generated. `AMT_prepro
 
 
 ## Supervised model <br />
-Based on the data collected from AMT, we train a supervised learning model to predict the quality of dialogues. The model is multi-heads self-attention with position embedding.
+A dialogue ranker aims to assign higher scores to problematic dialogues than normal ones so that developers may quickly identify problematic dialogues in the ranked list of log dialogues.
 
 <p align="center">
 <img src="https://github.com/XinnuoXu/msr_dialog_ranking/blob/master/supervised_learning.png" height="400" width="350">
@@ -107,16 +107,16 @@ sh discriminator_pretrain.sh
 The trained model will be saved as `trained_models/hierarchical_coherence_attention/model.tar.gz`. To test it, run
 
 ```
-discriminator_test.sh
+sh discriminator_test.sh
 ```
 
 You can change the hyper-parameters in `experiments/dialogue_context_hierarchical_coherence_attention_classifier.json`
 
 ## Unsupervised model <br />
 
-The goal of unsupervised model is that given only gold dialogues (references during the DS construction) and the DS and giving a ranker that can detect user-to-system dialogues with lower quality. Our approach is (1) train a user simulator to talk with Pydail restaurant finding bot and collect conversations as negative examples (2) take gold dialogues as positive examples (3) train a discriminator to detect dialogues with lower quality.
+Training a ranker typically requires labelling a substantial amount of data and one might have to repeat this process whenever a significant change is made to the system's behavior. This is not feasible for most developers and motivates us to explore a set of unsupervised approaches. The core idea is that we learn a generative user simulator and have it talk with the bot to produce problematic dialogues. We then train a ranker with seed dialogues used as normal examples. 
 
-### Pre-training of seq2seq user simulator <br />
+### Maluuba dataset <br />
 
 We pre-train our model on multi-domain Maluuba data. You can find Maluuba data and the script for format transfering in folder `Maluuba_data`. To read the original Maluuba data and transfer it into data for seq2seq model, you can run
 
@@ -151,9 +151,13 @@ you will find all generated dialogues in file `gold_dialogues.in`.
 
 ### Model: StepGAN <br />
 
-To generate negative examples for the training of discriminator, we use stepwised seq2seq as the user simulator and make it talk with the Pydail restaurant finding bot. During training process of user simulator, we save a model for each 6 epochs and collect 100 conversations between each model and Pydial restaurant finding bot. The positive examples for the training of discriminator is the duplication of gold dialogues.
+Figure below shows the overall pipeline of the StepGAN approach. A dialogue generator consists of a user simulator and the bot, and have them talk with each other. We start off by pre-training a generative user simulator on a large corpus of dialogues collected from multiple domains which teaches the simulator basic language skills and helps learn diverse out-of-domain behavior. We use the pre-trained user simulator to produce problematic dialogues and pre-train a discriminator with seed dialogues used as normal dialogues. We then begin stepwise GAN training.
 
-Stepwised seq2seq user simulator is working in folder `GAN_monster/` based on [OpenNMT-py](https://github.com/OpenNMT/OpenNMT-py). You need to create a conda enviornment first by running
+<p align="center">
+<img src="https://github.com/XinnuoXu/msr_dialog_ranking/blob/master/plot_gans.png" height="300" width="400">
+</p>
+
+StepGAN is working in folder `GAN_monster/` based on [OpenNMT-py](https://github.com/OpenNMT/OpenNMT-py). You need to create a conda enviornment first by running
 
 ```
 conda create -n GAN python=3.6
@@ -168,10 +172,111 @@ pip install -r requirements.txt
 pip install numpydoc
 ```
 
-We pre-train the seq2seq model on the Maluuba data mentioned before and train the model on gold dialogues. To pre-train the model, you need to copy data generated in folder `Maluuba_data` to folder `generator/data/` and run
+To train the StepGAN, you need to run
 
 ```
-sh pre-train.sh
+python gan.py
 ```
 
-You will find the pre-trained model in folder `dialogue-model`
+To prepare the training data for the dialouge ranker, please run
+
+```
+python discriminator_final.py data
+```
+
+To train the dialouge ranker, run
+
+```
+python discriminator_final.py train
+```
+
+To test the dialouge ranker, run
+
+```
+python discriminator_final.py test
+```
+
+### Model: StepFineTune <br />
+
+StepFineTune is working in folder `StepFineTune_monster/`. You can create a conda enviornment following the StepGAN's setup.
+
+To train the StepFineTune, you need to run
+
+```
+python step_fine_tune.py
+```
+
+To prepare the training data for the dialouge ranker, please run
+
+```
+python discriminator_final.py data
+```
+
+To train the dialouge ranker, run
+
+```
+python discriminator_final.py train
+```
+
+To test the dialouge ranker, run
+
+```
+python discriminator_final.py test
+```
+
+### Model: FineTune <br />
+
+FineTune is working in folder `FineTune_monster/`. You can create a conda enviornment following the StepGAN's setup.
+
+To train the FineTune, you need to run
+
+```
+python fine_tune.py
+```
+
+To prepare the training data for the dialouge ranker, please run
+
+```
+python discriminator_final.py data
+```
+
+To train the dialouge ranker, run
+
+```
+python discriminator_final.py train
+```
+
+To test the dialouge ranker, run
+
+```
+python discriminator_final.py test
+```
+
+### Model: MultiDomain <br />
+
+FineTune is working in folder `MultiDomain_monster/`. You can create a conda enviornment following the StepGAN's setup.
+
+To train the MultiDomain, you need to run
+
+```
+python multi_domain.py
+```
+
+To prepare the training data for the dialouge ranker, please run
+
+```
+python discriminator_final.py data
+```
+
+To train the dialouge ranker, run
+
+```
+python discriminator_final.py train
+```
+
+To test the dialouge ranker, run
+
+```
+python discriminator_final.py test
+```
+
