@@ -1,4 +1,7 @@
-# msr_dialog_ranking
+# DRank
+
+Code for paper "*Xinnuo Xu, Yizhe Zhang, Lars Liden, Sungjin Lee* [Unsupervised Dialogue Spectrum Generation for Log Dialogue Ranking]https://www.aclweb.org/anthology/W19-5919.pdf" *Proceedings of SIGDial 2019* :tada: :tada: :tada:
+
 
 Although the data-driven approaches of some recent bot building platforms make it possible for a wide range of users to easily create dialogue systems, those platforms don't offer tools for quickly identifying which log dialogues contain problems. This is important since corrections to log dialogues provide a means to improve performance after deployment. A log dialogue ranker, which ranks problematic dialogues higher, is an essential tool due to the sheer volume of log dialogues that could be generated. However, training a ranker typically requires labelling a substantial amount of data, which is not feasible for most users. In this paper, we present a novel unsupervised approach for dialogue ranking using GANs and release a corpus of labelled dialogues for evaluation and comparison with supervised methods. The evaluation result shows that our method compares favorably to supervised methods without any labelled data. To the best of our knowledge, we are the first to introduce the dialogue ranking task with accompanying data and present an unsupervised approach for training a dialogue ranker.
 
